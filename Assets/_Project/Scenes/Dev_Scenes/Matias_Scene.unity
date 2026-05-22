@@ -456,8 +456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimalInfoPanel
   nameText: {fileID: 1450953655}
-  hungerText: {fileID: 0}
-  healthText: {fileID: 0}
+  hungerText: {fileID: 667757225}
+  healthText: {fileID: 1401553569}
 --- !u!1 &827207633
 GameObject:
   m_ObjectHideFlags: 0
