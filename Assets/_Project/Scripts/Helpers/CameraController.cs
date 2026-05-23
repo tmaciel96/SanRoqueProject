@@ -20,7 +20,6 @@ public class CameraController : MonoBehaviour
 
     void CalculateBounds()
     {
-        Debug.Log("Calculating bounds...");
         if (backgroundSprite == null)
         {
             Debug.LogError("Please assign the Background SpriteRenderer in the Inspector!");
@@ -61,18 +60,15 @@ public class CameraController : MonoBehaviour
 
     void PanCamera()
     {
-        Debug.Log("Panning camera...");
         // When the user clicks down, save the initial world position of the mouse
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse button down...");
             dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
         }
 
         // While holding down, calculate the difference vector and move the camera
         if (Input.GetMouseButton(0))
         {
-            Debug.Log("Mouse button held down...");
             Vector3 currentMousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             Vector3 difference = dragOrigin - currentMousePos;
 
@@ -88,7 +84,6 @@ public class CameraController : MonoBehaviour
 
     void ClampCamera()
     {
-        Debug.Log("Clamping camera...");
         // Keep the camera inside the calculated boundaries
         Vector3 clampedPosition = transform.position;
 
