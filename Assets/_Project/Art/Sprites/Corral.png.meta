@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 1b916592aa55035459cf8780a280d29e
+guid: 9f2762dbcb03280438b890b3c7ad8843
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2631869624900911851
-    second: Potes_0
-  - first:
-      213: 575156876201748404
-    second: Potes_1
+      213: 2208497510161859296
+    second: Corral_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Potes_0
+      name: Corral_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 109
-        width: 317
-        height: 170
+        x: 0
+        y: 0
+        width: 1254
+        height: 1254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51df3a83588b97bd0800000000000000
-      internalID: -2631869624900911851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Potes_1
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 109
-        width: 304
-        height: 161
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b7e020b12e5bf700800000000000000
-      internalID: 575156876201748404
+      spriteID: 0e2488cc8c826ae10800000000000000
+      internalID: 2208497510161859296
       vertices: []
       indices: 
       edges: []
@@ -160,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Potes_0: -2631869624900911851
-      Potes_1: 575156876201748404
+      Corral_0: 2208497510161859296
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
