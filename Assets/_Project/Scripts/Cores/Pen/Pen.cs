@@ -37,7 +37,7 @@ public class Pen : MonoBehaviour
         UpdateVisuals();
     }
 
-    public void OnClicked()
+    /*public void OnClicked()
     {
         switch (currentState)
         {
@@ -55,7 +55,7 @@ public class Pen : MonoBehaviour
                 Debug.Log("This pen is locked. Unlock adjacent pens first!");
                 break;
         }
-    }
+    }*/
 
     private void BuyPen()
     {

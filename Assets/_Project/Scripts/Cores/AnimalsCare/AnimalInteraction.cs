@@ -14,5 +14,9 @@ public class AnimalInteraction : MonoBehaviour
     {
         Debug.Log("Está haciendo click");   
         UIManager.Instance.ShowAnimalPanel(animal);
+        
+
     }
+
+    
 }
