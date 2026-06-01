@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DraggableItem : MonoBehaviour
@@ -12,9 +13,7 @@ public class DraggableItem : MonoBehaviour
 
     private void OnMouseDown()
     {
-        isDragging = true;
-
-        offset = transform.position - GetMouseWorldPosition();
+        BeginDrag();
     }
 
     private void OnMouseUp() 
@@ -26,6 +25,8 @@ public class DraggableItem : MonoBehaviour
             hoveredAnimal.ApplyCare(careType);
 
             Debug.Log($"Aplicado {careType} a {hoveredAnimal.AnimalName}");
+
+            Destroy( gameObject );
         }
 
     }
@@ -56,5 +57,12 @@ public class DraggableItem : MonoBehaviour
             hoveredAnimal = animal;
             Debug.Log($"Entró en contacto con el {animal.AnimalName}");
         }
+    }
+
+    public void BeginDrag()
+    {
+        isDragging = true;
+
+        offset = transform.position - GetMouseWorldPosition();
     }
 }
