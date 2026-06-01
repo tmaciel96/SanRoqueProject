@@ -67,12 +67,22 @@ public class Animal : MonoBehaviour
 
     public void Feed(float amount)
     {
-        hunger -= amount;
+        hunger += amount;
     }
 
     public void Drink(float amount) 
     { 
-        thirst -= amount;
+        thirst += amount;
+    }
+
+    public void Heal(float amount)
+    {
+        health += amount;
+    }
+
+    public void Pet(float amount)
+    {
+        happiness += amount;
     }
 
     public override string ToString()
@@ -85,4 +95,29 @@ public class Animal : MonoBehaviour
             " Salud: " + health; 
     }
 
+    private void Update()
+    {
+        Hunger -= Time.deltaTime * 2f;
+        Thirst -= Time.deltaTime * 3f;
+    }
+
+    public void ApplyCare(CareType careType)
+    {
+        switch (careType)
+        {
+            case CareType.Food:
+                Feed(20f);
+                break;
+            case CareType.Water:
+                Drink(20f);
+                break;
+            case CareType.Petting:
+                Pet(20f);
+                break;
+            case CareType.Medicine:
+                Heal(20f);
+                break;
+
+        }
+    }
 }

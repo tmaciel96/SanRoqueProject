@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 6108a70536d5de64aa76d736ca84e1bd
+guid: 4480094a7bffbd84f950311a66851fd0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6940943420087549578
-    second: ui bubbles_0
+      213: -8212635036115766254
+    second: syringes_0
   - first:
-      213: -6447995814199555083
-    second: ui bubbles_1
+      213: -1019021755087639422
+    second: syringes_1
+  - first:
+      213: 1405525121374078087
+    second: syringes_2
+  - first:
+      213: 1591024529975816570
+    second: syringes_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui bubbles_0
+      name: syringes_0
       rect:
         serializedVersion: 2
-        x: 682
-        y: 383
-        width: 271
-        height: 315
+        x: 38
+        y: 71
+        width: 164
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 671c89febb0dcaf90800000000000000
-      internalID: -6940943420087549578
+      spriteID: 214746272fbd60e80800000000000000
+      internalID: -8212635036115766254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ui bubbles_1
+      name: syringes_1
       rect:
         serializedVersion: 2
-        x: 965
-        y: 384
-        width: 270
-        height: 314
+        x: 185
+        y: 176
+        width: 27
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +146,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fb0e6d48fd1486a0800000000000000
-      internalID: -6447995814199555083
+      spriteID: 28c2b9ddc15bbd1f0800000000000000
+      internalID: -1019021755087639422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: syringes_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 71
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784c36ea6ad618310800000000000000
+      internalID: 1405525121374078087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: syringes_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 67
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7134226164741610800000000000000
+      internalID: 1591024529975816570
       vertices: []
       indices: 
       edges: []
@@ -173,8 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui bubbles_0: -6940943420087549578
-      ui bubbles_1: -6447995814199555083
+      syringes_0: -8212635036115766254
+      syringes_1: -1019021755087639422
+      syringes_2: 1405525121374078087
+      syringes_3: 1591024529975816570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
