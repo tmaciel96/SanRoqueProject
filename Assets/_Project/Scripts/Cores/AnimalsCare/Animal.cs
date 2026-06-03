@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,7 +8,11 @@ public class Animal : MonoBehaviour
     [SerializeField] AnimalType animalType;
     private string animalName;
 
-    
+    private Animator animator;
+    private bool isReacting;
+
+    [SerializeField]private AudioSource audioSource;
+    [SerializeField]private AudioClip barkClip;
 
     /*private string description;
     private int age;
@@ -22,6 +27,14 @@ public class Animal : MonoBehaviour
     [SerializeField] private bool isSleeping = false;
     [SerializeField] private bool isAwake = false;
 
+
+    public void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+
+        audioSource = GetComponentInChildren<AudioSource>();
+
+    }
 
     public void Initialize (int id, string name, float hunger, float thirst, float happiness, float health )
     {
@@ -99,6 +112,28 @@ public class Animal : MonoBehaviour
     {
         Hunger -= Time.deltaTime * 2f;
         Thirst -= Time.deltaTime * 3f;
+        
+    }
+
+    public void PlayReaction()
+    {
+        if (isReacting) return;
+
+        StartCoroutine(ReactionRoutine());
+        
+    }
+
+    private IEnumerator ReactionRoutine()
+    {
+        isReacting = true;
+
+        animator.SetTrigger("Bark");
+
+        audioSource.PlayOneShot(barkClip);
+
+        yield return new WaitForSeconds(0.5f);
+
+        isReacting = false;
     }
 
     public void ApplyCare(CareType careType)
@@ -119,5 +154,7 @@ public class Animal : MonoBehaviour
                 break;
 
         }
+
+        PlayReaction();
     }
 }
