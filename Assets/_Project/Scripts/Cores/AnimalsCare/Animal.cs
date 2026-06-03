@@ -1,5 +1,6 @@
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class Animal : MonoBehaviour
@@ -8,11 +9,14 @@ public class Animal : MonoBehaviour
     [SerializeField] AnimalType animalType;
     private string animalName;
 
+    [SerializeField] ReactionType reactionType;
     private Animator animator;
     private bool isReacting;
 
-    [SerializeField]private AudioSource audioSource;
-    [SerializeField]private AudioClip barkClip;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip barkClip;
+    [SerializeField] private AudioClip sadClip;
+
 
     /*private string description;
     private int age;
@@ -23,7 +27,8 @@ public class Animal : MonoBehaviour
     [SerializeField] private float happiness;
     [SerializeField] private float health;
 
-    [SerializeField] private bool isAlive;
+    [SerializeField] private bool isSick = false;
+    private bool wasSick;
     [SerializeField] private bool isSleeping = false;
     [SerializeField] private bool isAwake = false;
 
@@ -48,6 +53,13 @@ public class Animal : MonoBehaviour
 
 
     public int ID => id;
+
+    
+    public bool isHealthy => Health > 40f;
+    public bool IsSick => Health <= 40f;
+    public bool isCritical => Health <= 10f;
+
+
     public string AnimalName
     {
         get => animalName;
@@ -112,24 +124,44 @@ public class Animal : MonoBehaviour
     {
         Hunger -= Time.deltaTime * 2f;
         Thirst -= Time.deltaTime * 3f;
+
+        animator.SetBool("isSick", IsSick);
+
+        bool currentlySick = IsSick;
+
+        if (currentlySick && !wasSick) 
+        {
+            audioSource.PlayOneShot(sadClip);
+        }
+
+        wasSick = currentlySick;
         
     }
 
-    public void PlayReaction()
+    public void PlayReaction(ReactionType reaction)
     {
         if (isReacting) return;
 
-        StartCoroutine(ReactionRoutine());
+        StartCoroutine(ReactionRoutine(reaction));
         
     }
 
-    private IEnumerator ReactionRoutine()
+    private IEnumerator ReactionRoutine(ReactionType reaction)
     {
         isReacting = true;
 
-        animator.SetTrigger("Bark");
+        switch (reactionType)
+        {
+            case ReactionType.Bark:
+                animator.SetTrigger("Bark");
+                audioSource.PlayOneShot(barkClip);
 
-        audioSource.PlayOneShot(barkClip);
+                break;
+            case ReactionType.Happy:
+                animator.SetTrigger("Happy");
+                audioSource.PlayOneShot(barkClip);
+                break;
+        }
 
         yield return new WaitForSeconds(0.5f);
 
@@ -141,20 +173,40 @@ public class Animal : MonoBehaviour
         switch (careType)
         {
             case CareType.Food:
-                Feed(20f);
+                if(isCritical) break;
+
+                Feed(isSick ? 10f : 20f);
+
+                if (isHealthy) PlayReaction(ReactionType.Bark);
+                
                 break;
             case CareType.Water:
-                Drink(20f);
+                if (isCritical) break;
+
+                Drink(isSick ? 10f : 20f);
+
+                if(isHealthy) PlayReaction(ReactionType.Bark);
+
                 break;
             case CareType.Petting:
-                Pet(20f);
+                if (isCritical) break;
+
+                Pet(isSick ? 0f : 20f);
+
+                if (isHealthy) PlayReaction(ReactionType.Happy);
+
+
                 break;
             case CareType.Medicine:
-                Heal(20f);
+                Heal(100f);
+                PlayReaction(ReactionType.Happy);
                 break;
 
         }
 
-        PlayReaction();
+            
     }
+
+    
+
 }

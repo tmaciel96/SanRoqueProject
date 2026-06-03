@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1497166947140476013, guid: 199472869611baa4b8f601b1a79b4e5d, type: 3}
+  m_Sprite: {fileID: -4353814613105701788, guid: 1f6e05e594f3d8e488a32123a30fa7e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 6134976153411165978}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: acb8a753a7dd1334d84803ba54e3a881, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3705042462301404398cf7caddc7f44c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -226,11 +226,12 @@ MonoBehaviour:
   animalType: 0
   audioSource: {fileID: 2220530870157097379}
   barkClip: {fileID: 8300000, guid: 6797ac577e66e7c4bb2f575afd36378f, type: 3}
+  sadClip: {fileID: 8300000, guid: 9e82c762b28e2f54ba05ddae6af7ec21, type: 3}
   hunger: 0
   thirst: 0
   happiness: 0
   health: 0
-  isAlive: 0
+  isSick: 0
   isSleeping: 0
   isAwake: 0
 --- !u!82 &2220530870157097379
