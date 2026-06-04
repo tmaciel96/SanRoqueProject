@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class Animal : MonoBehaviour
     [SerializeField] AnimalType animalType;
     private string animalName;
 
-    [SerializeField] ReactionType reactionType;
+    ReactionType reactionType;
     private Animator animator;
     private bool isReacting;
 
@@ -27,8 +28,10 @@ public class Animal : MonoBehaviour
     [SerializeField] private float happiness;
     [SerializeField] private float health;
 
-    [SerializeField] private bool isSick = false;
+    private float lowNeedsTimer = 0f;
+    private float randomDiseaseTimer = 0f;
     private bool wasSick;
+    
     [SerializeField] private bool isSleeping = false;
     [SerializeField] private bool isAwake = false;
 
@@ -55,9 +58,9 @@ public class Animal : MonoBehaviour
     public int ID => id;
 
     
-    public bool isHealthy => Health > 40f;
+    public bool IsHealthy => Health > 40f;
     public bool IsSick => Health <= 40f;
-    public bool isCritical => Health <= 10f;
+    public bool IsCritical => Health <= 10f;
 
 
     public string AnimalName
@@ -122,6 +125,9 @@ public class Animal : MonoBehaviour
 
     private void Update()
     {
+
+
+
         Hunger -= Time.deltaTime * 2f;
         Thirst -= Time.deltaTime * 3f;
 
@@ -129,10 +135,10 @@ public class Animal : MonoBehaviour
 
         bool currentlySick = IsSick;
 
-        if (currentlySick && !wasSick) 
-        {
-            audioSource.PlayOneShot(sadClip);
-        }
+        if (currentlySick && !wasSick) audioSource.PlayOneShot(sadClip);
+
+        if(wasSick && !currentlySick) PlayReaction(ReactionType.Happy);
+        
 
         wasSick = currentlySick;
         
@@ -150,7 +156,7 @@ public class Animal : MonoBehaviour
     {
         isReacting = true;
 
-        switch (reactionType)
+        switch (reaction)
         {
             case ReactionType.Bark:
                 animator.SetTrigger("Bark");
@@ -173,33 +179,34 @@ public class Animal : MonoBehaviour
         switch (careType)
         {
             case CareType.Food:
-                if(isCritical) break;
+                if(IsCritical) break;
 
-                Feed(isSick ? 10f : 20f);
+                Feed(IsSick ? 10f : 20f);
 
-                if (isHealthy) PlayReaction(ReactionType.Bark);
+                if (IsHealthy) PlayReaction(ReactionType.Bark);
                 
                 break;
             case CareType.Water:
-                if (isCritical) break;
+                if (IsCritical) break;
 
-                Drink(isSick ? 10f : 20f);
+                Drink(IsSick ? 10f : 20f);
 
-                if(isHealthy) PlayReaction(ReactionType.Bark);
+                if(IsHealthy) PlayReaction(ReactionType.Bark);
 
                 break;
             case CareType.Petting:
-                if (isCritical) break;
+                if (IsCritical) break;
 
-                Pet(isSick ? 0f : 20f);
+                
+                Pet(IsSick ? 0f : 20f);
 
-                if (isHealthy) PlayReaction(ReactionType.Happy);
+                if (IsHealthy) PlayReaction(ReactionType.Happy);
 
 
                 break;
             case CareType.Medicine:
                 Heal(100f);
-                PlayReaction(ReactionType.Happy);
+                //PlayReaction(ReactionType.Happy);
                 break;
 
         }
@@ -207,6 +214,50 @@ public class Animal : MonoBehaviour
             
     }
 
-    
+    private void CheckingHealth()
+    {
+        if (!IsHealthy) return;
+        //Rule 1
+        if (Hunger <= 10 || Thirst <= 10)
+        {
+            Health = 40;
+            return;
+        }
+
+        //Rule 2
+        if (Hunger <= 50 && Thirst <= 50)
+        {
+            lowNeedsTimer += Time.deltaTime;
+            
+            if (lowNeedsTimer >= 10f)
+            {
+                Health -= 5f;
+
+                lowNeedsTimer = 0f;
+            }
+        } else
+        {
+            lowNeedsTimer = 0f;
+        }
+
+        //Rule 3
+        randomDiseaseTimer += Time.deltaTime;
+
+        if (randomDiseaseTimer >= 120)
+        {
+            CheckRandomDisease();
+
+            randomDiseaseTimer = 0f;
+        }
+        
+        
+    }
+
+    private void CheckRandomDisease()
+    {
+        float chance = Random.Range(0f, 100f);
+
+        if (chance >= 5) Health = 40;
+    }
 
 }
