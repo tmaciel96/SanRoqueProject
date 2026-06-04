@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7808453041092574756}
   - component: {fileID: 8256211300689071465}
   - component: {fileID: -4398559107971157634}
-  - component: {fileID: 6050358367017782682}
+  - component: {fileID: 1639200763982963119}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -151,13 +151,13 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 15.625
---- !u!114 &6050358367017782682
+--- !u!114 &1639200763982963119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
