@@ -11,14 +11,21 @@ public class AnimalData
     public float affection = 50f;
 }
 
-public class Pen : MonoBehaviour
+public class Pen : MonoBehaviour, IInventoryItemTarget
 {
+    [Header("Upgrade")]
+    [SerializeField] private int currentLevel = 1;
+    [SerializeField] private int maxLevel = 3;
+    [SerializeField] private Color validItemColor = new Color(1f, 0.86f, 0.35f, 1f);
+
     private int row;
     private int column;
     private PenState currentState;
     private int unlockCost;
     private AnimalData currentAnimal;
     private ShelterGridManager gridManager;
+    private SpriteRenderer[] spriteRenderers;
+    private Color[] originalColors;
 
     [Header("Visual States")]
     [SerializeField] private GameObject visualLocked;
@@ -39,6 +46,9 @@ public class Pen : MonoBehaviour
 
     /*public void OnClicked()
     {
+        if (ItemSelectionManager.Instance != null && ItemSelectionManager.Instance.TryApplyToTarget(this))
+            return;
+
         switch (currentState)
         {
             case PenState.Available:
@@ -118,5 +128,49 @@ public class Pen : MonoBehaviour
                 animalContainer.SetActive(true); // Show the animal sprite on top
                 break;
         }
+    }
+
+    public bool CanReceiveItem(ShelterItemData itemData)
+    {
+        return itemData != null
+            && itemData.TargetType == ShelterItemTargetType.Pen
+            && currentState != PenState.Locked
+            && currentLevel < maxLevel;
+    }
+
+    public bool ApplyItem(ShelterItemData itemData)
+    {
+        if (!CanReceiveItem(itemData))
+            return false;
+
+        int previousLevel = currentLevel;
+        currentLevel = Mathf.Min(currentLevel + itemData.PenUpgradeAmount, maxLevel);
+        Debug.Log($"Corral mejorado: nivel {previousLevel}->{currentLevel} en fila {row}, columna {column}.");
+        return true;
+    }
+
+    public void SetItemPreview(bool active, ShelterItemData itemData)
+    {
+        if (spriteRenderers == null || spriteRenderers.Length == 0)
+            CacheRenderers();
+
+        for (int i = 0; i < spriteRenderers.Length; i++)
+        {
+            if (spriteRenderers[i] == null)
+                continue;
+
+            spriteRenderers[i].color = active
+                ? Color.Lerp(originalColors[i], validItemColor, 0.45f)
+                : originalColors[i];
+        }
+    }
+
+    private void CacheRenderers()
+    {
+        spriteRenderers = GetComponentsInChildren<SpriteRenderer>(true);
+        originalColors = new Color[spriteRenderers.Length];
+
+        for (int i = 0; i < spriteRenderers.Length; i++)
+            originalColors[i] = spriteRenderers[i].color;
     }
 }
