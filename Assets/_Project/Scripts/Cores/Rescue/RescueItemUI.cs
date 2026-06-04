@@ -18,7 +18,15 @@ public class RescueItemUI : MonoBehaviour
         manager = rescueManager;
 
         nameText.text = $"{request.animalData.animalName}";
-        expirationText.text = $"Expira en {request.expirationDay} Día{(request.expirationDay > 1 ? "s" : "")}";
+
+        if (request.daysRemaining == 1)
+        {
+            expirationText.text = "¡Último día!";
+        }
+        else
+        {
+            expirationText.text = $"Expira en {request.daysRemaining} Días";
+        }
 
         acceptButton.onClick.RemoveAllListeners();
         acceptButton.onClick.AddListener(ClickAccept);

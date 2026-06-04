@@ -15,35 +15,41 @@ public class RescueManager : MonoBehaviour
     [SerializeField] private NotificationBadge rescueBadge;
 
     private List<RescueRequest> activeRequests = new List<RescueRequest>();
-    private int currentDayTracker = 1;
-    private int nextAnimalId = 1;
 
-    private readonly string[] mockNames = { "Rex", "Luna", "Milo", "Oliver", "Bella", "Simba" };
+    private readonly string[] mockNames = { "Bondiola", "Feca", "Pocho", "Yuyo", "Negro", "Michi", "Bala", "Chispa", "Coco", "Pipa", "Bash", "Miga", "Pixel", "Astro", "Pampa"};
 
     private void OnEnable()
     {
-        DayManager.OnDayStarted += HandleNewDay;
+        DayManager.OnDayStarted += HandleDayStarted;
+        DayManager.OnDayEnded += HandleDayEnded;
     }
 
     private void OnDisable()
     {
-        DayManager.OnDayStarted -= HandleNewDay;
+        DayManager.OnDayStarted -= HandleDayStarted;
+        DayManager.OnDayEnded -= HandleDayEnded;
     }
 
     public List<RescueRequest> GetActiveRequests() => activeRequests;
 
-    private void HandleNewDay()
+    private void HandleDayEnded()
     {
-        ProcessExpirations();
+        foreach (var request in activeRequests)
+        {
+            request.daysRemaining--;
+        }
+
+        activeRequests.RemoveAll(request => request.daysRemaining <= 0);
+        
+        rescueBadge.UpdateBadge(activeRequests.Count);
+        OnRequestsUpdated?.Invoke();
+    }
+
+    private void HandleDayStarted()
+    {
         GenerateDailyRequests();
         rescueBadge.UpdateBadge(activeRequests.Count);
         OnRequestsUpdated?.Invoke();
-        currentDayTracker++;
-    }
-
-    private void ProcessExpirations()
-    {
-        activeRequests.RemoveAll(request => request.expirationDay <= currentDayTracker);
     }
 
     private void GenerateDailyRequests()
@@ -68,10 +74,8 @@ public class RescueManager : MonoBehaviour
             mockAnimal.animalName = randomName;
             mockAnimal.species = randomSpecies;
 
-            int randomExpiration = currentDayTracker + UnityEngine.Random.Range(1, 4); 
-            
-            activeRequests.Add(new RescueRequest(mockAnimal, randomExpiration));
-        }
+            int randomDaysRemaining = UnityEngine.Random.Range(1, 4);            
+            activeRequests.Add(new RescueRequest(mockAnimal, randomDaysRemaining));        }
     }
 
     public bool AcceptRescue(RescueRequest request)

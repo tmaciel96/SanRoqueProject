@@ -4,11 +4,11 @@ using System;
 public class RescueRequest
 {
     public AnimalData animalData;
-    public int expirationDay;
+    public int daysRemaining;
 
-    public RescueRequest(AnimalData animal, int expireDay)
+    public RescueRequest(AnimalData animal, int days)
     {
         animalData = animal;
-        expirationDay = expireDay;
+        daysRemaining = days;
     }
 }
