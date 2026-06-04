@@ -12,7 +12,7 @@ public class AnimalInteraction : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Está haciendo click");   
-        UIManager.Instance.ShowAnimalPanel(animal);
+        Debug.Log("Estï¿½ haciendo click");   
+        UIManager2.Instance.ShowAnimalPanel(animal);
     }
 }

@@ -818,6 +818,7 @@ GameObject:
   - component: {fileID: 835716248}
   - component: {fileID: 835716250}
   - component: {fileID: 835716249}
+  - component: {fileID: 835716251}
   m_Layer: 5
   m_Name: EndOfDayPanel
   m_TagString: Untagged
@@ -883,6 +884,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835716247}
   m_CullTransparentMesh: 1
+--- !u!114 &835716251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835716247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9a230d7c717d244a6736f9b6e4ebd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndOfDayUI
 --- !u!1 &925772899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CONTINUAR
+  m_text: SIGUIENTE DIA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1841,6 +1854,7 @@ GameObject:
   - component: {fileID: 1688768452}
   - component: {fileID: 1688768454}
   - component: {fileID: 1688768453}
+  - component: {fileID: 1688768455}
   m_Layer: 0
   m_Name: --MANAGERS--
   m_TagString: Untagged
@@ -1897,7 +1911,6 @@ MonoBehaviour:
   dayDurationInSeconds: 10
   dayText: {fileID: 1869659464}
   timerText: {fileID: 1112389395}
-  endOfDayPanel: {fileID: 835716247}
 --- !u!114 &1688768453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1929,6 +1942,19 @@ MonoBehaviour:
   maxRequests: 4
   mockHasCorralSpace: 1
   rescueBadge: {fileID: 133458230}
+--- !u!114 &1688768455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688768448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f061027913834dc4d887e90e0524f390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  endOfDayPanel: {fileID: 835716247}
 --- !u!1 &1715029481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,9 +2811,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1688768452}
-        m_TargetAssemblyTypeName: DayManager, Assembly-CSharp
-        m_MethodName: OnAcceptEndDayButtonPressed
+      - m_Target: {fileID: 835716251}
+        m_TargetAssemblyTypeName: EndOfDayUI, Assembly-CSharp
+        m_MethodName: StartNextDay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

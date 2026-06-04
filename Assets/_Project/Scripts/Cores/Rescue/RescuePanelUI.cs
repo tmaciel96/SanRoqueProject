@@ -20,13 +20,13 @@ public class RescuePanelUI : MonoBehaviour
 
     public void OpenPanel()
     {
-        panelContainer.SetActive(true);
+        UIManager.Instance.OpenPanel(panelContainer);
         RefreshList();
     }
 
     public void ClosePanel()
     {
-        panelContainer.SetActive(false);
+        UIManager.Instance.ClosePanel(panelContainer);
     }
 
     private void RefreshList()

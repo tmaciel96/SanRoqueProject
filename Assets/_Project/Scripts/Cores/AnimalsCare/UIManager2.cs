@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager2 : MonoBehaviour
 
 {
-    public static UIManager Instance;
+    public static UIManager2 Instance;
 
     [SerializeField] private AnimalInfoPanel animalPanel;
 

@@ -50,6 +50,8 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.CurrentState != GameState.Playing) return;
+        
         PanCamera();
     }
 

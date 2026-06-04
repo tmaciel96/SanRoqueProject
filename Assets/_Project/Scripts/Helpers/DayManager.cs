@@ -13,14 +13,21 @@ public class DayManager : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI dayText;
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private GameObject endOfDayPanel;
 
-    private int currentDay = 1;
+    private int currentDay = 0;
     private float currentTime;
     private bool isTimerRunning;
 
     private readonly DateTime startHour = DateTime.Today.AddHours(9); 
     private readonly DateTime endHour = DateTime.Today.AddHours(18);  
+
+    public static DayManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
 
     void Start()
     {
@@ -42,10 +49,10 @@ public class DayManager : MonoBehaviour
         }
     }
 
-    private void StartNewDay()
+    public void StartNewDay()
     {
+        currentDay++;
         currentTime = dayDurationInSeconds;
-        endOfDayPanel.SetActive(false);
         Time.timeScale = 1f;
         
         UpdateDayUI();
@@ -62,14 +69,7 @@ public class DayManager : MonoBehaviour
         UpdateTimerUI();
         
         Time.timeScale = 0f;
-        endOfDayPanel.SetActive(true);
         OnDayEnded?.Invoke();
-    }
-
-    public void OnAcceptEndDayButtonPressed()
-    {
-        currentDay++;
-        StartNewDay();
     }
 
     private void UpdateDayUI()
