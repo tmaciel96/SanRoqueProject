@@ -17,12 +17,6 @@ public class AnimalInteraction : MonoBehaviour, IInventoryItemTarget
 
     private void OnMouseDown()
     {
-<<<<<<< Updated upstream
-        Debug.Log("Está haciendo click");   
-        UIManager.Instance.ShowAnimalPanel(animal);
-        
-
-=======
         if (ItemSelectionManager.Instance != null && ItemSelectionManager.Instance.TryApplyToTarget(this))
             return;
 
@@ -46,9 +40,9 @@ public class AnimalInteraction : MonoBehaviour, IInventoryItemTarget
         float previousHappiness = animal.Happiness;
         float previousHealth = animal.Health;
 
-        animal.Hunger = animal.Hunger - itemData.HungerReduction;
-        animal.Happiness = animal.Happiness + itemData.HappinessIncrease;
-        animal.Health = animal.Health + itemData.HealthIncrease;
+        animal.Hunger -= itemData.HungerReduction;
+        animal.Happiness += itemData.HappinessIncrease;
+        animal.Health += itemData.HealthIncrease;
 
         Debug.Log(
             $"Item aplicado: {itemData.DisplayName} sobre {animal.AnimalName}. " +
@@ -82,8 +76,5 @@ public class AnimalInteraction : MonoBehaviour, IInventoryItemTarget
 
         for (int i = 0; i < spriteRenderers.Length; i++)
             originalColors[i] = spriteRenderers[i].color;
->>>>>>> Stashed changes
     }
-
-    
 }

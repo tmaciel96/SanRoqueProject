@@ -87,6 +87,20 @@ public class UIItemButton : MonoBehaviour
         Refresh();
     }
 
+    public void ApplySideSlotLayoutPreset()
+    {
+        layoutMode = UIItemButtonLayout.SideSlot;
+        EnsureVisualChildren();
+
+        RectTransform rect = (RectTransform)transform;
+        rect.sizeDelta = new Vector2(58f, 58f);
+
+        ConfigureRect(iconImage.rectTransform, new Vector2(0f, 5f), new Vector2(34f, 34f), new Vector2(0.5f, 0.5f));
+        ConfigureText(labelText, Vector2.zero, new Vector2(1f, 1f), 1f, TextAlignmentOptions.Center).gameObject.SetActive(false);
+        ConfigureText(costText, Vector2.zero, new Vector2(1f, 1f), 1f, TextAlignmentOptions.Center).gameObject.SetActive(false);
+        ConfigureText(countText, new Vector2(16f, -21f), new Vector2(28f, 14f), 10f, TextAlignmentOptions.Center).gameObject.SetActive(showCount);
+    }
+
     public void Refresh()
     {
         if (itemData == null)
@@ -260,5 +274,14 @@ public class UIItemButton : MonoBehaviour
         text.alignment = alignment;
         text.color = new Color(1f, 0.88f, 0.54f, 1f);
         return text;
+    }
+
+    private static void ConfigureRect(RectTransform rect, Vector2 anchoredPosition, Vector2 sizeDelta, Vector2 anchor)
+    {
+        rect.anchorMin = anchor;
+        rect.anchorMax = anchor;
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.anchoredPosition = anchoredPosition;
+        rect.sizeDelta = sizeDelta;
     }
 }
