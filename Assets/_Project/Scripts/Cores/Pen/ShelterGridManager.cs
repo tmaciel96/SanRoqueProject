@@ -25,10 +25,10 @@ public class ShelterGridManager : MonoBehaviour
         GenerateGrid();
     }
 
-    void Update()
+    /*void Update()
     {
         HandleInput();
-    }
+    }*/
 
     private void GenerateGrid()
     {
@@ -87,7 +87,7 @@ public class ShelterGridManager : MonoBehaviour
         }
     }
 
-    private void HandleInput()
+   /* private void HandleInput()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -103,5 +103,5 @@ public class ShelterGridManager : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }
