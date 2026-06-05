@@ -53,11 +53,8 @@ public class Animal : MonoBehaviour
         this.happiness = happiness;
         this.health = health;
     }
-
-
     public int ID => id;
 
-    
     public bool IsHealthy => Health > 40f;
     public bool IsSick => Health <= 40f;
     public bool IsCritical => Health <= 10f;
@@ -126,10 +123,10 @@ public class Animal : MonoBehaviour
     private void Update()
     {
 
-
-
         Hunger -= Time.deltaTime * 2f;
-        Thirst -= Time.deltaTime * 3f;
+        Thirst -= Time.deltaTime * 2f;
+
+        CheckingHealth();
 
         animator.SetBool("isSick", IsSick);
 
@@ -139,7 +136,6 @@ public class Animal : MonoBehaviour
 
         if(wasSick && !currentlySick) PlayReaction(ReactionType.Happy);
         
-
         wasSick = currentlySick;
         
     }
@@ -197,26 +193,24 @@ public class Animal : MonoBehaviour
             case CareType.Petting:
                 if (IsCritical) break;
 
-                
                 Pet(IsSick ? 0f : 20f);
 
                 if (IsHealthy) PlayReaction(ReactionType.Happy);
-
-
+                
                 break;
             case CareType.Medicine:
                 Heal(100f);
-                //PlayReaction(ReactionType.Happy);
+                
                 break;
 
         }
 
             
     }
-
     private void CheckingHealth()
     {
         if (!IsHealthy) return;
+
         //Rule 1
         if (Hunger <= 10 || Thirst <= 10)
         {
@@ -227,11 +221,14 @@ public class Animal : MonoBehaviour
         //Rule 2
         if (Hunger <= 50 && Thirst <= 50)
         {
+
+            Debug.Log("estoy aquí, " + IsSick + ", Hunger: " + Hunger + ", Thisrt: " + Thirst);
+
             lowNeedsTimer += Time.deltaTime;
             
-            if (lowNeedsTimer >= 10f)
+            if (lowNeedsTimer >= 5f)
             {
-                Health -= 5f;
+                Health -= 8f;
 
                 lowNeedsTimer = 0f;
             }
@@ -248,16 +245,16 @@ public class Animal : MonoBehaviour
             CheckRandomDisease();
 
             randomDiseaseTimer = 0f;
+        } else { 
+            randomDiseaseTimer = 0; 
         }
-        
-        
     }
 
     private void CheckRandomDisease()
     {
         float chance = Random.Range(0f, 100f);
 
-        if (chance >= 5) Health = 40;
+        if (chance <= 5) Health = 40;
     }
 
 }
