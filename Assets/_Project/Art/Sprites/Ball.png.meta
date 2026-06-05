@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 199472869611baa4b8f601b1a79b4e5d
+guid: 4c2f84f88bde5df469386cb96d724b31
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1497166947140476013
-    second: DogIdle_0
-  - first:
-      213: 3056696222392258077
-    second: DogIdle_1
-  - first:
-      213: 2941163411028523198
-    second: DogIdle_2
-  - first:
-      213: 8066742761912276949
-    second: DogIdle_3
-  - first:
-      213: 8833750368348357758
-    second: DogIdle_4
+      213: -3919779002189068522
+    second: Ball_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DogIdle_0
+      name: Ball_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 95
-        width: 116
-        height: 119
+        x: 28
+        y: 45
+        width: 442
+        height: 431
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,96 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6c93c5f76107c410800000000000000
-      internalID: 1497166947140476013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DogIdle_1
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 120
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d1e08f9e4019b6a20800000000000000
-      internalID: 3056696222392258077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DogIdle_2
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 95
-        width: 118
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eb83bb41a8c11d820800000000000000
-      internalID: 2941163411028523198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DogIdle_3
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 95
-        width: 117
-        height: 115
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d71c327dc3d2ff60800000000000000
-      internalID: 8066742761912276949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DogIdle_4
-      rect:
-        serializedVersion: 2
-        x: 665
-        y: 95
-        width: 116
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7441e32829c79a70800000000000000
-      internalID: 8833750368348357758
+      spriteID: 6174c70f3c52a99c0800000000000000
+      internalID: -3919779002189068522
       vertices: []
       indices: 
       edges: []
@@ -225,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DogIdle_0: 1497166947140476013
-      DogIdle_1: 3056696222392258077
-      DogIdle_2: 2941163411028523198
-      DogIdle_3: 8066742761912276949
-      DogIdle_4: 8833750368348357758
+      Ball_0: -3919779002189068522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
