@@ -22,6 +22,8 @@ public class DayManager : MonoBehaviour
 
     public static DayManager Instance { get; private set; }
 
+    public int CurrentDay => currentDay;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;

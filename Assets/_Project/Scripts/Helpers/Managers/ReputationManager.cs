@@ -1,6 +1,6 @@
+using UnityEngine;
 using System;
 using System.Collections;
-using UnityEngine;
 
 public class ReputationManager : MonoBehaviour
 {
@@ -12,14 +12,16 @@ public class ReputationManager : MonoBehaviour
     [Header("Donaciones")]
     [SerializeField] private int donationMinAmount = 50;
     [SerializeField] private int donationMaxAmount = 200;
-    [SerializeField] private float donationCooldown = 30f; // segundos entre donaciones
+    [SerializeField] private float donationCooldown = 30f;
 
     public int CurrentPoints { get; private set; }
     public int CurrentLevel { get; private set; } = 1;
 
-    public event Action<int> OnPointsChanged;   // parámetro: puntos actuales
-    public event Action<int> OnLevelUp;          // parámetro: nuevo nivel
-    public event Action<int> OnDonationReceived; // parámetro: monto
+    public event Action<int> OnPointsChanged;
+    public event Action<int> OnLevelUp;
+    public event Action<int> OnDonationReceived;
+
+    private Coroutine _donationCoroutine;
 
     private void Awake()
     {
@@ -34,6 +36,12 @@ public class ReputationManager : MonoBehaviour
         CheckLevelUp();
     }
 
+    public void ResetDay()
+    {
+        CurrentPoints = 0;
+        OnPointsChanged?.Invoke(CurrentPoints);
+    }
+
     private void CheckLevelUp()
     {
         for (int i = levelThresholds.Length - 1; i >= 0; i--)
@@ -42,7 +50,9 @@ public class ReputationManager : MonoBehaviour
             {
                 CurrentLevel = i + 1;
                 OnLevelUp?.Invoke(CurrentLevel);
-                StartCoroutine(DonationLoop());
+
+                if (_donationCoroutine != null) StopCoroutine(_donationCoroutine);
+                _donationCoroutine = StartCoroutine(DonationLoop());
                 break;
             }
         }
@@ -50,8 +60,11 @@ public class ReputationManager : MonoBehaviour
 
     private IEnumerator DonationLoop()
     {
-        yield return new WaitForSeconds(donationCooldown);
-        int amount = UnityEngine.Random.Range(donationMinAmount, donationMaxAmount);
-        OnDonationReceived?.Invoke(amount);
+        while (true)
+        {
+            yield return new WaitForSeconds(donationCooldown);
+            int amount = UnityEngine.Random.Range(donationMinAmount, donationMaxAmount);
+            OnDonationReceived?.Invoke(amount);
+        }
     }
 }

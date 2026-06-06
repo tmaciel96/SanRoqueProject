@@ -3,7 +3,15 @@ using UnityEngine;
 
 public class TaskListUI : MonoBehaviour
 {
+    public static TaskListUI Instance { get; private set; }
+
     [SerializeField] private TaskItemUI[] taskItems;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+    }
 
     public void SetTasks(List<TaskData> tasks)
     {
@@ -21,19 +29,28 @@ public class TaskListUI : MonoBehaviour
         }
     }
 
-    public void UpdateTask(string taskId, int current, int required)
+    public void UpdateTask(string taskId, int current)
     {
         foreach (var item in taskItems)
         {
             if (item.TaskId == taskId)
             {
-                item.UpdateProgress(current, required);
+                bool wasDone = item.IsCompleted;
+                item.UpdateProgress(current);
 
-                if (current >= required)
+                if (!wasDone && item.IsCompleted)
                     ReputationManager.Instance.AddPoints(item.GetReputationPoints());
 
                 break;
             }
         }
+    }
+
+    public bool AllTasksCompleted()
+    {
+        foreach (var item in taskItems)
+            if (item.gameObject.activeSelf && !item.IsCompleted)
+                return false;
+        return true;
     }
 }

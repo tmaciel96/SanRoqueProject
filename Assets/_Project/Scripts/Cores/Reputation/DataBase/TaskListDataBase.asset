@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b415bcc2320c6814c8b0c36e4a5d8256, type: 3}
+  m_Name: TaskListDataBase
+  m_EditorClassIdentifier: Assembly-CSharp::TaskDatabase
+  tasks:
+  - id: dar_mimos
+    label: Dar mimos
+    category: 0
+    accentColor: {r: 0.5764706, g: 0.4392157, b: 0.8588236, a: 1}
+    reputationPoints: 10
+    baseRequired: 2
+    increasePerDay: 1
+    maxRequired: 10
+  - id: alimentar
+    label: Alimentar
+    category: 0
+    accentColor: {r: 1, g: 0.6470588, b: 0, a: 1}
+    reputationPoints: 10
+    baseRequired: 2
+    increasePerDay: 1
+    maxRequired: 10
+  - id: dar_agua
+    label: Dar agua
+    category: 0
+    accentColor: {r: 0.1254902, g: 0.6980392, b: 0.6666667, a: 1}
+    reputationPoints: 10
+    baseRequired: 2
+    increasePerDay: 1
+    maxRequired: 10
+  - id: curar
+    label: Curar
+    category: 0
+    accentColor: {r: 0.6470588, g: 0.1647059, b: 0.1647059, a: 1}
+    reputationPoints: 10
+    baseRequired: 1
+    increasePerDay: 1
+    maxRequired: 5
+  - id: rescatar
+    label: Rescatar
+    category: 1
+    accentColor: {r: 0.5960785, g: 0.9843138, b: 0.5960785, a: 1}
+    reputationPoints: 30
+    baseRequired: 1
+    increasePerDay: 1
+    maxRequired: 3
+  - id: comprar_comida
+    label: Comprar comida
+    category: 2
+    accentColor: {r: 1, g: 0.8431373, b: 0, a: 1}
+    reputationPoints: 30
+    baseRequired: 1
+    increasePerDay: 1
+    maxRequired: 5
+  - id: comprar_juguetes
+    label: Comprar juguetes
+    category: 2
+    accentColor: {r: 0.8666667, g: 0.627451, b: 0.8666667, a: 1}
+    reputationPoints: 20
+    baseRequired: 1
+    increasePerDay: 1
+    maxRequired: 5
+  - id: comprar_medicina
+    label: Comprar medicina
+    category: 2
+    accentColor: {r: 1, g: 0.627451, b: 0.4784314, a: 1}
+    reputationPoints: 20
+    baseRequired: 1
+    increasePerDay: 1
+    maxRequired: 5
+  - id: expandir
+    label: Expandir refugio
+    category: 3
+    accentColor: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
+    reputationPoints: 30
+    baseRequired: 1
+    increasePerDay: 0
+    maxRequired: 1
