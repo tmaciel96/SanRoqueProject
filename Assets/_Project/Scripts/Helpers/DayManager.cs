@@ -11,8 +11,7 @@ public class DayManager : MonoBehaviour
     [SerializeField] private float dayDurationInSeconds = 120f;
     
     [Header("UI References")]
-    [SerializeField] private TextMeshProUGUI dayText;
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private TimeCard timeCard;
 
     private int currentDay = 0;
     private float currentTime;
@@ -72,17 +71,17 @@ public class DayManager : MonoBehaviour
         OnDayEnded?.Invoke();
     }
 
-    private void UpdateDayUI()
-    {
-        dayText.text = $"Día {currentDay}";
-    }
-
     private void UpdateTimerUI()
     {
         float progress = 1f - (currentTime / dayDurationInSeconds);
         TimeSpan totalGameTime = endHour - startHour;
         DateTime currentGameTime = startHour.AddSeconds(totalGameTime.TotalSeconds * progress);
 
-        timerText.text = currentGameTime.ToString("hh:mm tt").ToLower();
+        int hour = currentGameTime.Hour;
+        int minute = currentGameTime.Minute;
+
+        timeCard.UpdateTime(currentDay, hour, minute);
     }
+
+    private void UpdateDayUI() { } // ya no hace falta, UpdateTimerUI maneja todo
 }

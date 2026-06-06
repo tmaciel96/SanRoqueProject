@@ -1,5 +1,10 @@
+using UnityEngine;
+
 public class TimeCard : HUDCard
 {
+    [Header("Sprites del reloj")]
+    [SerializeField] private Sprite[] clockSprites;
+
     protected override void Awake()
     {
         base.Awake();
@@ -15,5 +20,9 @@ public class TimeCard : HUDCard
 
         SetLabel($"DÍA {day}");
         SetValue($"{displayHour:00}:{minute:00} {(isAM ? "AM" : "PM")}");
+
+        int spriteIndex = hour % 12;
+        if (clockSprites != null && clockSprites.Length == 12)
+            SetIcon(clockSprites[spriteIndex]);
     }
 }

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1052968783046552468}
   - component: {fileID: 1781525459201588279}
   - component: {fileID: 3701706202369444825}
-  - component: {fileID: 7380197394111105775}
   m_Layer: 5
   m_Name: HUD_Card
   m_TagString: Untagged
@@ -105,25 +104,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &7380197394111105775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398657443032411276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1203da8a068055d4aa03080f488e0b7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HUDCard
-  icon: {fileID: 5747589101580311452}
-  labelText: {fileID: 4596733124789604194}
-  valueText: {fileID: 7255502398888640670}
-  labelColor: {r: 1, g: 1, b: 1, a: 1}
-  valueColor: {r: 1, g: 1, b: 1, a: 1}
-  flashPositive: {r: 0.4, g: 1, b: 0.4, a: 1}
-  flashNegative: {r: 1, g: 0.4, b: 0.4, a: 1}
 --- !u!1 &2358983255895176144
 GameObject:
   m_ObjectHideFlags: 0
