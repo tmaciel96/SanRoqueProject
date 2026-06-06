@@ -122,7 +122,7 @@ public class Animal : MonoBehaviour
 
     private void Update()
     {
-
+        
         Hunger -= Time.deltaTime * 2f;
         Thirst -= Time.deltaTime * 2f;
 
@@ -199,7 +199,12 @@ public class Animal : MonoBehaviour
                 
                 break;
             case CareType.Medicine:
+                
+                if(IsHealthy) break;
+
                 Heal(100f);
+                Feed(60f);
+                Drink(60f);
                 
                 break;
 
