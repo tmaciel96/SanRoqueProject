@@ -4,6 +4,9 @@ using UnityEngine;
 public class DraggableItem : MonoBehaviour
 {
     [SerializeField] private CareType careType;
+    
+    private float pettingTimer;
+    [SerializeField] private float pettingInterval = 0.9f;
 
     private bool isDragging = false;
 
@@ -18,7 +21,7 @@ public class DraggableItem : MonoBehaviour
 
     private void OnMouseUp() 
     { 
-        isDragging = false;
+        isDragging = false; 
         
         if(hoveredAnimal != null )
         {
@@ -29,6 +32,8 @@ public class DraggableItem : MonoBehaviour
             Destroy( gameObject );
         }
 
+        Destroy( gameObject );  
+
     }
 
     void Update()
@@ -36,7 +41,19 @@ public class DraggableItem : MonoBehaviour
         if (isDragging)
         {
             transform.position = GetMouseWorldPosition() + offset;
-        }    
+        }
+
+        if (careType == CareType.Petting && hoveredAnimal != null)
+        {
+            pettingTimer += Time.deltaTime;
+
+            if(pettingTimer > pettingInterval )
+            {
+                hoveredAnimal.ApplyCare(CareType.Petting);
+
+                pettingTimer = 0f;
+            }
+        }
     }
 
     private Vector3 GetMouseWorldPosition()
@@ -57,6 +74,13 @@ public class DraggableItem : MonoBehaviour
             hoveredAnimal = animal;
             Debug.Log($"Entró en contacto con el {animal.AnimalName}");
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Animal animal = other.GetComponent<Animal>();
+
+        if(animal == hoveredAnimal) hoveredAnimal = null;
     }
 
     public void BeginDrag()

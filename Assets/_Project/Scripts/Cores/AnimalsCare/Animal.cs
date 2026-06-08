@@ -17,6 +17,7 @@ public class Animal : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip barkClip;
     [SerializeField] private AudioClip sadClip;
+    [SerializeField] private AudioClip angryClip;
 
 
     /*private string description;
@@ -58,6 +59,8 @@ public class Animal : MonoBehaviour
     public bool IsHealthy => Health > 40f;
     public bool IsSick => Health <= 40f;
     public bool IsCritical => Health <= 10f;
+
+    public bool isSad => Happiness <= 40f;
 
 
     public string AnimalName
@@ -123,8 +126,10 @@ public class Animal : MonoBehaviour
     private void Update()
     {
         
-        Hunger -= Time.deltaTime * 2f;
+        Hunger -= Time.deltaTime * 5f;
         Thirst -= Time.deltaTime * 2f;
+
+        Debug.Log(Thirst);
 
         CheckingHealth();
 
@@ -163,6 +168,9 @@ public class Animal : MonoBehaviour
                 animator.SetTrigger("Happy");
                 audioSource.PlayOneShot(barkClip);
                 break;
+            case ReactionType.Love:
+                animator.SetTrigger("Love");
+                break;
         }
 
         yield return new WaitForSeconds(0.5f);
@@ -175,27 +183,31 @@ public class Animal : MonoBehaviour
         switch (careType)
         {
             case CareType.Food:
-                if(IsCritical) break;
+                if (IsCritical) {
+                    Debug.Log(IsCritical);
+                    audioSource.PlayOneShot(angryClip);
+                    break; }
+                
 
                 Feed(IsSick ? 10f : 20f);
 
                 if (IsHealthy) PlayReaction(ReactionType.Bark);
-                
+
                 break;
             case CareType.Water:
                 if (IsCritical) break;
 
                 Drink(IsSick ? 10f : 20f);
 
-                if(IsHealthy) PlayReaction(ReactionType.Bark);
+                if (IsHealthy) PlayReaction(ReactionType.Bark);
 
                 break;
             case CareType.Petting:
-                if (IsCritical) break;
+                if (IsCritical)  break;
 
-                Pet(IsSick ? 0f : 20f);
+                Pet(IsSick ? 0f : 2f);
 
-                if (IsHealthy) PlayReaction(ReactionType.Happy);
+                if (IsHealthy) PlayReaction(ReactionType.Love);
                 
                 break;
             case CareType.Medicine:
@@ -214,34 +226,31 @@ public class Animal : MonoBehaviour
     }
     private void CheckingHealth()
     {
-        if (!IsHealthy) return;
+        if (!IsHealthy)
+        {
+            
+            Health -= Time.deltaTime * 1f;
+            Happiness -= Time.deltaTime * 1f;
+            
+            return;
+        }
 
         //Rule 1
         if (Hunger <= 10 || Thirst <= 10)
         {
-            Health = 40;
+            Health = 40f;
+            Happiness = 40f;
             return;
         }
 
         //Rule 2
-        if (Hunger <= 50 && Thirst <= 50)
-        {
-
-            Debug.Log("estoy aquí, " + IsSick + ", Hunger: " + Hunger + ", Thisrt: " + Thirst);
-
-            lowNeedsTimer += Time.deltaTime;
-            
-            if (lowNeedsTimer >= 5f)
-            {
-                Health -= 8f;
-
-                lowNeedsTimer = 0f;
-            }
-        } else
-        {
-            lowNeedsTimer = 0f;
+        if (Hunger <= 40 && Thirst <= 40) {
+            Health = 40f;
+            Happiness = 40f;
+            return; 
         }
 
+            
         //Rule 3
         randomDiseaseTimer += Time.deltaTime;
 
@@ -253,13 +262,15 @@ public class Animal : MonoBehaviour
         } else { 
             randomDiseaseTimer = 0; 
         }
+
+        
     }
 
     private void CheckRandomDisease()
     {
         float chance = Random.Range(0f, 100f);
 
-        if (chance <= 5) Health = 40;
+        if (chance <= 5 ) Health = 40;
     }
 
 }

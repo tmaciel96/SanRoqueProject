@@ -1,0 +1,851 @@
+fileFormatVersion: 2
+guid: 7cd5b05bfa4d9404383148ee7a5369da
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 521399089540437633
+    second: DogStates_0
+  - first:
+      213: -8297852603428551661
+    second: DogStates_1
+  - first:
+      213: 6190825974837439898
+    second: DogStates_2
+  - first:
+      213: -4801117989931459261
+    second: DogStates_3
+  - first:
+      213: 6755439197504558424
+    second: DogStates_4
+  - first:
+      213: -5284337052948547132
+    second: DogStates_5
+  - first:
+      213: -5706658058529249706
+    second: DogStates_6
+  - first:
+      213: 8021759760049020967
+    second: DogStates_7
+  - first:
+      213: 5358965391975776877
+    second: DogStates_8
+  - first:
+      213: -6236233821217698230
+    second: DogStates_9
+  - first:
+      213: -6354233472175515726
+    second: DogStates_10
+  - first:
+      213: 3824274358407939996
+    second: DogStates_11
+  - first:
+      213: 7053732760491733357
+    second: DogStates_12
+  - first:
+      213: 3557142146901024587
+    second: DogStates_13
+  - first:
+      213: 1610176370370444466
+    second: DogStates_14
+  - first:
+      213: -4160084090144105635
+    second: DogStates_15
+  - first:
+      213: -1305490479735557514
+    second: DogStates_16
+  - first:
+      213: 1194514977228470916
+    second: DogStates_17
+  - first:
+      213: 6281907164277177382
+    second: DogStates_18
+  - first:
+      213: 1002066406994771642
+    second: DogStates_19
+  - first:
+      213: 2835949783698641125
+    second: DogStates_20
+  - first:
+      213: 9154520742946116168
+    second: DogStates_21
+  - first:
+      213: 8323432153613787359
+    second: DogStates_22
+  - first:
+      213: -3425825406686225192
+    second: DogStates_23
+  - first:
+      213: -5002008432460836187
+    second: DogStates_24
+  - first:
+      213: -525893433935655511
+    second: DogStates_25
+  - first:
+      213: 1970144062833084937
+    second: DogStates_26
+  - first:
+      213: -1267246581136155727
+    second: DogStates_27
+  - first:
+      213: -8413328477312948847
+    second: DogStates_28
+  - first:
+      213: -8124958327035873596
+    second: DogStates_29
+  - first:
+      213: -2785299843783438854
+    second: DogStates_30
+  - first:
+      213: -6841379087107685580
+    second: DogStates_31
+  - first:
+      213: 4144361721009749216
+    second: DogStates_32
+  - first:
+      213: -7209202968402426433
+    second: DogStates_33
+  - first:
+      213: -4019747656240563310
+    second: DogStates_34
+  - first:
+      213: -2121838171600886325
+    second: DogStates_35
+  - first:
+      213: -3644607382713928514
+    second: DogStates_36
+  - first:
+      213: 348376869216950232
+    second: DogStates_37
+  - first:
+      213: -8253869010030986604
+    second: DogStates_38
+  - first:
+      213: -5905199476283534998
+    second: DogStates_39
+  - first:
+      213: 8396515531700437390
+    second: DogStates_40
+  - first:
+      213: 4228830081347493241
+    second: DogStates_41
+  - first:
+      213: 8523969982228321541
+    second: DogStates_42
+  - first:
+      213: 7879781470554855100
+    second: DogStates_43
+  - first:
+      213: -6489399007562835039
+    second: DogStates_44
+  - first:
+      213: 8775826573130109183
+    second: DogStates_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DogStates_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 319
+        width: 75
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186154e95b16c3700800000000000000
+      internalID: 521399089540437633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 319
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3144716650b18dc80800000000000000
+      internalID: -8297852603428551661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 319
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d62787c6b3ae550800000000000000
+      internalID: 6190825974837439898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_3
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 319
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34dd56520a00f5db0800000000000000
+      internalID: -4801117989931459261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_4
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 319
+        width: 73
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8555205882420cd50800000000000000
+      internalID: 6755439197504558424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_6
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 234
+        width: 81
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6566ebe1bb0edc0b0800000000000000
+      internalID: -5706658058529249706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 234
+        width: 86
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62045881aede5a40800000000000000
+      internalID: 5358965391975776877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 237
+        width: 91
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7d41fb25a31d7a0800000000000000
+      internalID: -6354233472175515726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_12
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 236
+        width: 90
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6135a9c294e3e160800000000000000
+      internalID: 7053732760491733357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_14
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 235
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc78a5b0ee785610800000000000000
+      internalID: 1610176370370444466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_20
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 162
+        width: 90
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e014328d415b5720800000000000000
+      internalID: 2835949783698641125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_21
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 162
+        width: 89
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8429f3cec146b0f70800000000000000
+      internalID: 9154520742946116168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_22
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 161
+        width: 89
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd0e63cb175c28370800000000000000
+      internalID: 8323432153613787359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_23
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 161
+        width: 89
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc95f381f50570d0800000000000000
+      internalID: -3425825406686225192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_24
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 160
+        width: 87
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2d9ab15db459ab0800000000000000
+      internalID: -5002008432460836187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_25
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 86
+        width: 91
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad0e8845b6a3b8f0800000000000000
+      internalID: -525893433935655511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_26
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 82
+        width: 82
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ac28d369b575b10800000000000000
+      internalID: 1970144062833084937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_28
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 84
+        width: 89
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195651b535add3b80800000000000000
+      internalID: -8413328477312948847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_32
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 84
+        width: 81
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec3389070bb38930800000000000000
+      internalID: 4144361721009749216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_34
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 83
+        width: 86
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b721fddccf638c0800000000000000
+      internalID: -4019747656240563310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_36
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 18
+        width: 94
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4f19735e0cb6dc0800000000000000
+      internalID: -3644607382713928514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 94
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a7f72cddd547d80800000000000000
+      internalID: -8253869010030986604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_40
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 17
+        width: 100
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e810e02b36a668470800000000000000
+      internalID: 8396515531700437390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_42
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 17
+        width: 95
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505dfc279893b4670800000000000000
+      internalID: 8523969982228321541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogStates_44
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 16
+        width: 96
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abd1742cf501f5a0800000000000000
+      internalID: -6489399007562835039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c5b8e5a8183946e47bd865013370216e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DogStates_0: 521399089540437633
+      DogStates_1: -8297852603428551661
+      DogStates_10: -6354233472175515726
+      DogStates_11: 3824274358407939996
+      DogStates_12: 7053732760491733357
+      DogStates_13: 3557142146901024587
+      DogStates_14: 1610176370370444466
+      DogStates_15: -4160084090144105635
+      DogStates_16: -1305490479735557514
+      DogStates_17: 1194514977228470916
+      DogStates_18: 6281907164277177382
+      DogStates_19: 1002066406994771642
+      DogStates_2: 6190825974837439898
+      DogStates_20: 2835949783698641125
+      DogStates_21: 9154520742946116168
+      DogStates_22: 8323432153613787359
+      DogStates_23: -3425825406686225192
+      DogStates_24: -5002008432460836187
+      DogStates_25: -525893433935655511
+      DogStates_26: 1970144062833084937
+      DogStates_27: -1267246581136155727
+      DogStates_28: -8413328477312948847
+      DogStates_29: -8124958327035873596
+      DogStates_3: -4801117989931459261
+      DogStates_30: -2785299843783438854
+      DogStates_31: -6841379087107685580
+      DogStates_32: 4144361721009749216
+      DogStates_33: -7209202968402426433
+      DogStates_34: -4019747656240563310
+      DogStates_35: -2121838171600886325
+      DogStates_36: -3644607382713928514
+      DogStates_37: 348376869216950232
+      DogStates_38: -8253869010030986604
+      DogStates_39: -5905199476283534998
+      DogStates_4: 6755439197504558424
+      DogStates_40: 8396515531700437390
+      DogStates_41: 4228830081347493241
+      DogStates_42: 8523969982228321541
+      DogStates_43: 7879781470554855100
+      DogStates_44: -6489399007562835039
+      DogStates_45: 8775826573130109183
+      DogStates_5: -5284337052948547132
+      DogStates_6: -5706658058529249706
+      DogStates_7: 8021759760049020967
+      DogStates_8: 5358965391975776877
+      DogStates_9: -6236233821217698230
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

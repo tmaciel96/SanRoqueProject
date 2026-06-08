@@ -298,6 +298,7 @@ MonoBehaviour:
   audioSource: {fileID: 2220530870157097379}
   barkClip: {fileID: 8300000, guid: 6797ac577e66e7c4bb2f575afd36378f, type: 3}
   sadClip: {fileID: 8300000, guid: 9e82c762b28e2f54ba05ddae6af7ec21, type: 3}
+  angryClip: {fileID: 8300000, guid: 83e231a6db163674c9d687bbea65d74f, type: 3}
   hunger: 0
   thirst: 0
   happiness: 0
@@ -466,6 +467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThirstBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 1826308533172249946, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: fillRenderer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4068052493174531108, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11432171
@@ -526,6 +531,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 5.531392
       objectReference: {fileID: 0}
+    - target: {fileID: 5548255873495997483, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -70.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5548255873495997483, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.9
+      objectReference: {fileID: 0}
     - target: {fileID: 6095474165310380423, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -566,6 +579,10 @@ PrefabInstance:
     - target: {fileID: 1057792833541580934, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_Name
       value: HappinessBubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826308533172249946, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: thresholdMid
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4068052493174531108, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_LocalScale.x
@@ -630,6 +647,26 @@ PrefabInstance:
     - target: {fileID: 6095474165310380423, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447317990094347391, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.013487
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447317990094347391, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.30557
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447317990094347391, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 7.6147575
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447317990094347391, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447317990094347391, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -833,6 +870,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 848963542, guid: d1f0c58f03cf7374ab4155afa4962e45, type: 3}
+    - target: {fileID: 8283048693467059739, guid: a9195760b95c58745848d7b81c46d706, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 426f1c3a36283534ba78c4bea7271573, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

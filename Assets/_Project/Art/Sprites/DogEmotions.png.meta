@@ -1,0 +1,1417 @@
+fileFormatVersion: 2
+guid: 95bb45803cce3a943bd4d1f134af1077
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9153864374290947546
+    second: DogEmotions_0
+  - first:
+      213: -3791636221394344607
+    second: DogEmotions_1
+  - first:
+      213: 682688552008374304
+    second: DogEmotions_2
+  - first:
+      213: 6113007096551666807
+    second: DogEmotions_3
+  - first:
+      213: 9209090961758832208
+    second: DogEmotions_4
+  - first:
+      213: -9130484594925185554
+    second: DogEmotions_5
+  - first:
+      213: 5456680336029145133
+    second: DogEmotions_6
+  - first:
+      213: -916730291439272256
+    second: DogEmotions_7
+  - first:
+      213: 661760278750920525
+    second: DogEmotions_8
+  - first:
+      213: -2773525144107909522
+    second: DogEmotions_9
+  - first:
+      213: -1166326024952026533
+    second: DogEmotions_10
+  - first:
+      213: -7279833926246073977
+    second: DogEmotions_11
+  - first:
+      213: -2480983397722816078
+    second: DogEmotions_12
+  - first:
+      213: -2764989341608875755
+    second: DogEmotions_13
+  - first:
+      213: -2178159525484762949
+    second: DogEmotions_14
+  - first:
+      213: 2152802554257605545
+    second: DogEmotions_15
+  - first:
+      213: 8848573163922262513
+    second: DogEmotions_16
+  - first:
+      213: 1465237412126415233
+    second: DogEmotions_17
+  - first:
+      213: -1423200233529031484
+    second: DogEmotions_18
+  - first:
+      213: 2632265323329449991
+    second: DogEmotions_19
+  - first:
+      213: 784715275557658726
+    second: DogEmotions_20
+  - first:
+      213: -3912120376369945320
+    second: DogEmotions_21
+  - first:
+      213: -1492342819981196625
+    second: DogEmotions_22
+  - first:
+      213: -8659185542320985237
+    second: DogEmotions_23
+  - first:
+      213: -2996058619122137281
+    second: DogEmotions_24
+  - first:
+      213: 8375174286247521682
+    second: DogEmotions_25
+  - first:
+      213: 8051152323522680750
+    second: DogEmotions_26
+  - first:
+      213: 1661822590761838764
+    second: DogEmotions_27
+  - first:
+      213: -4461107422062860889
+    second: DogEmotions_28
+  - first:
+      213: -7112508272433192178
+    second: DogEmotions_29
+  - first:
+      213: 686682912209700164
+    second: DogEmotions_30
+  - first:
+      213: -2278062087127437837
+    second: DogEmotions_31
+  - first:
+      213: 9056477723955694816
+    second: DogEmotions_32
+  - first:
+      213: -4524167140695470829
+    second: DogEmotions_33
+  - first:
+      213: -3150839843952008584
+    second: DogEmotions_34
+  - first:
+      213: 146982695734182455
+    second: DogEmotions_35
+  - first:
+      213: 8524221992252356801
+    second: DogEmotions_36
+  - first:
+      213: 372004067228345190
+    second: DogEmotions_37
+  - first:
+      213: 5848646602896118414
+    second: DogEmotions_38
+  - first:
+      213: -4949965294236021856
+    second: DogEmotions_39
+  - first:
+      213: 8096122940260188864
+    second: DogEmotions_40
+  - first:
+      213: 2587370736345822658
+    second: DogEmotions_41
+  - first:
+      213: -2350254383930315743
+    second: DogEmotions_42
+  - first:
+      213: -4126402410437909269
+    second: DogEmotions_43
+  - first:
+      213: 804392160481800075
+    second: DogEmotions_44
+  - first:
+      213: 3287896620149269424
+    second: DogEmotions_45
+  - first:
+      213: 5656335514008430482
+    second: DogEmotions_46
+  - first:
+      213: 2155673978066014695
+    second: DogEmotions_47
+  - first:
+      213: -3149187416068263400
+    second: DogEmotions_48
+  - first:
+      213: 452740101403419728
+    second: DogEmotions_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DogEmotions_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 334
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add17bf262f090f70800000000000000
+      internalID: 9153864374290947546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 334
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165294212f6616bc0800000000000000
+      internalID: -3791636221394344607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 334
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0285faafe95697900800000000000000
+      internalID: 682688552008374304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_3
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 334
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7747763f093c5d450800000000000000
+      internalID: 6113007096551666807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_4
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 333
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05645e710734dcf70800000000000000
+      internalID: 9209090961758832208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_5
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 310
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5de44e2a00a4180800000000000000
+      internalID: -9130484594925185554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_6
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 263
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2850e9dad50abb40800000000000000
+      internalID: 5456680336029145133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_7
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 310
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cefbef28ae1743f0800000000000000
+      internalID: -916730291439272256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_8
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 263
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f7965a77b0f2900800000000000000
+      internalID: 661760278750920525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_9
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 310
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e75d183957289d0800000000000000
+      internalID: -2773525144107909522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_10
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 263
+        width: 75
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ae076e8a060dfe0800000000000000
+      internalID: -1166326024952026533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_11
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 301
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789f3424d95d8fa90800000000000000
+      internalID: -7279833926246073977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_12
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 316
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1071d9eb6c19dd0800000000000000
+      internalID: -2480983397722816078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_13
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 263
+        width: 75
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51969a5e7d8c0a9d0800000000000000
+      internalID: -2764989341608875755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_14
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 310
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8e853b37f95c1e0800000000000000
+      internalID: -2178159525484762949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_15
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 263
+        width: 75
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3041e548a40ed10800000000000000
+      internalID: 2152802554257605545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_16
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 301
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f904ac29627cca70800000000000000
+      internalID: 8848573163922262513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_17
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 301
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1895865c9a1955410800000000000000
+      internalID: 1465237412126415233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_18
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 301
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4cf349de6cf3ce0800000000000000
+      internalID: -1423200233529031484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_19
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 301
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70071af7d5fa78420800000000000000
+      internalID: 2632265323329449991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_20
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 205
+        width: 85
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 660ef61b26ed3ea00800000000000000
+      internalID: 784715275557658726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_21
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 205
+        width: 85
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815e6e7be3b55b9c0800000000000000
+      internalID: -3912120376369945320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_22
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 205
+        width: 85
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa28aebac122a4be0800000000000000
+      internalID: -1492342819981196625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_23
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 205
+        width: 85
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b62c9a0a464d780800000000000000
+      internalID: -8659185542320985237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_24
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 205
+        width: 85
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f374af84f8cdb66d0800000000000000
+      internalID: -2996058619122137281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_25
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 133
+        width: 88
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29de4c7c3a89a3470800000000000000
+      internalID: 8375174286247521682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_26
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 131
+        width: 80
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea75124a1607bbf60800000000000000
+      internalID: 8051152323522680750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_27
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 131
+        width: 83
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca8241277daff0710800000000000000
+      internalID: 1661822590761838764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_28
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 142
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5a5138f66f612c0800000000000000
+      internalID: -4461107422062860889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_29
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 149
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e03a79fe86b4b4d90800000000000000
+      internalID: -7112508272433192178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_30
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 140
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 445079f6876978900800000000000000
+      internalID: 686682912209700164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_31
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 131
+        width: 57
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fdeb78f992b260e0800000000000000
+      internalID: -2278062087127437837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_32
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 144
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec0e94b1821fad70800000000000000
+      internalID: 9056477723955694816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_33
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 132
+        width: 77
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d0a52a4fde631c0800000000000000
+      internalID: -4524167140695470829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_34
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 143
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872e7151bd7f544d0800000000000000
+      internalID: -3150839843952008584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_35
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 71
+        width: 90
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7328d57abff2a0200800000000000000
+      internalID: 146982695734182455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_36
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 109
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c836ca1dbe1c4670800000000000000
+      internalID: 8524221992252356801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_37
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 69
+        width: 93
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663652a6abf992500800000000000000
+      internalID: 372004067228345190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_38
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 108
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e821b6e09119a2150800000000000000
+      internalID: 5848646602896118414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_39
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 69
+        width: 97
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abcc8a7ac03e4bb0800000000000000
+      internalID: -4949965294236021856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_40
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 105
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c289184be43b5070800000000000000
+      internalID: 8096122940260188864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_41
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 69
+        width: 94
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c5322ae9ff28e320800000000000000
+      internalID: 2587370736345822658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_42
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 105
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c670a0718326fd0800000000000000
+      internalID: -2350254383930315743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_43
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 69
+        width: 95
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4688dced21cb6c0800000000000000
+      internalID: -4126402410437909269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_44
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 105
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f60a97866c92b00800000000000000
+      internalID: 804392160481800075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_45
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 5
+        width: 72
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b364365e84f0ad20800000000000000
+      internalID: 3287896620149269424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_46
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 5
+        width: 71
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29726e27e275f7e40800000000000000
+      internalID: 5656335514008430482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_47
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 4
+        width: 72
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e19d22df0e7aed10800000000000000
+      internalID: 2155673978066014695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_48
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 4
+        width: 71
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812fe1eeab6db44d0800000000000000
+      internalID: -3149187416068263400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogEmotions_49
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 4
+        width: 71
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 054a9b739b4784600800000000000000
+      internalID: 452740101403419728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DogEmotions_0: 9153864374290947546
+      DogEmotions_1: -3791636221394344607
+      DogEmotions_10: -1166326024952026533
+      DogEmotions_11: -7279833926246073977
+      DogEmotions_12: -2480983397722816078
+      DogEmotions_13: -2764989341608875755
+      DogEmotions_14: -2178159525484762949
+      DogEmotions_15: 2152802554257605545
+      DogEmotions_16: 8848573163922262513
+      DogEmotions_17: 1465237412126415233
+      DogEmotions_18: -1423200233529031484
+      DogEmotions_19: 2632265323329449991
+      DogEmotions_2: 682688552008374304
+      DogEmotions_20: 784715275557658726
+      DogEmotions_21: -3912120376369945320
+      DogEmotions_22: -1492342819981196625
+      DogEmotions_23: -8659185542320985237
+      DogEmotions_24: -2996058619122137281
+      DogEmotions_25: 8375174286247521682
+      DogEmotions_26: 8051152323522680750
+      DogEmotions_27: 1661822590761838764
+      DogEmotions_28: -4461107422062860889
+      DogEmotions_29: -7112508272433192178
+      DogEmotions_3: 6113007096551666807
+      DogEmotions_30: 686682912209700164
+      DogEmotions_31: -2278062087127437837
+      DogEmotions_32: 9056477723955694816
+      DogEmotions_33: -4524167140695470829
+      DogEmotions_34: -3150839843952008584
+      DogEmotions_35: 146982695734182455
+      DogEmotions_36: 8524221992252356801
+      DogEmotions_37: 372004067228345190
+      DogEmotions_38: 5848646602896118414
+      DogEmotions_39: -4949965294236021856
+      DogEmotions_4: 9209090961758832208
+      DogEmotions_40: 8096122940260188864
+      DogEmotions_41: 2587370736345822658
+      DogEmotions_42: -2350254383930315743
+      DogEmotions_43: -4126402410437909269
+      DogEmotions_44: 804392160481800075
+      DogEmotions_45: 3287896620149269424
+      DogEmotions_46: 5656335514008430482
+      DogEmotions_47: 2155673978066014695
+      DogEmotions_48: -3149187416068263400
+      DogEmotions_49: 452740101403419728
+      DogEmotions_5: -9130484594925185554
+      DogEmotions_6: 5456680336029145133
+      DogEmotions_7: -916730291439272256
+      DogEmotions_8: 661760278750920525
+      DogEmotions_9: -2773525144107909522
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
