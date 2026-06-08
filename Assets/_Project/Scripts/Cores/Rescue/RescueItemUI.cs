@@ -17,16 +17,11 @@ public class RescueItemUI : MonoBehaviour
         currentRequest = request;
         manager = rescueManager;
 
-        nameText.text = $"{request.animalData.animalName}";
+        nameText.text = request.animalData.animalName;
 
-        if (request.daysRemaining == 1)
-        {
-            expirationText.text = "¡Último día!";
-        }
-        else
-        {
-            expirationText.text = $"Expira en {request.daysRemaining} Días";
-        }
+        expirationText.text = request.daysRemaining == 1
+            ? "¡Último día!"
+            : $"Expira en {request.daysRemaining} Días";
 
         acceptButton.onClick.RemoveAllListeners();
         acceptButton.onClick.AddListener(ClickAccept);
@@ -37,15 +32,17 @@ public class RescueItemUI : MonoBehaviour
 
     private void ClickAccept()
     {
-        if (manager.AcceptRescue(currentRequest))
+        if (!manager.AcceptRescue(currentRequest))
         {
-            Destroy(gameObject);
+            Debug.LogWarning("No hay capacidad para aceptar este rescate.");
+            return;
         }
+        // Si acepta, RescuePanelUI.RefreshList lo maneja via OnRequestsUpdated
     }
 
     private void ClickReject()
     {
         manager.RejectRescue(currentRequest);
-        Destroy(gameObject);
+        // Idem
     }
 }

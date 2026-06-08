@@ -1,12 +1,17 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class RescuePanelUI : MonoBehaviour
+public class RescuePanelUI : BasePanel
 {
+    [Header("Referencias")]
     [SerializeField] private RescueManager rescueManager;
-    [SerializeField] private GameObject panelContainer;
     [SerializeField] private Transform listParent;
     [SerializeField] private GameObject itemPrefab;
+
+    protected override void Awake()
+    {
+        base.Awake(); // auto-registro en UIManager
+    }
 
     private void OnEnable()
     {
@@ -18,25 +23,18 @@ public class RescuePanelUI : MonoBehaviour
         RescueManager.OnRequestsUpdated -= RefreshList;
     }
 
-    public void OpenPanel()
+    public override void Open()
     {
-        UIManager.Instance.OpenPanel(panelContainer);
+        base.Open();
         RefreshList();
-    }
-
-    public void ClosePanel()
-    {
-        UIManager.Instance.ClosePanel(panelContainer);
     }
 
     private void RefreshList()
     {
-        if (!panelContainer.activeSelf) return;
+        if (!gameObject.activeSelf) return;
 
         foreach (Transform child in listParent)
-        {
             Destroy(child.gameObject);
-        }
 
         List<RescueRequest> requests = rescueManager.GetActiveRequests();
         foreach (var request in requests)

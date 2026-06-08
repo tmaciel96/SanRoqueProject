@@ -13,6 +13,10 @@ public class TaskManager : MonoBehaviour
 
     [Header("Configuración")]
     [SerializeField] private int maxShelterExpansions = 6;
+    [SerializeField] private int shelterTaskEveryNDays = 2; // cada cuántos días aparece la tarea de refugio
+
+    private const string ShelterExpansionTaskId = "expandir";
+    // TODO: cuando haya prefabs de mejora de nivel, agregar const string ShelterUpgradeTaskId = "mejorar_refugio";
 
     private int _currentDay = 1;
     private int _shelterExpansions = 0;
@@ -26,6 +30,12 @@ public class TaskManager : MonoBehaviour
     private void OnEnable() => DayManager.OnDayStarted += OnDayStarted;
     private void OnDisable() => DayManager.OnDayStarted -= OnDayStarted;
 
+    private void Start()
+    {
+        // Genera las tareas del día 1 porque el evento ya se disparó antes de suscribirse
+        OnDayStarted();
+    }
+
     private void OnDayStarted()
     {
         _currentDay = DayManager.Instance.CurrentDay;
@@ -37,19 +47,28 @@ public class TaskManager : MonoBehaviour
     {
         var result = new List<TaskData>();
 
-        // Categorías disponibles
-        var categories = new List<TaskCategory> 
-        { 
-            TaskCategory.Cuidado, 
-            TaskCategory.Rescate, 
-            TaskCategory.Tienda 
+        var categories = new List<TaskCategory>
+        {
+            TaskCategory.Cuidado,
+            TaskCategory.Rescate,
+            TaskCategory.Tienda
         };
 
-        // Refugio solo disponible si no se completaron todas las expansiones
-        if (_shelterExpansions < maxShelterExpansions)
-            categories.Add(TaskCategory.Refugio);
+        // Tarea de refugio aparece cada N días y solo si quedan expansiones disponibles
+        bool esDiaDeRefugio = _currentDay % 2 != 0; // días impares: 1, 3, 5, 7...
+        bool quedanExpansiones = _shelterExpansions < maxShelterExpansions;
 
-        // 1 tarea aleatoria por categoría disponible, hasta 5 tareas
+        if (esDiaDeRefugio && quedanExpansiones)
+        {
+            categories.Add(TaskCategory.Refugio);
+            CapacityManager.Instance.EnableExpansion();
+        }
+        // No llamamos DisableExpansion acá — se deshabilita solo cuando se compra
+
+        // TODO: cuando haya prefabs de mejora, agregar lógica para días impares:
+        // bool esDiaDeMejora = !esDiaDeRefugio && TieneCorralesParaMejorar();
+        // if (esDiaDeMejora) categories.Add(TaskCategory.RefugioMejora);
+
         foreach (var category in categories)
         {
             if (result.Count >= 5) break;
@@ -61,13 +80,13 @@ public class TaskManager : MonoBehaviour
             result.Add(ToTaskData(picked));
         }
 
-        // Si quedaron menos de 5 por categoría bloqueada, rellenamos con Cuidado
+        // Rellenar hasta 5 con tareas de Cuidado sin duplicar
         while (result.Count < 5)
         {
             var pool = database.GetByCategory(TaskCategory.Cuidado);
-            TaskDefinition picked = pool[Random.Range(0, pool.Count)];
+            if (pool.Count == 0) break;
 
-            // Evitar duplicados
+            TaskDefinition picked = pool[Random.Range(0, pool.Count)];
             if (!result.Exists(t => t.id == picked.id))
                 result.Add(ToTaskData(picked));
         }
@@ -96,7 +115,19 @@ public class TaskManager : MonoBehaviour
     public void ReportShelterExpansion()
     {
         _shelterExpansions++;
+
+        // Solo actualiza la UI de tarea si hay una tarea de refugio activa este día
+        bool esDiaDeRefugio = _currentDay % 2 != 0;
+        if (esDiaDeRefugio)
+            taskListUI.UpdateTask(ShelterExpansionTaskId, 1);
+
         if (_shelterExpansions >= maxShelterExpansions)
-            Debug.Log("Refugio completo — categoría Refugio deshabilitada");
+            Debug.Log("Refugio completo — no se generarán más tareas de expansión.");
     }
+
+    // TODO: cuando haya prefabs de mejora, implementar:
+    // public void ReportShelterUpgrade()
+    // {
+    //     taskListUI.UpdateTask(ShelterUpgradeTaskId, 1);
+    // }
 }
