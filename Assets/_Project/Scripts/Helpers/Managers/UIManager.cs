@@ -140,16 +140,5 @@ public class UIManager : MonoBehaviour
     {
         GetPanel<RescuePanelUI>()?.Open();
     }
-
-    public void OpenShopPanel()
-    {
-        GetPanel<EndOfDayUI>()?.Open();
-    }
-
-    public void CloseShopPanel()
-    {
-        GetPanel<EndOfDayUI>()?.Close();
-    }
-
     
 }
