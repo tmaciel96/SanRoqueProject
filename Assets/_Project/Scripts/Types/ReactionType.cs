@@ -4,5 +4,7 @@ public enum ReactionType
 {
     Bark,
     Happy,
-    Love
+    Love,
+    Drinking,
+    Eating
 }

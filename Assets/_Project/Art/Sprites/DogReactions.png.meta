@@ -1,0 +1,2145 @@
+fileFormatVersion: 2
+guid: c644b4fe7e7b57942a8307a42a7a97ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5240093703184878006
+    second: DogReactions_0
+  - first:
+      213: 6307945040542610377
+    second: DogReactions_1
+  - first:
+      213: -8215777900244602302
+    second: DogReactions_2
+  - first:
+      213: -6351965645517361999
+    second: DogReactions_3
+  - first:
+      213: 4340560817110894001
+    second: DogReactions_4
+  - first:
+      213: -7354057921852176825
+    second: DogReactions_5
+  - first:
+      213: -7415219756235027674
+    second: DogReactions_6
+  - first:
+      213: -1037714586667129383
+    second: DogReactions_7
+  - first:
+      213: -1186416375022855859
+    second: DogReactions_8
+  - first:
+      213: -962130020127481494
+    second: DogReactions_9
+  - first:
+      213: 6314727393375967282
+    second: DogReactions_10
+  - first:
+      213: -7766579922821624472
+    second: DogReactions_11
+  - first:
+      213: 1909496822395813653
+    second: DogReactions_12
+  - first:
+      213: -1549322551140146564
+    second: DogReactions_13
+  - first:
+      213: 1316310452690047562
+    second: DogReactions_14
+  - first:
+      213: 5419225413635873554
+    second: DogReactions_15
+  - first:
+      213: 3448467582245818297
+    second: DogReactions_16
+  - first:
+      213: 5127995147329501117
+    second: DogReactions_17
+  - first:
+      213: -8758638506810609117
+    second: DogReactions_18
+  - first:
+      213: 3698250956814450621
+    second: DogReactions_19
+  - first:
+      213: -6831426820302724973
+    second: DogReactions_20
+  - first:
+      213: -8319069038528186595
+    second: DogReactions_21
+  - first:
+      213: -7210117173803047685
+    second: DogReactions_22
+  - first:
+      213: -781370707551113094
+    second: DogReactions_23
+  - first:
+      213: -2110618128063084879
+    second: DogReactions_24
+  - first:
+      213: 3307586164106320775
+    second: DogReactions_25
+  - first:
+      213: 4061770549625190861
+    second: DogReactions_26
+  - first:
+      213: -2947512145250006797
+    second: DogReactions_27
+  - first:
+      213: -6173874390292739279
+    second: DogReactions_28
+  - first:
+      213: -6974773762976127435
+    second: DogReactions_29
+  - first:
+      213: 3349422156593434891
+    second: DogReactions_30
+  - first:
+      213: -699054872177828787
+    second: DogReactions_31
+  - first:
+      213: 519787431053254429
+    second: DogReactions_32
+  - first:
+      213: -8742114708862767328
+    second: DogReactions_33
+  - first:
+      213: -4871338550096957105
+    second: DogReactions_34
+  - first:
+      213: 693281470896968816
+    second: DogReactions_35
+  - first:
+      213: 5154480823417908320
+    second: DogReactions_36
+  - first:
+      213: 668940106990158122
+    second: DogReactions_37
+  - first:
+      213: -3725872207364723417
+    second: DogReactions_38
+  - first:
+      213: -7133558735775160190
+    second: DogReactions_39
+  - first:
+      213: 6560021575350712356
+    second: DogReactions_40
+  - first:
+      213: -4865596235637196816
+    second: DogReactions_41
+  - first:
+      213: 8682340818716727448
+    second: DogReactions_42
+  - first:
+      213: -304204966088480934
+    second: DogReactions_43
+  - first:
+      213: 1957721233744960306
+    second: DogReactions_44
+  - first:
+      213: -1968610296484072618
+    second: DogReactions_45
+  - first:
+      213: -2576844774633250217
+    second: DogReactions_46
+  - first:
+      213: 1066272871245515301
+    second: DogReactions_47
+  - first:
+      213: 5062506141650861175
+    second: DogReactions_48
+  - first:
+      213: -6234160720074933954
+    second: DogReactions_49
+  - first:
+      213: -5985792881853682229
+    second: DogReactions_50
+  - first:
+      213: -1569778356492538533
+    second: DogReactions_51
+  - first:
+      213: -2556026665710769848
+    second: DogReactions_52
+  - first:
+      213: 95302966322159254
+    second: DogReactions_53
+  - first:
+      213: 2718094163168260735
+    second: DogReactions_54
+  - first:
+      213: -313933050758681646
+    second: DogReactions_55
+  - first:
+      213: -3847129376191493957
+    second: DogReactions_56
+  - first:
+      213: 3823818554730076230
+    second: DogReactions_57
+  - first:
+      213: 6481910644511236298
+    second: DogReactions_58
+  - first:
+      213: 3350619547897256051
+    second: DogReactions_59
+  - first:
+      213: 1993654158588797024
+    second: DogReactions_60
+  - first:
+      213: 7027753636090545060
+    second: DogReactions_61
+  - first:
+      213: -938154613069966903
+    second: DogReactions_62
+  - first:
+      213: 7522703947204982108
+    second: DogReactions_63
+  - first:
+      213: 2563013967107648993
+    second: DogReactions_64
+  - first:
+      213: -2651099078794121830
+    second: DogReactions_65
+  - first:
+      213: -4838296656636081163
+    second: DogReactions_66
+  - first:
+      213: 2042820056319164845
+    second: DogReactions_67
+  - first:
+      213: -7484081060498687
+    second: DogReactions_68
+  - first:
+      213: 6943957533345148653
+    second: DogReactions_69
+  - first:
+      213: -5580575289746909986
+    second: DogReactions_70
+  - first:
+      213: -5321558292778191423
+    second: DogReactions_71
+  - first:
+      213: -7620869602854114272
+    second: DogReactions_72
+  - first:
+      213: -9066463204879873917
+    second: DogReactions_73
+  - first:
+      213: -243290928990824379
+    second: DogReactions_74
+  - first:
+      213: 3159365018506272164
+    second: DogReactions_75
+  - first:
+      213: -1955991940761348136
+    second: DogReactions_76
+  - first:
+      213: -620891102341917940
+    second: DogReactions_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DogReactions_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 354
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b98818b57d88b840800000000000000
+      internalID: 5240093703184878006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 354
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3ba3ce7925a8750800000000000000
+      internalID: 6307945040542610377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 354
+        width: 52
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2427a6e5781bbfd80800000000000000
+      internalID: -8215777900244602302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_3
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 354
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bce37946e849d7a0800000000000000
+      internalID: -6351965645517361999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_4
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 354
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b5cfddd015cc3c30800000000000000
+      internalID: 4340560817110894001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_5
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 354
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7468a56984321f990800000000000000
+      internalID: -7354057921852176825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_6
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 354
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b07225be8d71990800000000000000
+      internalID: -7415219756235027674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_7
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 340
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5e67bd41c4991f0800000000000000
+      internalID: -1037714586667129383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_8
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 305
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d495e03c790098fe0800000000000000
+      internalID: -1186416375022855859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_9
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 340
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61ef8228d3d5a2f0800000000000000
+      internalID: -962130020127481494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_10
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 305
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2385a9f7b1b62a750800000000000000
+      internalID: 6314727393375967282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_11
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 340
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d498495b0973490800000000000000
+      internalID: -7766579922821624472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_12
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 305
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51fb3a63e35ef7a10800000000000000
+      internalID: 1909496822395813653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_13
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 340
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c722ac03953bf7ae0800000000000000
+      internalID: -1549322551140146564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_14
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 305
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4259b2f169744210800000000000000
+      internalID: 1316310452690047562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_15
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 340
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b19892dc4f43b40800000000000000
+      internalID: 5419225413635873554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_16
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 305
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf463bcefa6bdf20800000000000000
+      internalID: 3448467582245818297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_17
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 340
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7708eca6c4a2740800000000000000
+      internalID: 5127995147329501117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_18
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 305
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322fe7deea0137680800000000000000
+      internalID: -8758638506810609117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_19
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 340
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf7c2ba6a3d25330800000000000000
+      internalID: 3698250956814450621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_20
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 305
+        width: 53
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 390a7ca5085e131a0800000000000000
+      internalID: -6831426820302724973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_21
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 327
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17b39829cabc8c80800000000000000
+      internalID: -8319069038528186595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_22
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 328
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4a68a91a480fb90800000000000000
+      internalID: -7210117173803047685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_23
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 328
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70358a3b730825f0800000000000000
+      internalID: -781370707551113094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_24
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 328
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b6cc4cbef395b2e0800000000000000
+      internalID: -2110618128063084879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_25
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 328
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78bdd878718e6ed20800000000000000
+      internalID: 3307586164106320775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_26
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 328
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc97d817bce4e5830800000000000000
+      internalID: 4061770549625190861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_27
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 328
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8493b02555817d0800000000000000
+      internalID: -2947512145250006797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_28
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 267
+        width: 57
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b48bed3fdf15aa0800000000000000
+      internalID: -6173874390292739279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_29
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 267
+        width: 56
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536e71d6730a43f90800000000000000
+      internalID: -6974773762976127435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_30
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 293
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01139694b98b7e20800000000000000
+      internalID: 3349422156593434891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_31
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 267
+        width: 55
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c95592c457c46f0800000000000000
+      internalID: -699054872177828787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 267
+        width: 55
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f54a22ae7a63700800000000000000
+      internalID: 519787431053254429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_33
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 267
+        width: 54
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f64807df4cda680800000000000000
+      internalID: -8742114708862767328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_34
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 267
+        width: 56
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41fdcce567856cb0800000000000000
+      internalID: -4871338550096957105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_35
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 267
+        width: 55
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0749c2a13d70f9900800000000000000
+      internalID: 693281470896968816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_36
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 223
+        width: 64
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c2361dff4688740800000000000000
+      internalID: 5154480823417908320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_37
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 222
+        width: 59
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21092dab7d884900800000000000000
+      internalID: 668940106990158122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_38
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 222
+        width: 62
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d6689c7fa0b4cc0800000000000000
+      internalID: -3725872207364723417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_39
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 223
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288acb10022800d90800000000000000
+      internalID: -7133558735775160190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_40
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 223
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4287da5cdd0e90b50800000000000000
+      internalID: 6560021575350712356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_41
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 223
+        width: 59
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f7fd52b00ee97cb0800000000000000
+      internalID: -4865596235637196816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_42
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 223
+        width: 58
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8981c7e39fedd7870800000000000000
+      internalID: 8682340818716727448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_43
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 184
+        width: 65
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57e261f13f37cbf0800000000000000
+      internalID: -304204966088480934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_44
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 208
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b9b92f6193b2b10800000000000000
+      internalID: 1957721233744960306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_45
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 184
+        width: 64
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 653f3e09d571ea4e0800000000000000
+      internalID: -1968610296484072618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_46
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 208
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752e9a684553d3cd0800000000000000
+      internalID: -2576844774633250217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_47
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 184
+        width: 63
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a893ce6892cce00800000000000000
+      internalID: 1066272871245515301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_48
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 208
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c35567382a14640800000000000000
+      internalID: 5062506141650861175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_49
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 184
+        width: 63
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e397d37eadfcb79a0800000000000000
+      internalID: -6234160720074933954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 208
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcdac0a86113eeca0800000000000000
+      internalID: -5985792881853682229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_51
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 184
+        width: 63
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d6a2dd6e6073ae0800000000000000
+      internalID: -1569778356492538533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_52
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 208
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84922e93a4b278cd0800000000000000
+      internalID: -2556026665710769848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_53
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 184
+        width: 64
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e5cadfa85925100800000000000000
+      internalID: 95302966322159254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_54
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 208
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72f4b58d3c98b520800000000000000
+      internalID: 2718094163168260735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_55
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 184
+        width: 63
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db264abd8fa4abf0800000000000000
+      internalID: -313933050758681646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_56
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 208
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb8c22f17304c9ac0800000000000000
+      internalID: -3847129376191493957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_57
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 134
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648db3057bee01530800000000000000
+      internalID: 3823818554730076230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_58
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 134
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac06ae7736f54f950800000000000000
+      internalID: 6481910644511236298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_59
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 134
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37855e9f9bacf7e20800000000000000
+      internalID: 3350619547897256051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_60
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 134
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0606aa7f4e1eaab10800000000000000
+      internalID: 1993654158588797024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_61
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 134
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3032882b8978160800000000000000
+      internalID: 7027753636090545060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_62
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 134
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c1129799510bf2f0800000000000000
+      internalID: -938154613069966903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_63
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 134
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55f49b0263066860800000000000000
+      internalID: 7522703947204982108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_64
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 75
+        width: 54
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ede0d7af97a19320800000000000000
+      internalID: 2563013967107648993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_65
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 73
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d6c181f67653bd0800000000000000
+      internalID: -2651099078794121830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_66
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 77
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb0f3f33daeadcb0800000000000000
+      internalID: -4838296656636081163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_67
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 76
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da182f4940e895c10800000000000000
+      internalID: 2042820056319164845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_68
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 77
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1033be6944965eff0800000000000000
+      internalID: -7484081060498687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_69
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 76
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee6f6ef594ed5060800000000000000
+      internalID: 6943957533345148653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_70
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 78
+        width: 46
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed410545750dd82b0800000000000000
+      internalID: -5580575289746909986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_71
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 20
+        width: 61
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5fb637de60626b0800000000000000
+      internalID: -5321558292778191423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_72
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 19
+        width: 61
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cee4a297b3d3690800000000000000
+      internalID: -7620869602854114272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 19
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3884cf750c37d2280800000000000000
+      internalID: -9066463204879873917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_74
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 19
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5485d686038af9cf0800000000000000
+      internalID: -243290928990824379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_75
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 19
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad9cdbceb158db20800000000000000
+      internalID: 3159365018506272164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_76
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 19
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7946371bbead4e0800000000000000
+      internalID: -1955991940761348136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogReactions_77
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 20
+        width: 60
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0395b005d62267f0800000000000000
+      internalID: -620891102341917940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DogReactions_0: 5240093703184878006
+      DogReactions_1: 6307945040542610377
+      DogReactions_10: 6314727393375967282
+      DogReactions_11: -7766579922821624472
+      DogReactions_12: 1909496822395813653
+      DogReactions_13: -1549322551140146564
+      DogReactions_14: 1316310452690047562
+      DogReactions_15: 5419225413635873554
+      DogReactions_16: 3448467582245818297
+      DogReactions_17: 5127995147329501117
+      DogReactions_18: -8758638506810609117
+      DogReactions_19: 3698250956814450621
+      DogReactions_2: -8215777900244602302
+      DogReactions_20: -6831426820302724973
+      DogReactions_21: -8319069038528186595
+      DogReactions_22: -7210117173803047685
+      DogReactions_23: -781370707551113094
+      DogReactions_24: -2110618128063084879
+      DogReactions_25: 3307586164106320775
+      DogReactions_26: 4061770549625190861
+      DogReactions_27: -2947512145250006797
+      DogReactions_28: -6173874390292739279
+      DogReactions_29: -6974773762976127435
+      DogReactions_3: -6351965645517361999
+      DogReactions_30: 3349422156593434891
+      DogReactions_31: -699054872177828787
+      DogReactions_32: 519787431053254429
+      DogReactions_33: -8742114708862767328
+      DogReactions_34: -4871338550096957105
+      DogReactions_35: 693281470896968816
+      DogReactions_36: 5154480823417908320
+      DogReactions_37: 668940106990158122
+      DogReactions_38: -3725872207364723417
+      DogReactions_39: -7133558735775160190
+      DogReactions_4: 4340560817110894001
+      DogReactions_40: 6560021575350712356
+      DogReactions_41: -4865596235637196816
+      DogReactions_42: 8682340818716727448
+      DogReactions_43: -304204966088480934
+      DogReactions_44: 1957721233744960306
+      DogReactions_45: -1968610296484072618
+      DogReactions_46: -2576844774633250217
+      DogReactions_47: 1066272871245515301
+      DogReactions_48: 5062506141650861175
+      DogReactions_49: -6234160720074933954
+      DogReactions_5: -7354057921852176825
+      DogReactions_50: -5985792881853682229
+      DogReactions_51: -1569778356492538533
+      DogReactions_52: -2556026665710769848
+      DogReactions_53: 95302966322159254
+      DogReactions_54: 2718094163168260735
+      DogReactions_55: -313933050758681646
+      DogReactions_56: -3847129376191493957
+      DogReactions_57: 3823818554730076230
+      DogReactions_58: 6481910644511236298
+      DogReactions_59: 3350619547897256051
+      DogReactions_6: -7415219756235027674
+      DogReactions_60: 1993654158588797024
+      DogReactions_61: 7027753636090545060
+      DogReactions_62: -938154613069966903
+      DogReactions_63: 7522703947204982108
+      DogReactions_64: 2563013967107648993
+      DogReactions_65: -2651099078794121830
+      DogReactions_66: -4838296656636081163
+      DogReactions_67: 2042820056319164845
+      DogReactions_68: -7484081060498687
+      DogReactions_69: 6943957533345148653
+      DogReactions_7: -1037714586667129383
+      DogReactions_70: -5580575289746909986
+      DogReactions_71: -5321558292778191423
+      DogReactions_72: -7620869602854114272
+      DogReactions_73: -9066463204879873917
+      DogReactions_74: -243290928990824379
+      DogReactions_75: 3159365018506272164
+      DogReactions_76: -1955991940761348136
+      DogReactions_77: -620891102341917940
+      DogReactions_8: -1186416375022855859
+      DogReactions_9: -962130020127481494
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

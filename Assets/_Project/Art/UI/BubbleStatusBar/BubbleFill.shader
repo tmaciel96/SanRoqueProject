@@ -54,7 +54,8 @@ Shader "Custom/BubbleStateBar"
             {
                 Varyings OUT;
                 OUT.positionHCS = TransformObjectToHClip(IN.positionOS.xyz);
-                OUT.uv = TRANSFORM_TEX(IN.uv, _BaseMap);
+                //OUT.uv = TRANSFORM_TEX(IN.uv, _BaseMap);
+                OUT.uv = IN.uv;
                 return OUT;
             }
 
@@ -70,6 +71,8 @@ Shader "Custom/BubbleStateBar"
                 color.a = tex.a;
 
                 return color;
+                
+                
             }
             ENDHLSL
         }

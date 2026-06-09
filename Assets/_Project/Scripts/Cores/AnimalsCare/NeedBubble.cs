@@ -44,8 +44,10 @@ public class NeedBubble : MonoBehaviour
 
     void ApplyFill(float t)
     {
+
         _mat.SetFloat("_FillAmount", t);
         _mat.SetColor("_FillColor", GetFillColor(t));
+        
     }
 
     Color GetFillColor(float t)

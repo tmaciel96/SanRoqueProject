@@ -129,11 +129,12 @@ public class Animal : MonoBehaviour
         Hunger -= Time.deltaTime * 5f;
         Thirst -= Time.deltaTime * 2f;
 
-        Debug.Log(Thirst);
+        Debug.Log(Happiness);
 
         CheckingHealth();
 
         animator.SetBool("isSick", IsSick);
+        animator.SetBool("isSad", isSad && !IsSick);
 
         bool currentlySick = IsSick;
 
@@ -171,6 +172,9 @@ public class Animal : MonoBehaviour
             case ReactionType.Love:
                 animator.SetTrigger("Love");
                 break;
+            case ReactionType.Drinking:
+                animator.SetTrigger("Drinking");
+                break;
         }
 
         yield return new WaitForSeconds(0.5f);
@@ -199,7 +203,7 @@ public class Animal : MonoBehaviour
 
                 Drink(IsSick ? 10f : 20f);
 
-                if (IsHealthy) PlayReaction(ReactionType.Bark);
+                if (IsHealthy) PlayReaction(ReactionType.Drinking);
 
                 break;
             case CareType.Petting:
@@ -271,6 +275,11 @@ public class Animal : MonoBehaviour
         float chance = Random.Range(0f, 100f);
 
         if (chance <= 5 ) Health = 40;
+    }
+
+    private void checkingHappiness()
+    {
+
     }
 
 }

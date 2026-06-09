@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9f2762dbcb03280438b890b3c7ad8843
+guid: fb58b2f34d4db3a44ab0dd7bf895f4ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2208497510161859296
-    second: Corral_0
+      213: 7921079401069667217
+    second: buckwater_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Corral_0
+      name: buckwater_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1254
-        height: 1254
+        x: 32
+        y: 22
+        width: 213
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e2488cc8c826ae10800000000000000
-      internalID: 2208497510161859296
+      spriteID: 193eb626fb35ded60800000000000000
+      internalID: 7921079401069667217
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Corral_0: 2208497510161859296
+      buckwater_0: 7921079401069667217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
