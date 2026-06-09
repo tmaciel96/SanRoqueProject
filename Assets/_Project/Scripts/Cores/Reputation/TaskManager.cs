@@ -30,12 +30,6 @@ public class TaskManager : MonoBehaviour
     private void OnEnable() => DayManager.OnDayStarted += OnDayStarted;
     private void OnDisable() => DayManager.OnDayStarted -= OnDayStarted;
 
-    private void Start()
-    {
-        // Genera las tareas del día 1 porque el evento ya se disparó antes de suscribirse
-        OnDayStarted();
-    }
-
     private void OnDayStarted()
     {
         _currentDay = DayManager.Instance.CurrentDay;
