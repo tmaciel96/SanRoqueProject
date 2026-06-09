@@ -12,6 +12,7 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] private MoneyCard moneyCard;
 
     public int CurrentMoney { get; private set; }
+    public bool CanAfford(int amount) => amount <= CurrentMoney;
 
     public event Action<int> OnMoneyChanged;
 

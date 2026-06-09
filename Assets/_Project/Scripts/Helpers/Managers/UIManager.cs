@@ -140,5 +140,17 @@ public class UIManager : MonoBehaviour
     {
         GetPanel<RescuePanelUI>()?.Open();
     }
+
+    // ── Tienda ────────────────────────────────────────────────────────────
+
+    public void ShowShopItemPanel(ShopItemData itemData)
+    {
+        GetPanel<ShopItemPanelUI>()?.Open(itemData);
+    }
+
+    public void CloseShopItemPanel()
+    {
+        GetPanel<ShopItemPanelUI>()?.Close();
+    }
     
 }

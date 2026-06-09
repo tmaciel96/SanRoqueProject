@@ -1,113 +1,84 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Maneja el stock de insumos comprables: comida, medicina y juguetes.
+/// Separado del WaterManager intencionalmente.
+/// </summary>
 public class InventoryManager : MonoBehaviour
 {
-    [Serializable]
-    private class ItemStock
-    {
-        public ShelterItemData itemData;
-        [Min(0)] public int count;
-    }
-
     public static InventoryManager Instance { get; private set; }
 
-    [Header("Economy")]
-    [SerializeField] private int startingMoney = 1250;
+    [Header("Stock inicial")]
+    [SerializeField] private int initialFood = 0;
+    [SerializeField] private int initialMedicine = 0;
+    [SerializeField] private int initialToys = 0;
 
-    [Header("Starting Inventory")]
-    [SerializeField] private List<ItemStock> startingItems = new List<ItemStock>();
+    // ── Stock actual ──────────────────────────────────────────────────────
 
-    private readonly Dictionary<ShelterItemData, int> itemCounts = new Dictionary<ShelterItemData, int>();
+    public int Food { get; private set; }
+    public int Medicine { get; private set; }
+    public int Toys { get; private set; }
 
-    public event Action Changed;
+    // ── Eventos ───────────────────────────────────────────────────────────
 
-    public int Money { get; private set; }
+    public static event System.Action OnInventoryChanged;
+
+    // ── Ciclo de vida ─────────────────────────────────────────────────────
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+        if (Instance == null) Instance = this;
+        else { Destroy(gameObject); return; }
 
-        Instance = this;
-        Money = Mathf.Max(0, startingMoney);
-
-        foreach (ItemStock stock in startingItems)
-        {
-            if (stock.itemData == null)
-                continue;
-
-            itemCounts[stock.itemData] = Mathf.Clamp(stock.count, 0, stock.itemData.MaxInventory);
-        }
+        Food = initialFood;
+        Medicine = initialMedicine;
+        Toys = initialToys;
     }
 
-    public void RegisterItem(ShelterItemData itemData)
-    {
-        if (itemData == null || itemCounts.ContainsKey(itemData))
-            return;
+    // ── API genérica (usada por ShopItemPanelUI) ──────────────────────────
 
-        itemCounts[itemData] = 0;
-        Changed?.Invoke();
+    public int GetStock(InventoryItemType type)
+    {
+        return type switch
+        {
+            InventoryItemType.Food => Food,
+            InventoryItemType.Medicine => Medicine,
+            InventoryItemType.Toy => Toys,
+            _ => 0
+        };
     }
 
-    public int GetCount(ShelterItemData itemData)
+    public void AddItem(InventoryItemType type, int amount)
     {
-        if (itemData == null)
-            return 0;
+        if (amount <= 0) return;
 
-        return itemCounts.TryGetValue(itemData, out int count) ? count : 0;
+        switch (type)
+        {
+            case InventoryItemType.Food: Food += amount; break;
+            case InventoryItemType.Medicine: Medicine += amount; break;
+            case InventoryItemType.Toy: Toys += amount; break;
+        }
+
+        OnInventoryChanged?.Invoke();
+        Debug.Log($"InventoryManager: +{amount} {type}. Nuevo stock: {GetStock(type)}");
     }
 
-    public bool HasItem(ShelterItemData itemData)
+    public void ConsumeItem(InventoryItemType type, int amount)
     {
-        return GetCount(itemData) > 0;
+        if (amount <= 0) return;
+
+        switch (type)
+        {
+            case InventoryItemType.Food: Food = Mathf.Max(0, Food - amount); break;
+            case InventoryItemType.Medicine: Medicine = Mathf.Max(0, Medicine - amount); break;
+            case InventoryItemType.Toy: Toys = Mathf.Max(0, Toys - amount); break;
+        }
+
+        OnInventoryChanged?.Invoke();
     }
 
-    public bool TryBuyItem(ShelterItemData itemData)
+    public bool HasStock(InventoryItemType type, int amount = 1)
     {
-        if (itemData == null)
-        {
-            Debug.LogWarning("Inventario: no se puede comprar un item nulo.");
-            return false;
-        }
-
-        RegisterItem(itemData);
-
-        int currentCount = GetCount(itemData);
-        if (currentCount >= itemData.MaxInventory)
-        {
-            Debug.Log($"Inventario: {itemData.DisplayName} ya esta al maximo ({currentCount}/{itemData.MaxInventory}).");
-            return false;
-        }
-
-        if (Money < itemData.Cost)
-        {
-            Debug.Log($"Inventario: dinero insuficiente para comprar {itemData.DisplayName}. Costo: ${itemData.Cost}, disponible: ${Money}.");
-            return false;
-        }
-
-        Money -= itemData.Cost;
-        itemCounts[itemData] = currentCount + 1;
-        Debug.Log($"Inventario: compraste {itemData.DisplayName}. Stock: {itemCounts[itemData]}/{itemData.MaxInventory}. Dinero: ${Money}.");
-        Changed?.Invoke();
-        return true;
-    }
-
-    public bool TryConsumeItem(ShelterItemData itemData)
-    {
-        if (!HasItem(itemData))
-        {
-            Debug.Log($"Inventario: no quedan unidades de {itemData?.DisplayName ?? "este item"}.");
-            return false;
-        }
-
-        itemCounts[itemData]--;
-        Debug.Log($"Inventario: usaste {itemData.DisplayName}. Stock: {itemCounts[itemData]}/{itemData.MaxInventory}.");
-        Changed?.Invoke();
-        return true;
+        return GetStock(type) >= amount;
     }
 }

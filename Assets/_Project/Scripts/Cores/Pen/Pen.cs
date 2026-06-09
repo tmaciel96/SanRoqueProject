@@ -46,8 +46,6 @@ public class Pen : MonoBehaviour, IInventoryItemTarget
 
     public void OnClick()
     {
-        if (ItemSelectionManager.Instance != null && ItemSelectionManager.Instance.TryApplyToTarget(this))
-            return;
 
         switch (_currentState)
         {

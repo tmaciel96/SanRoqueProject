@@ -125,6 +125,12 @@ public class TaskManager : MonoBehaviour
             Debug.Log("Refugio completo — no se generarán más tareas de expansión.");
     }
 
+    private const string ShopTaskId = "compra_tienda"; // debe coincidir con el id en tu TaskDatabase
+
+    public void ReportShopPurchase()
+    {
+        taskListUI.UpdateTask(ShopTaskId, 1);
+    }
     // TODO: cuando haya prefabs de mejora, implementar:
     // public void ReportShelterUpgrade()
     // {

@@ -17,13 +17,13 @@ public class AnimalInteraction : MonoBehaviour, IInventoryItemTarget
 
     private void OnMouseDown()
     {
-        if (ItemSelectionManager.Instance != null && ItemSelectionManager.Instance.TryApplyToTarget(this))
+       /* if (ItemSelectionManager.Instance != null && ItemSelectionManager.Instance.TryApplyToTarget(this))
             return;
 
         Debug.Log("Click sobre animal");
 
         if (UIManager.Instance != null)
-            UIManager.Instance.ShowAnimalPanel(animal);
+            UIManager.Instance.ShowAnimalPanel(animal);*/
     }
 
     public bool CanReceiveItem(ShelterItemData itemData)

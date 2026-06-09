@@ -7,7 +7,7 @@ public enum ShelterItemTargetType
     Custom
 }
 
-[CreateAssetMenu(fileName = "ShelterItemData", menuName = "San Roque/Inventory/Item Data")]
+[CreateAssetMenu(fileName = "ShelterItemData", menuName = "SanRoque/Inventory/Item Data")]
 public class ShelterItemData : ScriptableObject
 {
     [Header("UI")]
