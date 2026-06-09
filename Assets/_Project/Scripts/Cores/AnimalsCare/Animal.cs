@@ -175,6 +175,9 @@ public class Animal : MonoBehaviour
             case ReactionType.Drinking:
                 animator.SetTrigger("Drinking");
                 break;
+            case ReactionType.Eating:
+                animator.SetTrigger("Eating");
+                break;
         }
 
         yield return new WaitForSeconds(0.5f);
@@ -195,7 +198,7 @@ public class Animal : MonoBehaviour
 
                 Feed(IsSick ? 10f : 20f);
 
-                if (IsHealthy) PlayReaction(ReactionType.Bark);
+                if (IsHealthy) PlayReaction(ReactionType.Eating);
 
                 break;
             case CareType.Water:
