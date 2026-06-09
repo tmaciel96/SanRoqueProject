@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0bac701308f2c7469c02c5a10351362, type: 3}
+  m_Name: ShelterDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::ShelterDatabase
+  tiers:
+  - label: "Corral b\xE1sico"
+    unlockCost: 100
+    animalCapacity: 1
+  - label: "Corral peque\xF1o"
+    unlockCost: 300
+    animalCapacity: 1
+  - label: Corral mediano
+    unlockCost: 600
+    animalCapacity: 2
+  - label: Corral grande
+    unlockCost: 1000
+    animalCapacity: 2
+  - label: Corral amplio
+    unlockCost: 1500
+    animalCapacity: 3
+  - label: Corral premium
+    unlockCost: 2000
+    animalCapacity: 3

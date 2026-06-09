@@ -3,105 +3,91 @@ using UnityEngine;
 public class ShelterGridManager : MonoBehaviour
 {
     [Header("Grid Layout")]
-    [SerializeField] private int rows = 3;
-    [SerializeField] private int columns = 4;
-    [SerializeField] private Vector2 cellSize = new Vector2(4f, 3f);
-    [SerializeField] private Transform gridOrigin;
+    [SerializeField] private int rows = 2;
+    [SerializeField] private int columns = 3;
+    [SerializeField] private Vector2 cellSize = new Vector2(180f, 150f);  // en píxeles UI
+    [SerializeField] private Vector2 spacing = new Vector2(10f, 10f);     // espacio entre pens
 
-    [Header("Economy")]
-    [SerializeField] private int baseCost = 1000;
-    [SerializeField] private float costMultiplier = 1.5f;
-
-    [Header("References")]
+    [Header("Referencias")]
     [SerializeField] private GameObject penPrefab;
+    [SerializeField] private RectTransform gridContainer; // el GridOrigin como RectTransform
 
-    private Camera mainCamera;
-    private Pen[,] gridMatrix;
+    private Pen[,] _gridMatrix;
 
-    void Start()
+    private void Awake()
     {
-        mainCamera = Camera.main;
-        gridMatrix = new Pen[rows, columns];
+        _gridMatrix = new Pen[rows, columns];
         GenerateGrid();
     }
 
-    /*void Update()
-    {
-        HandleInput();
-    }*/
-
     private void GenerateGrid()
     {
-        if (gridOrigin == null)
+        if (gridContainer == null)
         {
-            Debug.LogError("Grid Origin Transform is missing!");
+            Debug.LogError("ShelterGridManager: falta el Grid Container (RectTransform).");
             return;
         }
-
-        Vector3 originPos = gridOrigin.position;
 
         for (int r = 0; r < rows; r++)
         {
             for (int c = 0; c < columns; c++)
             {
-                // Strict grid layout with zero spacing (vallas compartidas)
-                float posX = originPos.x + (c * cellSize.x);
-                float posY = originPos.y - (r * cellSize.y); 
-                Vector3 spawnPosition = new Vector3(posX, posY, 0f);
+                // Posición en píxeles dentro del Canvas
+                float posX = c * (cellSize.x + spacing.x);
+                float posY = -r * (cellSize.y + spacing.y); // negativo porque Y baja en UI
 
-                GameObject newPenObj = Instantiate(penPrefab, spawnPosition, Quaternion.identity, gridOrigin);
-                Pen newPen = newPenObj.GetComponent<Pen>();
+                GameObject penObj = Instantiate(penPrefab, gridContainer);
+                RectTransform penRect = penObj.GetComponent<RectTransform>();
 
-                // Progression rule: First pen [0,0] starts empty, its direct neighbors start available
+                // Anclar arriba-izquierda del container y posicionar desde ahí
+                penRect.anchorMin = new Vector2(0f, 1f);
+                penRect.anchorMax = new Vector2(0f, 1f);
+                penRect.pivot = new Vector2(0f, 1f);
+                penRect.anchoredPosition = new Vector2(posX, posY);
+                penRect.sizeDelta = cellSize;
+
+                Pen pen = penObj.GetComponent<Pen>();
+
                 PenState initialState = PenState.Locked;
-                if (r == 0 && c == 0)
-                {
-                    initialState = PenState.Empty;
-                }
-                else if ((r == 0 && c == 1))
-                {
-                    initialState = PenState.Available;
-                }
 
-                // Progressive cost based on matrix distance
-                int calculatedCost = Mathf.RoundToInt(baseCost * Mathf.Pow(costMultiplier, r + c));
-
-                newPen.Init(r, c, initialState, calculatedCost, this);
-                gridMatrix[r, c] = newPen;
+                pen.Init(r, c, initialState, this);
+                _gridMatrix[r, c] = pen;
             }
         }
     }
 
-    public void UnlockNeighbors(int currentRow, int currentColumn)
+    /// <summary>
+    /// Habilita el primer pen disponible para comprar.
+    /// Llamado por CapacityManager.EnableExpansion().
+    /// </summary>
+    public void ShowNextAvailable()
     {
-        // Check neighbor to the right
-        if (currentColumn + 1 < columns)
-        {
-            gridMatrix[currentRow, currentColumn + 1].SetAvailable();
-        }
+        if (_gridMatrix == null) return;
 
-        // Check neighbor below
-        else if (currentRow + 1 < rows)
+        // Busca el primer pen que esté Locked y lo marca Available
+        for (int r = 0; r < rows; r++)
         {
-            gridMatrix[currentRow + 1, 0].SetAvailable();
-        }
-    }
-
-   /* private void HandleInput()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
-
-            if (hit.collider != null)
+            for (int c = 0; c < columns; c++)
             {
-                Pen clickedPen = hit.collider.GetComponent<Pen>();
-                if (clickedPen != null)
+                Pen pen = _gridMatrix[r, c];
+                if (pen != null && pen.CurrentState == PenState.Locked)
                 {
-                    clickedPen.OnClicked();
+                    pen.SetAvailable();
+                    return;
                 }
             }
         }
-    }*/
+    }
+
+    /// <summary>
+    /// Desbloquea el siguiente vecino disponible.
+    /// Llamado por CapacityManager después de un desbloqueo exitoso.
+    /// </summary>
+    public void UnlockNeighbors(int row, int column)
+    {
+        if (column + 1 < columns)
+            _gridMatrix[row, column + 1].SetAvailable();
+        else if (row + 1 < rows)
+            _gridMatrix[row + 1, 0].SetAvailable();
+    }
 }

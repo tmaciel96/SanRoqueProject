@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1e8a7ff8cf8e54992b6e7a4785904e, type: 3}
+  m_Name: Juguetitos
+  m_EditorClassIdentifier: Assembly-CSharp::ShelterItemData
+  displayName: Juguetitos
+  icon: {fileID: -5562791630036632887, guid: c506052cb66fc9a4db35465238a28667, type: 3}
+  cost: 150
+  maxInventory: 10
+  targetType: 0
+  hungerReduction: 0
+  happinessIncrease: 20
+  healthIncrease: 0
+  penUpgradeAmount: 1
