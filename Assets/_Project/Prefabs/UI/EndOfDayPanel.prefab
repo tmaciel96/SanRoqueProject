@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -137.59546}
+  m_AnchoredPosition: {x: 510, y: -102.27319}
   m_SizeDelta: {x: 1020, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &294063542354816452
@@ -308,7 +308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -295.19092}
+  m_AnchoredPosition: {x: 510, y: -224.54639}
   m_SizeDelta: {x: 1020, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &672133166521314933
@@ -599,7 +599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -351.48865}
+  m_AnchoredPosition: {x: 510, y: -263.18298}
   m_SizeDelta: {x: 1020, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6384622270463596957
@@ -763,7 +763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -216.39319}
+  m_AnchoredPosition: {x: 510, y: -163.40979}
   m_SizeDelta: {x: 1020, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7679009150306399739
@@ -900,7 +900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 515, y: -81.29773}
+  m_AnchoredPosition: {x: 515, y: -63.636597}
   m_SizeDelta: {x: 1030, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6062283305047556464
@@ -1187,7 +1187,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8574078777039032105}
   - component: {fileID: 9181696110585391821}
-  - component: {fileID: 6637419001161239559}
   - component: {fileID: 2130352240672348206}
   m_Layer: 5
   m_Name: EndOfDayPanel
@@ -1224,36 +1223,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7133426756488458829}
   m_CullTransparentMesh: 1
---- !u!114 &6637419001161239559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7133426756488458829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.028301895, g: 0.009011559, b: 0, a: 0.9647059}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &2130352240672348206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,6 +1235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9a230d7c717d244a6736f9b6e4ebd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndOfDayUI
+  pausesTime: 1
   titleText: {fileID: 7407506557304166087}
   animalsText: {fileID: 7830792825325738629}
   pointsText: {fileID: 9159146712506653661}
