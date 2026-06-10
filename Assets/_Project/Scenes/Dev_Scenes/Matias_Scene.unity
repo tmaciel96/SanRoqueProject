@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2873977a56873af49bc4a3c678b27eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShelterManager
-  dogPrfb: {fileID: 8003052216929166466, guid: 77ecf2632577d874fb7fc4ff05ca52ff, type: 3}
+  dogPrfb: {fileID: 4720147176494494713, guid: 06c69f595233a0049aac28de64369cd8, type: 3}
 --- !u!4 &40746997
 Transform:
   m_ObjectHideFlags: 0
@@ -2762,7 +2762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02245804680b4aa4ab2e10d1470430ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  clickBlocker: {fileID: 0}
 --- !u!4 &1171368036
 Transform:
   m_ObjectHideFlags: 0

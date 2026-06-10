@@ -416,7 +416,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DogAnimations_0
+  m_Name: DogAnimatiorController
   serializedVersion: 6
   m_AnimatorParameters:
   - m_Name: Bark
