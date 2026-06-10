@@ -98,7 +98,7 @@ public class ShopItemPanelUI : BasePanel
         if (!MoneyManager.Instance.TrySpend(totalCost)) return;
 
         InventoryManager.Instance.AddItem(_currentItem.inventoryType, _quantity);
-        TaskManager.Instance.ReportShopPurchase();
+        TaskManager.Instance.ReportShopPurchase(_currentItem.inventoryType, _quantity);
 
         _quantity = 1;
         RefreshDynamicInfo();
