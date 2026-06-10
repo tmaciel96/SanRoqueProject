@@ -130,7 +130,7 @@ public class Animal : MonoBehaviour
     private void Update()
     {
         
-        Hunger -= Time.deltaTime * 5f;
+        Hunger -= Time.deltaTime * 3f;
         Thirst -= Time.deltaTime * 2f;
 
         Debug.Log(Happiness);
