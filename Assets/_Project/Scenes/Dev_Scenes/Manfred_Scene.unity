@@ -1505,7 +1505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 234.45633, y: -41.7225}
+  m_AnchoredPosition: {x: 234.45633, y: -41.722504}
   m_SizeDelta: {x: 400, y: 63.445}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &430255020
@@ -2202,7 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b59340dcca191469b3b69e6d6fafc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayTimer
-  dayDurationInSeconds: 10
+  dayDurationInSeconds: 360
   timeCard: {fileID: 1995679140}
 --- !u!4 &632869823
 Transform:
@@ -5543,8 +5543,8 @@ Canvas:
   m_GameObject: {fileID: 1546607765}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 520987875}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
