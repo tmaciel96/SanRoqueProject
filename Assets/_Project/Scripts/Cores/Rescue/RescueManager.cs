@@ -225,6 +225,13 @@ public class RescueManager : MonoBehaviour
         //  ───────────────────── FIX TEMPORAL ─────────────────────
         // Hasta no resolver bien lo de las horas de translado hasta el refugio, asignamos al animal a un corral inmediatamente
         cm.AssignAnimalToPen(request);
+        
+
+        if (MoneyManager.Instance != null)
+            MoneyManager.Instance.AddMoney(request.rewardAmount);
+
+        if (TaskManager.Instance != null)
+            TaskManager.Instance.ReportRescue();
         // ───────────────────────────────────────────────────────────────
 
         request.StartRescue();
@@ -233,6 +240,7 @@ public class RescueManager : MonoBehaviour
         RefreshBadge();
         OnPendingRequestsUpdated?.Invoke(pendingRequests);
         OnRescueStarted?.Invoke(request);
+
         return true;
     }
 
