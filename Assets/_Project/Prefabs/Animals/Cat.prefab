@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 833b00e92bb20444bba1dc55990ed3f9, type: 2}
+    - target: {fileID: 2191540044511400058, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
+      propertyPath: eatClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6964d3f1218464f4f904d9a26f5936e2, type: 3}
+    - target: {fileID: 2191540044511400058, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
+      propertyPath: sadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 58702404ba86e3548a9767a8be65615d, type: 3}
+    - target: {fileID: 2191540044511400058, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
+      propertyPath: barkClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1988fe34eaa17414abf1fd16828aedbc, type: 3}
+    - target: {fileID: 2191540044511400058, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
+      propertyPath: drinkClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f62dc7aabe99964cb5e3e88d1d1be6c, type: 3}
+    - target: {fileID: 2191540044511400058, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
+      propertyPath: pantingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4a91be9ebd40aef4282d618951588f2b, type: 3}
     - target: {fileID: 2386357037652291716, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
