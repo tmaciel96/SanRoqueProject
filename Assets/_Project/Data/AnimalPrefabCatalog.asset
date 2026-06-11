@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4213bc26784277489a3207b9b7d3d81, type: 3}
   m_Name: AnimalPrefabCatalog
   m_EditorClassIdentifier: Assembly-CSharp::AnimalPrefabCatalog
-  dogPrefab: {fileID: 8003052216929166466, guid: ccc7664cc1d10914791f32e75f19a6ca, type: 3}
-  catPrefab: {fileID: 0}
+  dogPrefab: {fileID: 1019880845694425458, guid: 4c158bdf6f0bc9f4aa1a3151eb5d7e88, type: 3}
+  catPrefab: {fileID: 4720147176494494713, guid: 06c69f595233a0049aac28de64369cd8, type: 3}
