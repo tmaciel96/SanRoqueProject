@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4213bc26784277489a3207b9b7d3d81, type: 3}
+  m_Name: AnimalPrefabCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalPrefabCatalog
+  dogPrefab: {fileID: 8003052216929166466, guid: ccc7664cc1d10914791f32e75f19a6ca, type: 3}
+  catPrefab: {fileID: 0}

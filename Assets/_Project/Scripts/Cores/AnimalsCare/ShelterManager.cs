@@ -19,7 +19,7 @@ public class ShelterManager : MonoBehaviour
 
         Animal animal = dog.GetComponent<Animal>();
 
-        animal.Initialize(0, "Firulais", 100f, 100f, 100.0f, 100.0f);
+        animal.Initialize(0, "Firulais", AnimalType.Dog, 100f, 100f, 100.0f, 100.0f);
         Debug.Log(animal.ToString());
     }
 }

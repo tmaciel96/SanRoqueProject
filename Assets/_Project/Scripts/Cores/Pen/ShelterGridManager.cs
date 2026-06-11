@@ -90,4 +90,21 @@ public class ShelterGridManager : MonoBehaviour
         else if (row + 1 < rows)
             _gridMatrix[row + 1, 0].SetAvailable();
     }
+
+    public Pen GetFirstEmptyPen()
+    {
+        if (_gridMatrix == null) return null;
+
+        for (int r = 0; r < rows; r++)
+        {
+            for (int c = 0; c < columns; c++)
+            {
+                Pen pen = _gridMatrix[r, c];
+                if (pen != null && pen.CurrentState == PenState.Empty)
+                    return pen;
+            }
+        }
+
+        return null;
+    }
 }

@@ -36,23 +36,62 @@ public class Animal : MonoBehaviour
     [SerializeField] private bool isSleeping = false;
     [SerializeField] private bool isAwake = false;
 
+    [Header("Visual Variants")]
+    [SerializeField] private GameObject[] visualVariants;
+
+    public int VariantCount => visualVariants != null && visualVariants.Length > 0
+        ? visualVariants.Length
+        : 1;
+
+    public AnimalType Species => animalType;
 
     public void Awake()
     {
-        animator = GetComponentInChildren<Animator>();
-
-        audioSource = GetComponentInChildren<AudioSource>();
-
+        ResolveVariant(-1);
+        BindComponents();
     }
 
-    public void Initialize (int id, string name, float hunger, float thirst, float happiness, float health )
+    public void Initialize(int id, string name, AnimalType type, float hunger, float thirst, float happiness, float health, int variantIndex = -1)
     {
         this.id = id;
         this.animalName = name;
+        this.animalType = type;
         this.hunger = hunger;
         this.thirst = thirst;
         this.happiness = happiness;
         this.health = health;
+
+        if (variantIndex >= 0)
+        {
+            ResolveVariant(variantIndex);
+            BindComponents();
+        }
+    }
+
+    private void ResolveVariant(int index)
+    {
+        if (visualVariants == null || visualVariants.Length == 0)
+            return;
+
+        for (int i = 0; i < visualVariants.Length; i++)
+        {
+            if (visualVariants[i] != null)
+                visualVariants[i].SetActive(false);
+        }
+
+        int chosen = index >= 0 && index < visualVariants.Length
+            ? index
+            : Random.Range(0, visualVariants.Length);
+
+        if (visualVariants[chosen] != null)
+            visualVariants[chosen].SetActive(true);
+    }
+
+    private void BindComponents()
+    {
+        animator = GetComponentInChildren<Animator>();
+        if (audioSource == null)
+            audioSource = GetComponentInChildren<AudioSource>();
     }
     public int ID => id;
 
@@ -129,7 +168,7 @@ public class Animal : MonoBehaviour
         Hunger -= Time.deltaTime * 5f;
         Thirst -= Time.deltaTime * 2f;
 
-        Debug.Log(Happiness);
+        //Debug.Log(Happiness);
 
         CheckingHealth();
 

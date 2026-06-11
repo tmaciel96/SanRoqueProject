@@ -11,11 +11,13 @@ public class RescueItemUI : MonoBehaviour
 
     private RescueRequest currentRequest;
     private RescueManager manager;
+    private RescuePanelUI panel;
 
-    public void Setup(RescueRequest request, RescueManager rescueManager)
+    public void Setup(RescueRequest request, RescueManager rescueManager, RescuePanelUI rescuePanel)
     {
         currentRequest = request;
         manager = rescueManager;
+        panel = rescuePanel;
 
         nameText.text = request.animalData.animalName;
 
@@ -28,6 +30,16 @@ public class RescueItemUI : MonoBehaviour
 
         rejectButton.onClick.RemoveAllListeners();
         rejectButton.onClick.AddListener(ClickReject);
+
+        RefreshAcceptButton();
+    }
+
+    public void RefreshAcceptButton()
+    {
+        if (acceptButton == null || CapacityManager.Instance == null)
+            return;
+
+        acceptButton.interactable = CapacityManager.Instance.HasAvailableSpace;
     }
 
     private void ClickAccept()
@@ -35,14 +47,17 @@ public class RescueItemUI : MonoBehaviour
         if (!manager.AcceptRescue(currentRequest))
         {
             Debug.LogWarning("No hay capacidad para aceptar este rescate.");
+            RefreshAcceptButton();
             return;
         }
-        // Si acepta, RescuePanelUI.RefreshList lo maneja via OnRequestsUpdated
+
+        panel?.RefreshAcceptButtons();
+        Destroy(gameObject);
     }
 
     private void ClickReject()
     {
         manager.RejectRescue(currentRequest);
-        // Idem
+        Destroy(gameObject);
     }
 }

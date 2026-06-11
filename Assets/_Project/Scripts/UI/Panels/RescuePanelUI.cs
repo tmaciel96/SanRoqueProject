@@ -10,23 +10,32 @@ public class RescuePanelUI : BasePanel
 
     protected override void Awake()
     {
-        base.Awake(); // auto-registro en UIManager
+        base.Awake();
     }
 
     private void OnEnable()
     {
-        RescueManager.OnRequestsUpdated += RefreshList;
+        RescueManager.OnRequestsUpdated += HandleDayRequestsUpdated;
+        CapacityManager.OnCapacityChanged += RefreshAcceptButtons;
     }
 
     private void OnDisable()
     {
-        RescueManager.OnRequestsUpdated -= RefreshList;
+        RescueManager.OnRequestsUpdated -= HandleDayRequestsUpdated;
+        CapacityManager.OnCapacityChanged -= RefreshAcceptButtons;
     }
 
     public override void Open()
     {
         base.Open();
         RefreshList();
+        RefreshAcceptButtons();
+    }
+
+    private void HandleDayRequestsUpdated()
+    {
+        RefreshList();
+        RefreshAcceptButtons();
     }
 
     private void RefreshList()
@@ -41,7 +50,18 @@ public class RescuePanelUI : BasePanel
         {
             GameObject newGo = Instantiate(itemPrefab, listParent);
             RescueItemUI itemScript = newGo.GetComponent<RescueItemUI>();
-            itemScript.Setup(request, rescueManager);
+            itemScript.Setup(request, rescueManager, this);
+        }
+    }
+
+    public void RefreshAcceptButtons()
+    {
+        if (!gameObject.activeSelf || listParent == null) return;
+
+        foreach (Transform child in listParent)
+        {
+            RescueItemUI item = child.GetComponent<RescueItemUI>();
+            item?.RefreshAcceptButton();
         }
     }
 }

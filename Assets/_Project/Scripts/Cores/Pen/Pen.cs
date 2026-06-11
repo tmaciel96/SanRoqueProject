@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public enum PenState { Locked, Available, Empty, Occupied }
@@ -18,11 +17,10 @@ public class Pen : MonoBehaviour, IInventoryItemTarget
     [Header("UI - Info")]
     [SerializeField] private TextMeshProUGUI txtNivel;
     [SerializeField] private TextMeshProUGUI txtCapacidad;
-
-    [Header("UI - Animal")]
-    [SerializeField] private Image imgAnimal;
+    [SerializeField] private TextMeshProUGUI txtAnimalName;
 
     private int _row;
+    private GameObject _spawnedAnimal;
     private int _column;
     private PenState _currentState;
     private ShelterGridManager _gridManager;
@@ -47,23 +45,8 @@ public class Pen : MonoBehaviour, IInventoryItemTarget
     public void OnClick()
     {
 
-        switch (_currentState)
-        {
-            case PenState.Available:
-                TryBuy();
-                break;
-            case PenState.Empty:
-                // TODO: abrir panel de asignación de animal
-                Debug.Log($"Pen [{_row},{_column}]: vacío, listo para recibir un animal.");
-                break;
-            case PenState.Occupied:
-                // TODO: abrir panel de interacción con el animal
-                Debug.Log($"Pen [{_row},{_column}]: ocupado.");
-                break;
-            case PenState.Locked:
-                Debug.Log($"Pen [{_row},{_column}]: bloqueado.");
-                break;
-        }
+        if (_currentState == PenState.Available)
+            TryBuy();
     }
 
     private void TryBuy()
@@ -89,18 +72,47 @@ public class Pen : MonoBehaviour, IInventoryItemTarget
         }
     }
 
-    public void AssignAnimal(AnimalData animal)
+    public bool PlaceAnimal(GameObject animalPrefab, AnimalData animalData, int animalId)
     {
+        if (_currentState != PenState.Empty || animalPrefab == null || animalContainer == null)
+            return false;
+
+        if (_spawnedAnimal != null)
+            Destroy(_spawnedAnimal);
+
+        _spawnedAnimal = Instantiate(animalPrefab, animalContainer.transform);
+
+        Animal animal = _spawnedAnimal.GetComponent<Animal>();
+        if (animal != null)
+        {
+            animal.Initialize(
+                animalId,
+                animalData.animalName,
+                animalData.species,
+                animalData.hunger,
+                animalData.thirst,
+                animalData.affection,
+                animalData.health,
+                animalData.variantIndex);
+        }
+
         _currentState = PenState.Occupied;
+        txtAnimalName.text = animalData.animalName;
         RefreshInfoPanel();
         UpdateVisuals();
-        // TODO: asignar sprite del animal cuando esté disponible
-        // imgAnimal.sprite = animal.sprite;
+        return true;
     }
 
     public void RemoveAnimal()
     {
+        if (_spawnedAnimal != null)
+        {
+            Destroy(_spawnedAnimal);
+            _spawnedAnimal = null;
+        }
+
         _currentState = PenState.Empty;
+        txtAnimalName.text = "";
         RefreshInfoPanel();
         UpdateVisuals();
     }
@@ -114,7 +126,7 @@ public class Pen : MonoBehaviour, IInventoryItemTarget
     }
 
     private void RefreshInfoPanel()
-    {
+    { 
         if (txtNivel != null)
             txtNivel.text = "Nv.1";
 

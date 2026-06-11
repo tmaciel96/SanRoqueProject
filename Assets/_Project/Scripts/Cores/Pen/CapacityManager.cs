@@ -1,8 +1,10 @@
 using UnityEngine;
+using System;
 using System.Collections.Generic;
 
 public class CapacityManager : MonoBehaviour
 {
+    public static event Action OnCapacityChanged;
     public static CapacityManager Instance { get; private set; }
 
     [Header("UI")]
@@ -22,6 +24,7 @@ public class CapacityManager : MonoBehaviour
     public int UnlockedCount => _unlockedTiers.Count;
     public bool ExpansionAvailable => _expansionAvailable;
     public bool HasShelter => _unlockedTiers.Count > 0; // false hasta que compre el primero
+    public bool HasAvailableSpace => HasShelter && _currentAnimals < MaxCapacity;
 
     private void Awake()
     {
@@ -142,5 +145,6 @@ public class CapacityManager : MonoBehaviour
     private void RefreshUI()
     {
         capacityCard?.UpdateCapacity(_currentAnimals, MaxCapacity);
+        OnCapacityChanged?.Invoke();
     }
 }

@@ -2175,7 +2175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RescueManager
   maxRequests: 4
-  mockHasCorralSpace: 1
+  animalPrefabCatalog: {fileID: 11400000, guid: 859b7b3451fadda43ad0da04a4b35e35, type: 2}
+  shelterGridManager: {fileID: 1687888823}
   rescueBadge: {fileID: 7802341570964250300}
 --- !u!114 &632869820
 MonoBehaviour:
@@ -2202,7 +2203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b59340dcca191469b3b69e6d6fafc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayTimer
-  dayDurationInSeconds: 360
+  dayDurationInSeconds: 30
   timeCard: {fileID: 1995679140}
 --- !u!4 &632869823
 Transform:
@@ -2445,6 +2446,8 @@ GameObject:
   - component: {fileID: 744592082}
   - component: {fileID: 744592085}
   - component: {fileID: 744592084}
+  - component: {fileID: 744592087}
+  - component: {fileID: 744592086}
   m_Layer: 5
   m_Name: ShopPanel
   m_TagString: Untagged
@@ -2561,6 +2564,47 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &744592086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744592080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &744592087
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744592080}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: -1905950073
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &776327721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3143,6 +3187,52 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &997624066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7133426756488458829, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
+  m_PrefabInstance: {fileID: 5004363573062471854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &997624069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997624066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &997624070
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997624066}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: -1905950073
+  m_SortingOrder: 10
+  m_TargetDisplay: 0
 --- !u!114 &1008807467 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9010484804521633433, guid: 8f78b3cbb97691d4db9e287b2b3c50f5, type: 3}
@@ -3270,6 +3360,8 @@ GameObject:
   - component: {fileID: 1014435313}
   - component: {fileID: 1014435315}
   - component: {fileID: 1014435316}
+  - component: {fileID: 1014435317}
+  - component: {fileID: 1014435318}
   m_Layer: 5
   m_Name: RescuePanel
   m_TagString: Untagged
@@ -3321,6 +3413,47 @@ MonoBehaviour:
   rescueManager: {fileID: 632869819}
   listParent: {fileID: 1929956057}
   itemPrefab: {fileID: 9053352451058129566, guid: 0fa3c32fee649d84990cb0afdf36924d, type: 3}
+--- !u!223 &1014435317
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014435312}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: -1905950073
+  m_SortingOrder: 10
+  m_TargetDisplay: 0
+--- !u!114 &1014435318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014435312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1014621599
 GameObject:
   m_ObjectHideFlags: 0
@@ -6737,7 +6870,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7133426756488458829, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 997624070}
+    - targetCorrespondingSourceObject: {fileID: 7133426756488458829, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 997624069}
   m_SourcePrefab: {fileID: 100100000, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
 --- !u!1001 &6983066520065560373
 PrefabInstance:
