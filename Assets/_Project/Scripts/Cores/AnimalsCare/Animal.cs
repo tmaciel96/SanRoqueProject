@@ -171,6 +171,7 @@ public class Animal : MonoBehaviour
         
         Hunger -= Time.deltaTime * 3f;
         Thirst -= Time.deltaTime * 2f;
+        Happiness -= Time.deltaTime * 0.75f;
 
         //Debug.Log(Happiness);
 
