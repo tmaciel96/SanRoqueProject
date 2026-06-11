@@ -97,9 +97,9 @@ MonoBehaviour:
   visualAvailable: {fileID: 7439108591819283852}
   visualEmpty: {fileID: 5820822475011061509}
   animalContainer: {fileID: 8973955734345659622}
-  txtPrecio: {fileID: 0}
-  txtNivel: {fileID: 0}
-  txtCapacidad: {fileID: 0}
+  txtPrecio: {fileID: 2258954221223003720}
+  txtNivel: {fileID: 8042601574689689884}
+  txtCapacidad: {fileID: 1478296052013046768}
   imgAnimal: {fileID: 0}
 --- !u!114 &7926903604484539441
 MonoBehaviour:
@@ -1078,14 +1078,14 @@ RectTransform:
   m_GameObject: {fileID: 8444639139565207129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6194813, y: 0.6194813, z: 0.6194813}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7419587730534072886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9.5, y: 15.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8771542051029334109
