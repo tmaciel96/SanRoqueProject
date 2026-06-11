@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e11ac4440f2ef454e9f2ec824ae0d874
+guid: cad4402fb4f2b6448aa1129ffe50fdde
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5450786553235070542
-    second: SingleBubble_0
+      213: 4606908045521496030
+    second: Heart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,10 +48,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SingleBubble_0
+      name: Heart_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 225
-        height: 225
+        x: 59
+        y: 67
+        width: 228
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4e5d0c9d7515ab40800000000000000
-      internalID: 5450786553235070542
+      spriteID: ed7a23e75760fef30800000000000000
+      internalID: 4606908045521496030
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SingleBubble_0: 5450786553235070542
+      Heart_0: 4606908045521496030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -18,6 +18,9 @@ public class Animal : MonoBehaviour
     [SerializeField] private AudioClip barkClip;
     [SerializeField] private AudioClip sadClip;
     [SerializeField] private AudioClip angryClip;
+    [SerializeField] private AudioClip pantingClip;
+    [SerializeField] private AudioClip drinkClip;
+    [SerializeField] private AudioClip eatClip;
 
 
     /*private string description;
@@ -32,6 +35,7 @@ public class Animal : MonoBehaviour
     private float lowNeedsTimer = 0f;
     private float randomDiseaseTimer = 0f;
     private bool wasSick;
+    private bool wasSad;
     
     [SerializeField] private bool isSleeping = false;
     [SerializeField] private bool isAwake = false;
@@ -60,7 +64,7 @@ public class Animal : MonoBehaviour
     public bool IsSick => Health <= 40f;
     public bool IsCritical => Health <= 10f;
 
-    public bool isSad => Happiness <= 40f;
+    public bool IsSad => Happiness <= 40f;
 
 
     public string AnimalName
@@ -126,7 +130,7 @@ public class Animal : MonoBehaviour
     private void Update()
     {
         
-        Hunger -= Time.deltaTime * 5f;
+        Hunger -= Time.deltaTime * 3f;
         Thirst -= Time.deltaTime * 2f;
 
         Debug.Log(Happiness);
@@ -134,15 +138,17 @@ public class Animal : MonoBehaviour
         CheckingHealth();
 
         animator.SetBool("isSick", IsSick);
-        animator.SetBool("isSad", isSad && !IsSick);
+        animator.SetBool("isSad", IsSad && !IsSick);
 
         bool currentlySick = IsSick;
+        bool currentlySad = IsSad;
 
-        if (currentlySick && !wasSick) audioSource.PlayOneShot(sadClip);
+        if((currentlySick && !wasSick) || (currentlySad && !wasSad)) audioSource.PlayOneShot(sadClip);
 
-        if(wasSick && !currentlySick) PlayReaction(ReactionType.Happy);
+        if((wasSick && !currentlySick) || (wasSad && !currentlySad)) PlayReaction(ReactionType.Happy);
         
         wasSick = currentlySick;
+        wasSad = currentlySad;
         
     }
 
@@ -191,30 +197,52 @@ public class Animal : MonoBehaviour
         {
             case CareType.Food:
                 if (IsCritical) {
-                    Debug.Log(IsCritical);
+                    
                     audioSource.PlayOneShot(angryClip);
                     break; }
                 
 
-                Feed(IsSick ? 10f : 20f);
+                Feed(IsSick || IsSad ? 10f : 20f);
 
-                if (IsHealthy) PlayReaction(ReactionType.Eating);
+                if (IsHealthy)
+                {
+                    PlayReaction(ReactionType.Eating);
+                    audioSource.PlayOneShot(eatClip); 
+                }
 
                 break;
             case CareType.Water:
-                if (IsCritical) break;
+                if (IsCritical)
+                {
+                    
+                    audioSource.PlayOneShot(angryClip);
+                    break;
+                }
 
-                Drink(IsSick ? 10f : 20f);
+                Drink(IsSick || IsSad ? 10f : 20f);
 
-                if (IsHealthy) PlayReaction(ReactionType.Drinking);
+                if (IsHealthy)
+                {
+                    PlayReaction(ReactionType.Drinking);
+                    audioSource.PlayOneShot(drinkClip);
+                }
 
                 break;
             case CareType.Petting:
-                if (IsCritical)  break;
+                if (IsCritical)
+                {
+                    
+                    audioSource.PlayOneShot(angryClip);
+                    break;
+                }
 
-                Pet(IsSick ? 0f : 2f);
+                Pet(IsSick ? 1f : 2f);
 
-                if (IsHealthy) PlayReaction(ReactionType.Love);
+                if (IsHealthy)
+                {
+                    PlayReaction(ReactionType.Love);
+                    audioSource.PlayOneShot(pantingClip);
+                }
                 
                 break;
             case CareType.Medicine:
@@ -224,6 +252,7 @@ public class Animal : MonoBehaviour
                 Heal(100f);
                 Feed(60f);
                 Drink(60f);
+                Pet(30);
                 
                 break;
 

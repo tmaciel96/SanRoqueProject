@@ -20,8 +20,16 @@ public class NeedBubble : MonoBehaviour
 
     private Material _mat;
 
+    [SerializeField] private float pulseThreshold = 0.1f;
+    [SerializeField] private float pulseSpeed = 4f;
+    [SerializeField] private float pulseAmount = 0.15f;
+
+    private Vector3 originalScale;
+
+
     void Awake()
     {
+        originalScale = transform.localScale;
         // instanciamos el material para que cada burbuja sea independiente
         _mat = fillRenderer.material = new Material(fillRenderer.sharedMaterial);
     }
@@ -29,6 +37,8 @@ public class NeedBubble : MonoBehaviour
     void Update()
     {
         ApplyFill(fillAmount);
+
+        HandlePulse();
     }
 
     public void SetFill(float value)
@@ -58,5 +68,20 @@ public class NeedBubble : MonoBehaviour
             return Color.Lerp(colorEmpty, colorMid, (t - thresholdEmpty) / (thresholdMid - thresholdEmpty));
         else
             return colorEmpty;
+    }
+
+    private void HandlePulse()
+    {
+        if(fillAmount > pulseThreshold)
+        {
+            transform.localScale = originalScale;
+            return;
+        }
+
+        float scaleOffset =
+            Mathf.Sin(Time.time * pulseSpeed) * pulseAmount;
+
+        transform.localScale = 
+            originalScale * (1f + scaleOffset);
     }
 }
