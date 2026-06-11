@@ -29,6 +29,8 @@ public class DraggableItem : MonoBehaviour
 
             Debug.Log($"Aplicado {careType} a {hoveredAnimal.AnimalName}");
 
+            reportAppliedCare(careType);
+
             Destroy( gameObject );
         }
 
@@ -78,7 +80,7 @@ public class DraggableItem : MonoBehaviour
         if (animal != null)
         {
             hoveredAnimal = animal;
-            Debug.Log($"Entró en contacto con el {animal.AnimalName}");
+            Debug.Log($"Entrï¿½ en contacto con el {animal.AnimalName}");
         }
     }
 
@@ -94,5 +96,12 @@ public class DraggableItem : MonoBehaviour
         isDragging = true;
 
         offset = transform.position - GetMouseWorldPosition();
+    }
+
+    private void reportAppliedCare(CareType careType){
+        if (TaskManager.Instance == null)
+            Debug.LogWarning("[DraggableItem] No se encontro la referencia a TaskManager");
+
+        TaskManager.Instance.ReportCare(careType);
     }
 }

@@ -81,4 +81,9 @@ public class InventoryManager : MonoBehaviour
     {
         return GetStock(type) >= amount;
     }
+
+    public bool HasAnyStock()
+    {
+        return Food > 0 || Medicine > 0 || Toys > 0;
+    }
 }

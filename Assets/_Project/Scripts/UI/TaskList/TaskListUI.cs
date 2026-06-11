@@ -53,4 +53,30 @@ public class TaskListUI : MonoBehaviour
                 return false;
         return true;
     }
+
+    public bool HasIncompleteTask(string taskId)
+    {
+        foreach (var item in taskItems)
+        {
+            if (item.gameObject.activeSelf && item.TaskId == taskId && !item.IsCompleted)
+                return true;
+        }
+
+        return false;
+    }
+
+    public bool TryGetRemainingForTask(string taskId, out int remaining)
+    {
+        foreach (var item in taskItems)
+        {
+            if (item.gameObject.activeSelf && item.TaskId == taskId && !item.IsCompleted)
+            {
+                remaining = item.Remaining;
+                return true;
+            }
+        }
+
+        remaining = 0;
+        return false;
+    }
 }

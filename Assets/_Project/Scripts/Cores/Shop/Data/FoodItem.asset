@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Alimento
   description: Necesario para alimenatar a las mascotas
   icon: {fileID: 4271309658533835991, guid: 310d76860e9b8b94784da8b85a2b2d7b, type: 3}
-  pricePerUnit: 50
+  pricePerUnit: 100
   inventoryType: 0
