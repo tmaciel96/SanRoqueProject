@@ -20,6 +20,15 @@ public class TaskManager : MonoBehaviour
     private const string BuyMedicineTaskId = "comprar_medicina";
     private const string BuyToysTaskId = "comprar_juguetes";
     private const string RescueTaskId = "rescatar";
+    private const string PettingTaskId = "dar_mimos";
+    private const string GiveFoodTaskId = "alimentar";
+    private const string GiveWaterTaskId = "dar_agua";
+    private const string GiveMediceTaskId = "curar";
+
+
+
+
+
     // TODO: cuando haya prefabs de mejora de nivel, agregar const string ShelterUpgradeTaskId = "mejorar_refugio";
 
     private int _currentDay = 1;
@@ -151,6 +160,21 @@ public class TaskManager : MonoBehaviour
     {
         AddProgress(RescueTaskId, amount);
     }
+
+    public void ReportCare(CareType careType){
+
+        string taskId = careType switch
+        {
+            CareType.Food => GiveFoodTaskId,
+            CareType.Water => GiveWaterTaskId,
+            CareType.Petting => PettingTaskId,
+            CareType.Medicine => GiveMediceTaskId,
+            _ => null
+        };
+
+        AddProgress(taskId);
+    }
+
     // TODO: cuando haya prefabs de mejora, implementar:
     // public void ReportShelterUpgrade()
     // {
