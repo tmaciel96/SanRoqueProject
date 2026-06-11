@@ -82,15 +82,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4353814613105701788, guid: 1f6e05e594f3d8e488a32123a30fa7e0, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.25, y: 7.4375}
+  m_Size: {x: 2.375, y: 2.3333333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1202710343274717426
 Animator:
@@ -102,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 6134976153411165978}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3705042462301404398cf7caddc7f44c, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 2191540044511400058}
   - component: {fileID: 2220530870157097379}
   m_Layer: 0
-  m_Name: Dog_2
+  m_Name: AnimalBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,12 +225,12 @@ MonoBehaviour:
   id: 0
   animalType: 0
   audioSource: {fileID: 2220530870157097379}
-  barkClip: {fileID: 8300000, guid: 6797ac577e66e7c4bb2f575afd36378f, type: 3}
-  sadClip: {fileID: 8300000, guid: 9e82c762b28e2f54ba05ddae6af7ec21, type: 3}
-  angryClip: {fileID: 8300000, guid: 83e231a6db163674c9d687bbea65d74f, type: 3}
-  pantingClip: {fileID: 8300000, guid: d9094cbef450ba145a2679f9ef5de2bc, type: 3}
-  drinkClip: {fileID: 8300000, guid: be852341c478bd24c9b7505b22aaadb3, type: 3}
-  eatClip: {fileID: 8300000, guid: 96fa8d8f06a2e774d8ce9567cc9d2383, type: 3}
+  barkClip: {fileID: 0}
+  sadClip: {fileID: 0}
+  angryClip: {fileID: 0}
+  pantingClip: {fileID: 0}
+  drinkClip: {fileID: 0}
+  eatClip: {fileID: 0}
   hunger: 0
   thirst: 0
   happiness: 0

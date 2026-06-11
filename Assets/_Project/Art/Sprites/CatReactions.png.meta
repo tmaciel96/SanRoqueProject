@@ -1,0 +1,1379 @@
+fileFormatVersion: 2
+guid: f55bdd44f7b50674ca9f13218a9586f5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1770175442666475643
+    second: CatReactions_0
+  - first:
+      213: 2571354733429573824
+    second: CatReactions_1
+  - first:
+      213: 1651257904699666463
+    second: CatReactions_2
+  - first:
+      213: -8422168812186687800
+    second: CatReactions_3
+  - first:
+      213: 8512803580100373008
+    second: CatReactions_4
+  - first:
+      213: 7963592927001810526
+    second: CatReactions_5
+  - first:
+      213: -635669958669354278
+    second: CatReactions_6
+  - first:
+      213: -1949525299550384763
+    second: CatReactions_7
+  - first:
+      213: 5060332336456755401
+    second: CatReactions_8
+  - first:
+      213: -9018542048586506589
+    second: CatReactions_9
+  - first:
+      213: 5356070175633720856
+    second: CatReactions_10
+  - first:
+      213: -4573391500207197506
+    second: CatReactions_11
+  - first:
+      213: -4396481390706785277
+    second: CatReactions_12
+  - first:
+      213: -1029970308333624609
+    second: CatReactions_13
+  - first:
+      213: -8483820229737264153
+    second: CatReactions_14
+  - first:
+      213: 3461956526297850703
+    second: CatReactions_15
+  - first:
+      213: 408447144559174084
+    second: CatReactions_16
+  - first:
+      213: 4711156629040838173
+    second: CatReactions_17
+  - first:
+      213: 2608579070202886303
+    second: CatReactions_18
+  - first:
+      213: 8656423310729626669
+    second: CatReactions_19
+  - first:
+      213: 668515514550841146
+    second: CatReactions_20
+  - first:
+      213: -995881443355425080
+    second: CatReactions_21
+  - first:
+      213: -7316565558245311767
+    second: CatReactions_22
+  - first:
+      213: 61038734823910505
+    second: CatReactions_23
+  - first:
+      213: 8557711696580860307
+    second: CatReactions_24
+  - first:
+      213: -4341986381681708548
+    second: CatReactions_25
+  - first:
+      213: 7680692265126320937
+    second: CatReactions_26
+  - first:
+      213: 1385794113289808779
+    second: CatReactions_27
+  - first:
+      213: -8037291189848542030
+    second: CatReactions_28
+  - first:
+      213: -4079411198405001470
+    second: CatReactions_29
+  - first:
+      213: 8880299896728362041
+    second: CatReactions_30
+  - first:
+      213: 4951539646368199011
+    second: CatReactions_31
+  - first:
+      213: 8368430347379516969
+    second: CatReactions_32
+  - first:
+      213: 4647794146727948402
+    second: CatReactions_33
+  - first:
+      213: 7574532784426756285
+    second: CatReactions_34
+  - first:
+      213: -2866117513284814240
+    second: CatReactions_35
+  - first:
+      213: 942537772790144252
+    second: CatReactions_36
+  - first:
+      213: 1070029316041666495
+    second: CatReactions_37
+  - first:
+      213: 7220036600974632708
+    second: CatReactions_38
+  - first:
+      213: -937192048623916095
+    second: CatReactions_39
+  - first:
+      213: -6058442248658900996
+    second: CatReactions_40
+  - first:
+      213: -4760388319968769969
+    second: CatReactions_41
+  - first:
+      213: 4583155210861870883
+    second: CatReactions_42
+  - first:
+      213: -5823080235419580311
+    second: CatReactions_43
+  - first:
+      213: -2013536239515032300
+    second: CatReactions_44
+  - first:
+      213: 5682263882971176926
+    second: CatReactions_45
+  - first:
+      213: 7323785634826992700
+    second: CatReactions_46
+  - first:
+      213: -4726020960120414350
+    second: CatReactions_47
+  - first:
+      213: -1502901855512609663
+    second: CatReactions_48
+  - first:
+      213: -5042993471093730656
+    second: CatReactions_49
+  - first:
+      213: -4691946235216709357
+    second: CatReactions_50
+  - first:
+      213: -4573305192906546266
+    second: CatReactions_51
+  - first:
+      213: 3584496105247575095
+    second: CatReactions_52
+  - first:
+      213: 679994358067419777
+    second: CatReactions_53
+  - first:
+      213: 1465761766653980638
+    second: CatReactions_54
+  - first:
+      213: 4902767454498914227
+    second: CatReactions_55
+  - first:
+      213: 1534115681440211836
+    second: CatReactions_56
+  - first:
+      213: 6390772229689176563
+    second: CatReactions_57
+  - first:
+      213: 8558704919511723515
+    second: CatReactions_58
+  - first:
+      213: -3847170492483367817
+    second: CatReactions_59
+  - first:
+      213: 2216995614723440168
+    second: CatReactions_60
+  - first:
+      213: 101552569072651488
+    second: CatReactions_61
+  - first:
+      213: 2447877125186235044
+    second: CatReactions_62
+  - first:
+      213: 933915203110955292
+    second: CatReactions_63
+  - first:
+      213: -5940214164726653359
+    second: CatReactions_64
+  - first:
+      213: 6505293934370249738
+    second: CatReactions_65
+  - first:
+      213: -5663658774060705628
+    second: CatReactions_66
+  - first:
+      213: 1739641738997623408
+    second: CatReactions_67
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CatReactions_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 343
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b705142bf2de09810800000000000000
+      internalID: 1770175442666475643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 343
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8c695a1894fa320800000000000000
+      internalID: 2571354733429573824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_2
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 343
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10fd2ac0527ae610800000000000000
+      internalID: 1651257904699666463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 343
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c62d3f76127e1b80800000000000000
+      internalID: -8422168812186687800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_4
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 343
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a6e8ad0cd832670800000000000000
+      internalID: 8512803580100373008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_5
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 343
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5691cdf29d548e60800000000000000
+      internalID: 7963592927001810526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_6
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 343
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ada302f5a85ad27f0800000000000000
+      internalID: -635669958669354278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_7
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 285
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d89afa115e1f4e0800000000000000
+      internalID: -1949525299550384763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_11
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 283
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2fb5359ac0880c0800000000000000
+      internalID: -4573391500207197506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_14
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 285
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ebcc34437a634a80800000000000000
+      internalID: -8483820229737264153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_17
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 284
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16b43b4ef3616140800000000000000
+      internalID: 4711156629040838173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_20
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 285
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3fe3ab815b074900800000000000000
+      internalID: 668515514550841146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_23
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 286
+        width: 59
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ce7bae76ad8d000800000000000000
+      internalID: 61038734823910505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 284
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf13744046a2eb3c0800000000000000
+      internalID: -4341986381681708548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_29
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 238
+        width: 62
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20fb152f0250367c0800000000000000
+      internalID: -4079411198405001470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_31
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 238
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3613a01f21767b440800000000000000
+      internalID: 4951539646368199011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_32
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 238
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926a7272013a22470800000000000000
+      internalID: 8368430347379516969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_33
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 238
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270fbd0c628408040800000000000000
+      internalID: 4647794146727948402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_34
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 238
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8ae439f652e1960800000000000000
+      internalID: 7574532784426756285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_35
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 238
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06af1289e418938d0800000000000000
+      internalID: -2866117513284814240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 237
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc5b8e4c11941d00800000000000000
+      internalID: 942537772790144252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_38
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 173
+        width: 68
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40769620909b23460800000000000000
+      internalID: 7220036600974632708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_40
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 175
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7a774bfd61ceba0800000000000000
+      internalID: -6058442248658900996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_45
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 174
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf578845e47bde40800000000000000
+      internalID: 5682263882971176926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_47
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 175
+        width: 76
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27fd8fee9fcc96eb0800000000000000
+      internalID: -4726020960120414350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_48
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 176
+        width: 58
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c35e1a9be942be0800000000000000
+      internalID: -1502901855512609663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_49
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 108
+        width: 59
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a218de2820b30ab0800000000000000
+      internalID: -5042993471093730656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_50
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 108
+        width: 57
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3193da012cbd2eeb0800000000000000
+      internalID: -4691946235216709357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_51
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 108
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a32b5f482b5880c0800000000000000
+      internalID: -4573305192906546266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_52
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 108
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c8d0c5730beb130800000000000000
+      internalID: 3584496105247575095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_53
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 108
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18ad0e11443df6900800000000000000
+      internalID: 679994358067419777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_54
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 108
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf62c29f8e675410800000000000000
+      internalID: 1465761766653980638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_55
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 62
+        width: 65
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bff0cd16012a0440800000000000000
+      internalID: 4902767454498914227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_56
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 63
+        width: 67
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c73a99c85164a4510800000000000000
+      internalID: 1534115681440211836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_57
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 63
+        width: 64
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1fd0fab7590b850800000000000000
+      internalID: 6390772229689176563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_58
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 62
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd62e047c0a6c670800000000000000
+      internalID: 8558704919511723515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_59
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 62
+        width: 64
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c0a2df1da1c9ac0800000000000000
+      internalID: -3847170492483367817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_60
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 62
+        width: 61
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e7034f3c954ce10800000000000000
+      internalID: 2216995614723440168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_61
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 10
+        width: 48
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec8a950689c86100800000000000000
+      internalID: 101552569072651488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_62
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 10
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aaa784a64b98f120800000000000000
+      internalID: 2447877125186235044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_63
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 10
+        width: 50
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19e3cbddeee5fc00800000000000000
+      internalID: 933915203110955292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_64
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 9
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e59b590be109da0800000000000000
+      internalID: -5940214164726653359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_65
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 9
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c54a5ed52774a50800000000000000
+      internalID: 6505293934370249738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_66
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 7
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a856133a54a661b0800000000000000
+      internalID: -5663658774060705628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatReactions_67
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 6
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a6561d1f2742810800000000000000
+      internalID: 1739641738997623408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 10508b5ca644d4e499004a3846b40967
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CatReactions_0: 1770175442666475643
+      CatReactions_1: 2571354733429573824
+      CatReactions_10: 5356070175633720856
+      CatReactions_11: -4573391500207197506
+      CatReactions_12: -4396481390706785277
+      CatReactions_13: -1029970308333624609
+      CatReactions_14: -8483820229737264153
+      CatReactions_15: 3461956526297850703
+      CatReactions_16: 408447144559174084
+      CatReactions_17: 4711156629040838173
+      CatReactions_18: 2608579070202886303
+      CatReactions_19: 8656423310729626669
+      CatReactions_2: 1651257904699666463
+      CatReactions_20: 668515514550841146
+      CatReactions_21: -995881443355425080
+      CatReactions_22: -7316565558245311767
+      CatReactions_23: 61038734823910505
+      CatReactions_24: 8557711696580860307
+      CatReactions_25: -4341986381681708548
+      CatReactions_26: 7680692265126320937
+      CatReactions_27: 1385794113289808779
+      CatReactions_28: -8037291189848542030
+      CatReactions_29: -4079411198405001470
+      CatReactions_3: -8422168812186687800
+      CatReactions_30: 8880299896728362041
+      CatReactions_31: 4951539646368199011
+      CatReactions_32: 8368430347379516969
+      CatReactions_33: 4647794146727948402
+      CatReactions_34: 7574532784426756285
+      CatReactions_35: -2866117513284814240
+      CatReactions_36: 942537772790144252
+      CatReactions_37: 1070029316041666495
+      CatReactions_38: 7220036600974632708
+      CatReactions_39: -937192048623916095
+      CatReactions_4: 8512803580100373008
+      CatReactions_40: -6058442248658900996
+      CatReactions_41: -4760388319968769969
+      CatReactions_42: 4583155210861870883
+      CatReactions_43: -5823080235419580311
+      CatReactions_44: -2013536239515032300
+      CatReactions_45: 5682263882971176926
+      CatReactions_46: 7323785634826992700
+      CatReactions_47: -4726020960120414350
+      CatReactions_48: -1502901855512609663
+      CatReactions_49: -5042993471093730656
+      CatReactions_5: 7963592927001810526
+      CatReactions_50: -4691946235216709357
+      CatReactions_51: -4573305192906546266
+      CatReactions_52: 3584496105247575095
+      CatReactions_53: 679994358067419777
+      CatReactions_54: 1465761766653980638
+      CatReactions_55: 4902767454498914227
+      CatReactions_56: 1534115681440211836
+      CatReactions_57: 6390772229689176563
+      CatReactions_58: 8558704919511723515
+      CatReactions_59: -3847170492483367817
+      CatReactions_6: -635669958669354278
+      CatReactions_60: 2216995614723440168
+      CatReactions_61: 101552569072651488
+      CatReactions_62: 2447877125186235044
+      CatReactions_63: 933915203110955292
+      CatReactions_64: -5940214164726653359
+      CatReactions_65: 6505293934370249738
+      CatReactions_66: -5663658774060705628
+      CatReactions_67: 1739641738997623408
+      CatReactions_7: -1949525299550384763
+      CatReactions_8: 5060332336456755401
+      CatReactions_9: -9018542048586506589
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

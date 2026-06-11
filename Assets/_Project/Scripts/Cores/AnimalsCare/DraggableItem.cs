@@ -41,6 +41,12 @@ public class DraggableItem : MonoBehaviour
         if (isDragging)
         {
             transform.position = GetMouseWorldPosition() + offset;
+
+            if(Input.GetMouseButtonDown(1))
+            {
+                Destroy( gameObject );
+                return;
+            }
         }
 
         if (careType == CareType.Petting && hoveredAnimal != null)
