@@ -1,8 +1,10 @@
 using UnityEngine;
+using System;
 using System.Collections.Generic;
 
 public class CapacityManager : MonoBehaviour
 {
+    public static event Action OnCapacityChanged;
     public static CapacityManager Instance { get; private set; }
 
     [Header("UI")]
@@ -22,6 +24,12 @@ public class CapacityManager : MonoBehaviour
     public int UnlockedCount => _unlockedTiers.Count;
     public bool ExpansionAvailable => _expansionAvailable;
     public bool HasShelter => _unlockedTiers.Count > 0; // false hasta que compre el primero
+    public bool HasAvailableSpace => HasShelter && _currentAnimals < MaxCapacity;
+
+    [Header("Referencias")]
+    [SerializeField] private ShelterGridManager shelterGridManager;
+
+    // ── Control de expansión (llamado por TaskManager) ────────────────────
 
     private void Awake()
     {
@@ -29,11 +37,6 @@ public class CapacityManager : MonoBehaviour
         Instance = this;
         RefreshUI();
     }
-
-    [Header("Referencias")]
-    [SerializeField] private ShelterGridManager shelterGridManager;
-
-    // ── Control de expansión (llamado por TaskManager) ────────────────────
 
     public void EnableExpansion()
     {
@@ -49,13 +52,19 @@ public class CapacityManager : MonoBehaviour
 
     // ── Animales ──────────────────────────────────────────────────────────
 
-    public bool TryAddAnimal()
+    public void AssignAnimalToPen(RescueRequest completedRequest)
     {
-        if (_currentAnimals >= MaxCapacity) return false;
+        if (_currentAnimals >= MaxCapacity) {
+            Debug.LogError("[CapacityManager] No se pudo asignar al animal a un corral despues de haber aceptado un rescate y esperado su llegada.");
+            return;
+        }
+                  
+        Pen pen = shelterGridManager.GetFirstEmptyPen();
+        pen.PlaceAnimal(completedRequest.animalData);
+
         _currentAnimals++;
         TotalAnimalsHelped++;
         RefreshUI();
-        return true;
     }
 
     public void RemoveAnimal()
@@ -142,5 +151,6 @@ public class CapacityManager : MonoBehaviour
     private void RefreshUI()
     {
         capacityCard?.UpdateCapacity(_currentAnimals, MaxCapacity);
+        OnCapacityChanged?.Invoke();
     }
 }

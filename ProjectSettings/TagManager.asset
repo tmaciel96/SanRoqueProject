@@ -45,6 +45,9 @@ TagManager:
   - name: BubbleOutline
     uniqueID: 3155624557
     locked: 0
+  - name: PanelsUI
+    uniqueID: 2389017223
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []
