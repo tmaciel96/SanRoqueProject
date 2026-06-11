@@ -10,6 +10,7 @@ public class TaskItemUI : MonoBehaviour
 
     public string TaskId { get; private set; }
     public bool IsCompleted => _current >= _required;
+    public int Remaining => Mathf.Max(0, _required - _current);
 
     private int _reputationPoints;
     private int _current;

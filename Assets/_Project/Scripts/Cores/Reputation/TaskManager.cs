@@ -16,10 +16,15 @@ public class TaskManager : MonoBehaviour
     [SerializeField] private int shelterTaskEveryNDays = 2; // cada cuántos días aparece la tarea de refugio
 
     private const string ShelterExpansionTaskId = "expandir";
+    private const string BuyFoodTaskId = "comprar_comida";
+    private const string BuyMedicineTaskId = "comprar_medicina";
+    private const string BuyToysTaskId = "comprar_juguetes";
+    private const string RescueTaskId = "rescatar";
     // TODO: cuando haya prefabs de mejora de nivel, agregar const string ShelterUpgradeTaskId = "mejorar_refugio";
 
     private int _currentDay = 1;
     private int _shelterExpansions = 0;
+    private readonly Dictionary<string, int> _taskProgress = new Dictionary<string, int>();
 
     private void Awake()
     {
@@ -33,6 +38,7 @@ public class TaskManager : MonoBehaviour
     private void OnDayStarted()
     {
         _currentDay = DayManager.Instance.CurrentDay;
+        _taskProgress.Clear();
         var tasks = GenerateDayTasks();
         taskListUI.SetTasks(tasks);
     }
@@ -103,7 +109,16 @@ public class TaskManager : MonoBehaviour
 
     public void ReportProgress(string taskId, int current)
     {
+        _taskProgress[taskId] = current;
         taskListUI.UpdateTask(taskId, current);
+    }
+
+    public void AddProgress(string taskId, int amount = 1)
+    {
+        if (string.IsNullOrEmpty(taskId) || amount <= 0) return;
+
+        _taskProgress.TryGetValue(taskId, out int current);
+        ReportProgress(taskId, current + amount);
     }
 
     public void ReportShelterExpansion()
@@ -113,17 +128,28 @@ public class TaskManager : MonoBehaviour
         // Solo actualiza la UI de tarea si hay una tarea de refugio activa este día
         bool esDiaDeRefugio = _currentDay % 2 != 0;
         if (esDiaDeRefugio)
-            taskListUI.UpdateTask(ShelterExpansionTaskId, 1);
+            AddProgress(ShelterExpansionTaskId);
 
         if (_shelterExpansions >= maxShelterExpansions)
             Debug.Log("Refugio completo — no se generarán más tareas de expansión.");
     }
 
-    private const string ShopTaskId = "compra_tienda"; // debe coincidir con el id en tu TaskDatabase
-
-    public void ReportShopPurchase()
+    public void ReportShopPurchase(InventoryItemType itemType, int amount = 1)
     {
-        taskListUI.UpdateTask(ShopTaskId, 1);
+        string taskId = itemType switch
+        {
+            InventoryItemType.Food => BuyFoodTaskId,
+            InventoryItemType.Medicine => BuyMedicineTaskId,
+            InventoryItemType.Toy => BuyToysTaskId,
+            _ => null
+        };
+
+        AddProgress(taskId, amount);
+    }
+
+    public void ReportRescue(int amount = 1)
+    {
+        AddProgress(RescueTaskId, amount);
     }
     // TODO: cuando haya prefabs de mejora, implementar:
     // public void ReportShelterUpgrade()

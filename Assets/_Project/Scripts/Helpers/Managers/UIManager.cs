@@ -42,6 +42,12 @@ public class UIManager : MonoBehaviour
 
     // ── Auto-registro (llamado por cada BasePanel en su Awake) ───────────
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            GameManager.RestartGame();
+    }
+
     public void RegisterAvailablePanel(BasePanel panel)
     {
         System.Type type = panel.GetType();
