@@ -18,10 +18,12 @@ public class CapacityManager : MonoBehaviour
 
     public int CurrentAnimals => _currentAnimals;
     public int MaxCapacity => CalculateMaxCapacity();
+    public int FreeSpace => Mathf.Max(0, MaxCapacity - _currentAnimals);
     public int TotalAnimalsHelped { get; private set; }
     public int UnlockedCount => _unlockedTiers.Count;
     public bool ExpansionAvailable => _expansionAvailable;
     public bool HasShelter => _unlockedTiers.Count > 0; // false hasta que compre el primero
+    public bool HasFreeSpace => FreeSpace > 0;
 
     private void Awake()
     {
@@ -56,6 +58,23 @@ public class CapacityManager : MonoBehaviour
         TotalAnimalsHelped++;
         RefreshUI();
         return true;
+    }
+
+    public int GetNextShelterCost()
+    {
+        if (shelterDatabase == null) return -1;
+
+        int nextIndex = _unlockedTiers.Count;
+        if (nextIndex >= shelterDatabase.TierCount) return -1;
+
+        ShelterTierData tier = shelterDatabase.GetTier(nextIndex);
+        return tier != null ? tier.unlockCost : -1;
+    }
+
+    public bool CanAffordNextShelter(int availableMoney)
+    {
+        int nextCost = GetNextShelterCost();
+        return _expansionAvailable && nextCost >= 0 && availableMoney >= nextCost;
     }
 
     public void RemoveAnimal()

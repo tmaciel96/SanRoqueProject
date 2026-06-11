@@ -10,6 +10,7 @@ public class RescueManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private int maxRequests = 4;
     [SerializeField] private bool mockHasCorralSpace = true;
+    [SerializeField] private int rewardPerRescue = 100;
 
     [Header("UI Component")]
     [SerializeField] private NotificationBadge rescueBadge;
@@ -81,11 +82,17 @@ public class RescueManager : MonoBehaviour
     public bool AcceptRescue(RescueRequest request)
     {
         if (!mockHasCorralSpace) return false;
+        if (CapacityManager.Instance != null && !CapacityManager.Instance.TryAddAnimal()) return false;
 
         activeRequests.Remove(request);
         rescueBadge.UpdateBadge(activeRequests.Count);
         OnRequestsUpdated?.Invoke();
 
+        if (MoneyManager.Instance != null)
+            MoneyManager.Instance.AddMoney(rewardPerRescue);
+
+        if (TaskManager.Instance != null)
+            TaskManager.Instance.ReportRescue();
         OnRescueAccepted?.Invoke(request.animalData);
         return true;
     }

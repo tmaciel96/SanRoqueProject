@@ -3,7 +3,8 @@ using UnityEngine;
 public enum GameState
 {
     Playing,
-    InMenu
+    InMenu,
+    GameOver
 }
 
 public class GameManager : MonoBehaviour

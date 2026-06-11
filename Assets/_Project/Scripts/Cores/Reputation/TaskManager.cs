@@ -19,6 +19,7 @@ public class TaskManager : MonoBehaviour
     private const string BuyFoodTaskId = "comprar_comida";
     private const string BuyMedicineTaskId = "comprar_medicina";
     private const string BuyToysTaskId = "comprar_juguetes";
+    private const string RescueTaskId = "rescatar";
     // TODO: cuando haya prefabs de mejora de nivel, agregar const string ShelterUpgradeTaskId = "mejorar_refugio";
 
     private int _currentDay = 1;
@@ -150,6 +151,11 @@ public class TaskManager : MonoBehaviour
         };
 
         AddProgress(taskId, amount);
+    }
+
+    public void ReportRescue(int amount = 1)
+    {
+        AddProgress(RescueTaskId, amount);
     }
     // TODO: cuando haya prefabs de mejora, implementar:
     // public void ReportShelterUpgrade()
