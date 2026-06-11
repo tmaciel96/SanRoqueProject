@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/_Project/Scenes/Menu_Scene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Main_Scene.unity
-    guid: 6abfe57616a6d434393698138f0973df
+    path: Assets/_Project/Scenes/Main_Scene.unity
+    guid: 75e681e0e61c5ac4fb6ee0b6242fe1a7
   m_configObjects:
     com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 559a8c1396af0e344811ef0a0804faaa, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 16be1e97be8bcf94ab704563e45841ed, type: 2}

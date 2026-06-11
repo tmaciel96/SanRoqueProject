@@ -206,6 +206,18 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 833b00e92bb20444bba1dc55990ed3f9, type: 2}
+    - target: {fileID: 5034267008492136882, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5034267008492136882, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5034267008492136882, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5268824109553011993, guid: 31f7c03767e359d40baaf04819e54b92, type: 3}
       propertyPath: m_IsActive
       value: 1
