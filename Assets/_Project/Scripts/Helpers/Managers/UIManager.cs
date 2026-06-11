@@ -136,9 +136,16 @@ public class UIManager : MonoBehaviour
         GetPanel<AnimalInfoPanel>()?.Open(animal);
     }
 
+    // ── Rescate ───────────────────────────────────────────────────────────────
+
     public void ShowRescuePanel()
     {
-        GetPanel<RescuePanelUI>()?.Open();
+        GetPanel<RescuePanel>()?.Open();
+    }
+
+    public void CloseRescuePanel()
+    {
+        GetPanel<RescuePanel>()?.Close();
     }
 
     // ── Tienda ────────────────────────────────────────────────────────────

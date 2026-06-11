@@ -26,17 +26,17 @@ public class CapacityManager : MonoBehaviour
     public bool HasShelter => _unlockedTiers.Count > 0; // false hasta que compre el primero
     public bool HasAvailableSpace => HasShelter && _currentAnimals < MaxCapacity;
 
+    [Header("Referencias")]
+    [SerializeField] private ShelterGridManager shelterGridManager;
+
+    // ── Control de expansión (llamado por TaskManager) ────────────────────
+
     private void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
         RefreshUI();
     }
-
-    [Header("Referencias")]
-    [SerializeField] private ShelterGridManager shelterGridManager;
-
-    // ── Control de expansión (llamado por TaskManager) ────────────────────
 
     public void EnableExpansion()
     {
@@ -52,13 +52,19 @@ public class CapacityManager : MonoBehaviour
 
     // ── Animales ──────────────────────────────────────────────────────────
 
-    public bool TryAddAnimal()
+    public void AssignAnimalToPen(RescueRequest completedRequest)
     {
-        if (_currentAnimals >= MaxCapacity) return false;
+        if (_currentAnimals >= MaxCapacity) {
+            Debug.LogError("[CapacityManager] No se pudo asignar al animal a un corral despues de haber aceptado un rescate y esperado su llegada.");
+            return;
+        }
+                  
+        Pen pen = shelterGridManager.GetFirstEmptyPen();
+        pen.PlaceAnimal(completedRequest.animalData);
+
         _currentAnimals++;
         TotalAnimalsHelped++;
         RefreshUI();
-        return true;
     }
 
     public void RemoveAnimal()

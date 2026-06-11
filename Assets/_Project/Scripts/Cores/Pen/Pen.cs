@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 
 public enum PenState { Locked, Available, Empty, Occupied }
 
@@ -18,6 +19,9 @@ public class Pen : MonoBehaviour, IInventoryItemTarget
     [SerializeField] private TextMeshProUGUI txtNivel;
     [SerializeField] private TextMeshProUGUI txtCapacidad;
     [SerializeField] private TextMeshProUGUI txtAnimalName;
+
+    [Header("Referencias")]
+    [SerializeField] private AnimalPrefabCatalog animalPrefabCatalog;
 
     private int _row;
     private GameObject _spawnedAnimal;
@@ -72,19 +76,29 @@ public class Pen : MonoBehaviour, IInventoryItemTarget
         }
     }
 
-    public bool PlaceAnimal(GameObject animalPrefab, AnimalData animalData, int animalId)
+    public bool PlaceAnimal(AnimalData animalData)
     {
-        if (_currentState != PenState.Empty || animalPrefab == null || animalContainer == null)
+        if (_currentState != PenState.Empty || animalContainer == null)
             return false;
 
         if (_spawnedAnimal != null)
             Destroy(_spawnedAnimal);
+
+        GameObject animalPrefab = animalPrefabCatalog.GetPrefab(animalData.species);
+        if (animalPrefab == null)
+        {
+            Debug.LogError($"RescueManager: no hay prefab para {animalData.species}.");
+            return false;
+        }
 
         _spawnedAnimal = Instantiate(animalPrefab, animalContainer.transform);
 
         Animal animal = _spawnedAnimal.GetComponent<Animal>();
         if (animal != null)
         {
+
+            Guid newUuid = Guid.NewGuid();
+            string animalId = newUuid.ToString();
             animal.Initialize(
                 animalId,
                 animalData.animalName,

@@ -101,6 +101,7 @@ MonoBehaviour:
   txtNivel: {fileID: 8042601574689689884}
   txtCapacidad: {fileID: 1478296052013046768}
   txtAnimalName: {fileID: 1086141344556378592}
+  animalPrefabCatalog: {fileID: 11400000, guid: 859b7b3451fadda43ad0da04a4b35e35, type: 2}
 --- !u!114 &7926903604484539441
 MonoBehaviour:
   m_ObjectHideFlags: 0

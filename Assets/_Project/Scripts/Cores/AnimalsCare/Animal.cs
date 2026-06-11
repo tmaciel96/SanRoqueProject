@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    [SerializeField] private int id;
+    [SerializeField] private string id;
     [SerializeField] AnimalType animalType;
     private string animalName;
 
@@ -55,7 +55,7 @@ public class Animal : MonoBehaviour
         BindComponents();
     }
 
-    public void Initialize(int id, string name, AnimalType type, float hunger, float thirst, float happiness, float health, int variantIndex = -1)
+    public void Initialize(string id, string name, AnimalType type, float hunger, float thirst, float happiness, float health, int variantIndex = -1)
     {
         this.id = id;
         this.animalName = name;
@@ -97,7 +97,7 @@ public class Animal : MonoBehaviour
         if (audioSource == null)
             audioSource = GetComponentInChildren<AudioSource>();
     }
-    public int ID => id;
+    public string ID => id;
 
     public bool IsHealthy => Health > 40f;
     public bool IsSick => Health <= 40f;
