@@ -2,98 +2,230 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// Orquesta todo el sistema de rescate:
+/// - Genera requests al inicio del día
+/// - Coordina con RescueMapController para mostrar/ocultar markers
+/// - Valida capacidad antes de aceptar
+/// - Maneja el rescate activo (solo uno a la vez)
+/// - Notifica completación para mostrar panel de recepción
+/// </summary>
 public class RescueManager : MonoBehaviour
 {
-    public static event Action<AnimalData> OnRescueAccepted;
-    public static event Action OnRequestsUpdated;
+    // ── Eventos públicos ─────────────────────────────────────────────────────
 
-    [Header("Settings")]
-    [SerializeField] private int maxRequests = 4;
-    [SerializeField] private bool mockHasCorralSpace = true;
+    /// Nuevos requests disponibles en el mapa
+    public static event Action<List<RescueRequest>> OnPendingRequestsUpdated;
 
-    [Header("UI Component")]
+    /// El player confirmó un rescate (comienza el viaje)
+    public static event Action<RescueRequest> OnRescueStarted;
+
+    /// El rescate activo se completó → mostrar panel de recepción
+    public static event Action<RescueRequest> OnRescueCompleted;
+
+    /// Un request expiró del mapa sin ser atendido
+    public static event Action<RescueRequest> OnRequestExpired;
+
+    // ── Inspector ─────────────────────────────────────────────────────────────
+
+    [Header("Generación")]
+    [SerializeField] private int maxPendingRequests = 4;
+
+    [Header("Horas de rescate (rango aleatorio)")]
+    [SerializeField] private int minRescueHours = 1;
+    [SerializeField] private int maxRescueHours = 5;
+
+    [Header("Horas hasta expiración (rango aleatorio)")]
+    [SerializeField] private int minExpiryHours = 3;
+    [SerializeField] private int maxExpiryHours = 8;
+
+    [Header("Recompensa")]
+    [SerializeField] private int baseReward = 100;
+
+    [Header("Referencias")]
+    [SerializeField] private RescueMapController mapController;
     [SerializeField] private NotificationBadge rescueBadge;
 
-    private List<RescueRequest> activeRequests = new List<RescueRequest>();
+    // ── Estado interno ────────────────────────────────────────────────────────
 
-    private readonly string[] mockNames = { "Bondiola", "Feca", "Pocho", "Yuyo", "Negro", "Michi", "Bala", "Chispa", "Coco", "Pipa", "Bash", "Miga", "Pixel", "Astro", "Pampa"};
+    private List<RescueRequest> pendingRequests = new List<RescueRequest>();
+    private RescueRequest activeRescue = null;
+
+    public bool HasActiveRescue => activeRescue != null;
+    public RescueRequest ActiveRescue => activeRescue;
+    public List<RescueRequest> PendingRequests => pendingRequests;
+
+    // Mock de nombres de animales
+    private readonly string[] mockNames =
+    {
+        "Bondiola", "Feca", "Pocho", "Yuyo", "Negro",
+        "Michi", "Bala", "Chispa", "Coco", "Pipa",
+        "Bash", "Miga", "Pixel", "Astro", "Pampa"
+    };
+
+    // ── Unity ─────────────────────────────────────────────────────────────────
 
     private void OnEnable()
     {
-        DayManager.OnDayStarted += HandleDayStarted;
-        DayManager.OnDayEnded += HandleDayEnded;
+        DayManager.OnDayStarted  += HandleDayStarted;
+        DayManager.OnDayEnded    += HandleDayEnded;
+        DayManager.OnHourChanged += HandleHourChanged;
     }
 
     private void OnDisable()
     {
-        DayManager.OnDayStarted -= HandleDayStarted;
-        DayManager.OnDayEnded -= HandleDayEnded;
+        DayManager.OnDayStarted  -= HandleDayStarted;
+        DayManager.OnDayEnded    -= HandleDayEnded;
+        DayManager.OnHourChanged -= HandleHourChanged;
     }
 
-    public List<RescueRequest> GetActiveRequests() => activeRequests;
-
-    private void HandleDayEnded()
-    {
-        foreach (var request in activeRequests)
-        {
-            request.daysRemaining--;
-        }
-
-        activeRequests.RemoveAll(request => request.daysRemaining <= 0);
-        
-        rescueBadge.UpdateBadge(activeRequests.Count);
-        OnRequestsUpdated?.Invoke();
-    }
+    // ── Handlers de día ───────────────────────────────────────────────────────
 
     private void HandleDayStarted()
     {
         GenerateDailyRequests();
-        rescueBadge.UpdateBadge(activeRequests.Count);
-        OnRequestsUpdated?.Invoke();
+        RefreshBadge();
+        OnPendingRequestsUpdated?.Invoke(pendingRequests);
     }
+
+    private void HandleDayEnded()
+    {
+        // El día terminó — solo refrescamos UI
+        // El tick de horas lo maneja HandleHourChanged
+        RefreshBadge();
+        OnPendingRequestsUpdated?.Invoke(pendingRequests);
+    }
+
+    private void HandleHourChanged(int hour)
+    {
+        // Tick del rescate activo
+        if (activeRescue != null)
+        {
+            bool completed = activeRescue.TickRescueHour();
+            if (completed)
+            {
+                var finished = activeRescue;
+                activeRescue = null;
+                OnRescueCompleted?.Invoke(finished);
+            }
+        }
+
+        // Tick de expiración de requests pendientes
+        var expired = new List<RescueRequest>();
+        foreach (var req in pendingRequests)
+        {
+            if (req.TickExpiryHour())
+                expired.Add(req);
+        }
+
+        foreach (var req in expired)
+        {
+            pendingRequests.Remove(req);
+            mapController.HideMarker(req);
+            OnRequestExpired?.Invoke(req);
+        }
+
+        RefreshBadge();
+        OnPendingRequestsUpdated?.Invoke(pendingRequests);
+    }
+
+    // ── Generación ────────────────────────────────────────────────────────────
 
     private void GenerateDailyRequests()
     {
-        if (activeRequests.Count >= maxRequests) return;
+        if (pendingRequests.Count >= maxPendingRequests) return;
 
-        float chance = UnityEngine.Random.value;
-        int newRequestsCount = 0;
+        int newCount = RollNewRequestCount();
+        List<int> availableSpawnPoints = mapController.GetAvailableSpawnIndices(pendingRequests);
 
-        if (chance < 0.50f) newRequestsCount = 1;       // 50% probabilidad de 1
-        else if (chance < 0.85f) newRequestsCount = 2;  // 35% probabilidad de 2
-        else if (chance < 0.98f) newRequestsCount = 3;  // 13% probabilidad de 3
-        else newRequestsCount = 4;                      // 2% probabilidad de 4 (Muy raro)
-
-        for (int i = 0; i < newRequestsCount; i++)
+        for (int i = 0; i < newCount; i++)
         {
-            if (activeRequests.Count >= maxRequests) break;
+            if (pendingRequests.Count >= maxPendingRequests) break;
+            if (availableSpawnPoints.Count == 0) break;
 
-            AnimalData mockAnimal = new AnimalData();
-            string randomName = mockNames[UnityEngine.Random.Range(0, mockNames.Length)];
-            AnimalType randomSpecies = (AnimalType)UnityEngine.Random.Range(0, Enum.GetValues(typeof(AnimalType)).Length);
-            mockAnimal.animalName = randomName;
-            mockAnimal.species = randomSpecies;
+            int randomIdx = UnityEngine.Random.Range(0, availableSpawnPoints.Count);
+            int spawnIndex = availableSpawnPoints[randomIdx];
+            availableSpawnPoints.RemoveAt(randomIdx);
 
-            int randomDaysRemaining = UnityEngine.Random.Range(1, 4);            
-            activeRequests.Add(new RescueRequest(mockAnimal, randomDaysRemaining));        }
+            var request = CreateRandomRequest(spawnIndex);
+            pendingRequests.Add(request);
+            mapController.ShowMarker(request);
+        }
     }
 
-    public bool AcceptRescue(RescueRequest request)
+    private int RollNewRequestCount()
     {
-        if (!mockHasCorralSpace) return false;
+        float chance = UnityEngine.Random.value;
+        if (chance < 0.50f) return 1;       // 50%
+        if (chance < 0.85f) return 2;       // 35%
+        if (chance < 0.98f) return 3;       // 13%
+        return 4;                           // 2%
+    }
 
-        activeRequests.Remove(request);
-        rescueBadge.UpdateBadge(activeRequests.Count);
-        OnRequestsUpdated?.Invoke();
+    private RescueRequest CreateRandomRequest(int spawnIndex)
+    {
+        var animal = new AnimalData
+        {
+            animalName = mockNames[UnityEngine.Random.Range(0, mockNames.Length)],
+            species    = (AnimalType)UnityEngine.Random.Range(0, Enum.GetValues(typeof(AnimalType)).Length)
+        };
 
-        OnRescueAccepted?.Invoke(request.animalData);
+        int rescueHours = UnityEngine.Random.Range(minRescueHours, maxRescueHours + 1);
+        int expiryHours = UnityEngine.Random.Range(minExpiryHours, maxExpiryHours + 1);
+
+        // Recompensa inversamente proporcional a la duración (rescates rápidos = más caro)
+        int reward = baseReward + (maxRescueHours - rescueHours) * 50;
+
+        return new RescueRequest(animal, expiryHours, rescueHours, reward, spawnIndex);
+    }
+
+    // ── API pública ───────────────────────────────────────────────────────────
+
+    /// Llamado por RescueDetailPanel cuando el player confirma el rescate.
+    /// Retorna false si no hay capacidad o ya hay un rescate activo.
+    public bool TryAcceptRescue(RescueRequest request)
+    {
+        if (HasActiveRescue)
+        {
+            Debug.LogWarning("[RescueManager] Ya hay un rescate en progreso.");
+            return false;
+        }
+
+        var cm = CapacityManager.Instance;
+        bool hasSpace = cm != null && cm.HasShelter && cm.CurrentAnimals < cm.MaxCapacity;
+        if (!hasSpace)
+        {
+            Debug.LogWarning("[RescueManager] Sin espacio en el corral.");
+            return false;
+        }
+
+        pendingRequests.Remove(request);
+        mapController.HideMarker(request);
+
+        request.StartRescue();
+        activeRescue = request;
+
+        RefreshBadge();
+        OnPendingRequestsUpdated?.Invoke(pendingRequests);
+        OnRescueStarted?.Invoke(request);
         return true;
     }
 
+    /// Llamado por RescueDetailPanel cuando el player rechaza.
     public void RejectRescue(RescueRequest request)
     {
-        activeRequests.Remove(request);
-        rescueBadge.UpdateBadge(activeRequests.Count);
-        OnRequestsUpdated?.Invoke();
+        pendingRequests.Remove(request);
+        mapController.HideMarker(request);
+        request.Reject();
+
+        RefreshBadge();
+        OnPendingRequestsUpdated?.Invoke(pendingRequests);
+    }
+
+    // ── Helpers ───────────────────────────────────────────────────────────────
+
+    private void RefreshBadge()
+    {
+        rescueBadge?.UpdateBadge(pendingRequests.Count);
     }
 }
