@@ -1,19 +1,18 @@
-Shader "Custom/SimpleFill"
+Shader "Custom/IconDrain"
 {
     Properties
     {
-        _MainTex("Sprite", 2D) = "white" {}
-        _FillAmount("Fill Amount", Range(0,1)) = 1
-        _FillColor("Fill Color", Color) = (0,1,0,1)
+        [MainTexture] _BaseMap("Base Map", 2D) = "white" {}
+        _FillAmount("Fill Amount", Range(0, 1)) = 1
     }
 
     SubShader
     {
         Tags
         {
-            "RenderType"="Transparent"
-            "Queue"="Transparent"
-            "RenderPipeline"="UniversalPipeline"
+            "RenderType" = "Transparent"
+            "Queue" = "Transparent"
+            "RenderPipeline" = "UniversalPipeline"
         }
 
         Blend SrcAlpha OneMinusSrcAlpha
@@ -23,10 +22,8 @@ Shader "Custom/SimpleFill"
         Pass
         {
             HLSLPROGRAM
-
             #pragma vertex vert
             #pragma fragment frag
-
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
             struct Attributes
@@ -41,42 +38,32 @@ Shader "Custom/SimpleFill"
                 float2 uv : TEXCOORD0;
             };
 
-            TEXTURE2D(_MainTex);
-            SAMPLER(sampler_MainTex);
+            TEXTURE2D(_BaseMap);
+            SAMPLER(sampler_BaseMap);
 
             CBUFFER_START(UnityPerMaterial)
                 float _FillAmount;
-                float4 _FillColor;
             CBUFFER_END
 
             Varyings vert(Attributes IN)
             {
                 Varyings OUT;
-
-                OUT.positionHCS =
-                    TransformObjectToHClip(IN.positionOS.xyz);
-
+                OUT.positionHCS = TransformObjectToHClip(IN.positionOS.xyz);
                 OUT.uv = IN.uv;
-
                 return OUT;
             }
 
             half4 frag(Varyings IN) : SV_Target
             {
-                half4 tex =
-                    SAMPLE_TEXTURE2D(
-                        _MainTex,
-                        sampler_MainTex,
-                        IN.uv);
+                half4 tex = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, IN.uv);
 
                 clip(tex.a - 0.01);
 
-                if(IN.uv.y <= _FillAmount)
-                    return _FillColor;
+                if (IN.uv.y > _FillAmount)
+                    discard;
 
-                return half4(1,1,1,1);
+                return tex;
             }
-
             ENDHLSL
         }
     }

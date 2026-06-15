@@ -14,6 +14,13 @@ public class DraggableItem : MonoBehaviour
 
     private Animal hoveredAnimal;
 
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     private void OnMouseDown()
     {
         BeginDrag();
@@ -21,15 +28,20 @@ public class DraggableItem : MonoBehaviour
 
     private void OnMouseUp() 
     { 
-        isDragging = false; 
-        
-        if(hoveredAnimal != null )
+        isDragging = false;
+
+        if (careType == CareType.Petting && animator != null)
+        {
+            animator.SetBool("IsPetting", false);
+        }
+
+        if (careType != CareType.Petting && hoveredAnimal != null )
         {
             hoveredAnimal.ApplyCare(careType);
 
             Debug.Log($"Aplicado {careType} a {hoveredAnimal.AnimalName}");
 
-            reportAppliedCare(careType);
+            //reportAppliedCare(careType);
 
             Destroy( gameObject );
         }
@@ -96,6 +108,11 @@ public class DraggableItem : MonoBehaviour
         isDragging = true;
 
         offset = transform.position - GetMouseWorldPosition();
+
+        if (careType == CareType.Petting && animator != null)
+        {
+            animator.SetBool("IsPetting", true);
+        }
     }
 
     private void reportAppliedCare(CareType careType){
