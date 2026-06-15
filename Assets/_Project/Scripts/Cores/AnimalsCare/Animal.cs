@@ -173,7 +173,7 @@ public class Animal : MonoBehaviour
         Thirst -= Time.deltaTime * 2f;
         Happiness -= Time.deltaTime * 0.75f;
 
-        //Debug.Log(Happiness);
+        //Debug.Log(Hunger);
 
         CheckingHealth();
 
@@ -281,6 +281,7 @@ public class Animal : MonoBehaviour
                 if (IsHealthy)
                 {
                     PlayReaction(ReactionType.Love);
+                    
                     audioSource.PlayOneShot(pantingClip);
                 }
                 

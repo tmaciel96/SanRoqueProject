@@ -1,0 +1,1339 @@
+fileFormatVersion: 2
+guid: 858cf70d18dd3d54bba9b36d9a73c084
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7674483421852501095
+    second: DogJack_0
+  - first:
+      213: 7190982415941794417
+    second: DogJack_1
+  - first:
+      213: -8150076125885960962
+    second: DogJack_2
+  - first:
+      213: -1982101999692442603
+    second: DogJack_3
+  - first:
+      213: 8202742414786002590
+    second: DogJack_4
+  - first:
+      213: -4498390130746096252
+    second: DogJack_5
+  - first:
+      213: 7249711057506352585
+    second: DogJack_6
+  - first:
+      213: 1422608083665491871
+    second: DogJack_7
+  - first:
+      213: 657548000502267357
+    second: DogJack_8
+  - first:
+      213: -4533491628062051822
+    second: DogJack_9
+  - first:
+      213: 2793060837076689931
+    second: DogJack_10
+  - first:
+      213: -2227300230736131736
+    second: DogJack_11
+  - first:
+      213: 7398725216485022536
+    second: DogJack_12
+  - first:
+      213: -9082931467188715822
+    second: DogJack_13
+  - first:
+      213: 2192582650030570135
+    second: DogJack_14
+  - first:
+      213: 4792651116616414943
+    second: DogJack_15
+  - first:
+      213: -8575894893652318192
+    second: DogJack_16
+  - first:
+      213: -7215293471272636486
+    second: DogJack_17
+  - first:
+      213: 8476890165182259610
+    second: DogJack_18
+  - first:
+      213: -5385964593346571313
+    second: DogJack_19
+  - first:
+      213: -5960146069510520741
+    second: DogJack_20
+  - first:
+      213: 699066720937619388
+    second: DogJack_21
+  - first:
+      213: -5187642860075545008
+    second: DogJack_22
+  - first:
+      213: 195167577985155060
+    second: DogJack_23
+  - first:
+      213: -6526195090027970199
+    second: DogJack_24
+  - first:
+      213: -4707752299002208848
+    second: DogJack_25
+  - first:
+      213: -5315895288012067250
+    second: DogJack_26
+  - first:
+      213: 7627121539710366327
+    second: DogJack_27
+  - first:
+      213: 1910363051589835809
+    second: DogJack_28
+  - first:
+      213: -8217980368005139709
+    second: DogJack_29
+  - first:
+      213: 5205479533844427939
+    second: DogJack_30
+  - first:
+      213: -600513199049780666
+    second: DogJack_31
+  - first:
+      213: -4535239472472325341
+    second: DogJack_32
+  - first:
+      213: 7444433874354051566
+    second: DogJack_33
+  - first:
+      213: -4672886307505969381
+    second: DogJack_34
+  - first:
+      213: 5140287677038364598
+    second: DogJack_35
+  - first:
+      213: 2009056551757518222
+    second: DogJack_36
+  - first:
+      213: -7346719495177702439
+    second: DogJack_37
+  - first:
+      213: 1446346922573042168
+    second: DogJack_38
+  - first:
+      213: -4319545828398578062
+    second: DogJack_39
+  - first:
+      213: 7635214456290840894
+    second: DogJack_40
+  - first:
+      213: -7882003895757714062
+    second: DogJack_41
+  - first:
+      213: 1865316429065274145
+    second: DogJack_42
+  - first:
+      213: -517522424021957688
+    second: DogJack_43
+  - first:
+      213: 230351067936267890
+    second: DogJack_44
+  - first:
+      213: 3987091476407623267
+    second: DogJack_45
+  - first:
+      213: -6350389858479190780
+    second: DogJack_46
+  - first:
+      213: -177454394086920290
+    second: DogJack_47
+  - first:
+      213: -6149507928731732713
+    second: DogJack_48
+  - first:
+      213: -2043260039963951606
+    second: DogJack_49
+  - first:
+      213: -7118399931681676898
+    second: DogJack_50
+  - first:
+      213: 3717639416953802646
+    second: DogJack_51
+  - first:
+      213: -6380061270987934456
+    second: DogJack_52
+  - first:
+      213: 7528893123798850763
+    second: DogJack_53
+  - first:
+      213: 8731832264644799263
+    second: DogJack_54
+  - first:
+      213: 4397480597264123362
+    second: DogJack_55
+  - first:
+      213: -5296687704536103218
+    second: DogJack_56
+  - first:
+      213: -7182120339393786973
+    second: DogJack_57
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DogJack_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 527
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7648422d20e318a60800000000000000
+      internalID: 7674483421852501095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 526
+        width: 57
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a7a4868608bc360800000000000000
+      internalID: 7190982415941794417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_2
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 526
+        width: 56
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcec28c1fc15ee80800000000000000
+      internalID: -8150076125885960962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 526
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5149dbf9bb82e74e0800000000000000
+      internalID: -1982101999692442603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_4
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 526
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e795924cef5d170800000000000000
+      internalID: 8202742414786002590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 527
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48581c372028291c0800000000000000
+      internalID: -4498390130746096252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 442
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f971b79c38e1eb310800000000000000
+      internalID: 1422608083665491871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_10
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 442
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04e2067802f2c620800000000000000
+      internalID: 2793060837076689931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 441
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b905f526d8da660800000000000000
+      internalID: 7398725216485022536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_13
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 442
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2debffa34f1f2f180800000000000000
+      internalID: -9082931467188715822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_14
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 441
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79ab1cbad4e9d6e10800000000000000
+      internalID: 2192582650030570135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_16
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 441
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01864c0080d4cf880800000000000000
+      internalID: -8575894893652318192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 366
+        width: 72
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50826d5abe494da0800000000000000
+      internalID: -5960146069510520741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_21
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 367
+        width: 67
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbfa8c79a7593b900800000000000000
+      internalID: 699066720937619388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_22
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 367
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e0b97dd4ac108b0800000000000000
+      internalID: -5187642860075545008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_23
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 367
+        width: 69
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff7a7dc0ef55b200800000000000000
+      internalID: 195167577985155060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_24
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 365
+        width: 69
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9610cf3942c4e65a0800000000000000
+      internalID: -6526195090027970199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_26
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 280
+        width: 56
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e2ede76652a36b0800000000000000
+      internalID: -5315895288012067250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_27
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 280
+        width: 45
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772ba2151aaf8d960800000000000000
+      internalID: 7627121539710366327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_28
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 280
+        width: 46
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12c1b0ae219f28a10800000000000000
+      internalID: 1910363051589835809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_30
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 281
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4fc546e049d3840800000000000000
+      internalID: 5205479533844427939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_32
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 282
+        width: 57
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32305ff7ab79f01c0800000000000000
+      internalID: -4535239472472325341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_33
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 285
+        width: 56
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee912ca9a21ff4760800000000000000
+      internalID: 7444433874354051566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_35
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 210
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b780396868f55740800000000000000
+      internalID: 5140287677038364598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_36
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 210
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e859d251a4a91eb10800000000000000
+      internalID: 2009056551757518222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_37
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 210
+        width: 60
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3fe713b853b0a90800000000000000
+      internalID: -7346719495177702439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_38
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 210
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f112fdecd4721410800000000000000
+      internalID: 1446346922573042168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_40
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 209
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31942b481bb5f960800000000000000
+      internalID: 7635214456290840894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_41
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 209
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27dcd1ba73f7d9290800000000000000
+      internalID: -7882003895757714062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_42
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 127
+        width: 53
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123c22cc86fe2e910800000000000000
+      internalID: 1865316429065274145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_43
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 128
+        width: 52
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c34fd8e81461d8f0800000000000000
+      internalID: -517522424021957688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_44
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 128
+        width: 53
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e19f9631f523300800000000000000
+      internalID: 230351067936267890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_45
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 128
+        width: 51
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e9342c29ef45730800000000000000
+      internalID: 3987091476407623267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_46
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 127
+        width: 48
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40dca1cc112eed7a0800000000000000
+      internalID: -6350389858479190780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_47
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 127
+        width: 55
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9fed943b2e898df0800000000000000
+      internalID: -177454394086920290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_48
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 70
+        width: 68
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7153f7cce1f88aaa0800000000000000
+      internalID: -6149507928731732713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_49
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 69
+        width: 69
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0eb23eb1d1e4a3e0800000000000000
+      internalID: -2043260039963951606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_50
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 70
+        width: 69
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91e2fe1afc563d90800000000000000
+      internalID: -7118399931681676898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_51
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 69
+        width: 69
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69f85825a55b79330800000000000000
+      internalID: 3717639416953802646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_52
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 70
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8057989b3187577a0800000000000000
+      internalID: -6380061270987934456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_53
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 9
+        width: 76
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc59e308600c7860800000000000000
+      internalID: 7528893123798850763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_54
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 8
+        width: 74
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ba2747e23bd2970800000000000000
+      internalID: 8731832264644799263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_55
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 8
+        width: 73
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5c99aed4df60d30800000000000000
+      internalID: 4397480597264123362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_56
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 8
+        width: 75
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec642f488926e76b0800000000000000
+      internalID: -5296687704536103218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DogJack_57
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 11
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ab43549a9bf35c90800000000000000
+      internalID: -7182120339393786973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6cc42d6ad9b11ca45855b050e37af536
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DogJack_0: 7674483421852501095
+      DogJack_1: 7190982415941794417
+      DogJack_10: 2793060837076689931
+      DogJack_11: -2227300230736131736
+      DogJack_12: 7398725216485022536
+      DogJack_13: -9082931467188715822
+      DogJack_14: 2192582650030570135
+      DogJack_15: 4792651116616414943
+      DogJack_16: -8575894893652318192
+      DogJack_17: -7215293471272636486
+      DogJack_18: 8476890165182259610
+      DogJack_19: -5385964593346571313
+      DogJack_2: -8150076125885960962
+      DogJack_20: -5960146069510520741
+      DogJack_21: 699066720937619388
+      DogJack_22: -5187642860075545008
+      DogJack_23: 195167577985155060
+      DogJack_24: -6526195090027970199
+      DogJack_25: -4707752299002208848
+      DogJack_26: -5315895288012067250
+      DogJack_27: 7627121539710366327
+      DogJack_28: 1910363051589835809
+      DogJack_29: -8217980368005139709
+      DogJack_3: -1982101999692442603
+      DogJack_30: 5205479533844427939
+      DogJack_31: -600513199049780666
+      DogJack_32: -4535239472472325341
+      DogJack_33: 7444433874354051566
+      DogJack_34: -4672886307505969381
+      DogJack_35: 5140287677038364598
+      DogJack_36: 2009056551757518222
+      DogJack_37: -7346719495177702439
+      DogJack_38: 1446346922573042168
+      DogJack_39: -4319545828398578062
+      DogJack_4: 8202742414786002590
+      DogJack_40: 7635214456290840894
+      DogJack_41: -7882003895757714062
+      DogJack_42: 1865316429065274145
+      DogJack_43: -517522424021957688
+      DogJack_44: 230351067936267890
+      DogJack_45: 3987091476407623267
+      DogJack_46: -6350389858479190780
+      DogJack_47: -177454394086920290
+      DogJack_48: -6149507928731732713
+      DogJack_49: -2043260039963951606
+      DogJack_5: -4498390130746096252
+      DogJack_50: -7118399931681676898
+      DogJack_51: 3717639416953802646
+      DogJack_52: -6380061270987934456
+      DogJack_53: 7528893123798850763
+      DogJack_54: 8731832264644799263
+      DogJack_55: 4397480597264123362
+      DogJack_56: -5296687704536103218
+      DogJack_57: -7182120339393786973
+      DogJack_6: 7249711057506352585
+      DogJack_7: 1422608083665491871
+      DogJack_8: 657548000502267357
+      DogJack_9: -4533491628062051822
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
