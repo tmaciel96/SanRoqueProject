@@ -19,6 +19,11 @@ public class DraggableItem : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
+        if (animator == null)
+        {
+            Debug.LogWarning($"{name} no encontró Animator.");
+        }
     }
 
     private void OnMouseDown()
@@ -63,7 +68,7 @@ public class DraggableItem : MonoBehaviour
             }
         }
 
-        if (careType == CareType.Petting && hoveredAnimal != null)
+        if (isDragging && careType == CareType.Petting && hoveredAnimal != null)
         {
             pettingTimer += Time.deltaTime;
 
@@ -92,7 +97,14 @@ public class DraggableItem : MonoBehaviour
         if (animal != null)
         {
             hoveredAnimal = animal;
+
+            if (careType == CareType.Petting && animator != null)
+            {
+                animator.SetBool("isPetting", true);
+            }
+
             Debug.Log($"Entr� en contacto con el {animal.AnimalName}");
+
         }
     }
 
@@ -100,7 +112,15 @@ public class DraggableItem : MonoBehaviour
     {
         Animal animal = other.GetComponent<Animal>();
 
-        if(animal == hoveredAnimal) hoveredAnimal = null;
+        if (animal == hoveredAnimal)
+        {
+            hoveredAnimal = null;
+
+            if (careType == CareType.Petting && animator != null)
+            {
+                animator.SetBool("isPetting", false);
+            }
+        }
     }
 
     public void BeginDrag()
@@ -109,10 +129,7 @@ public class DraggableItem : MonoBehaviour
 
         offset = transform.position - GetMouseWorldPosition();
 
-        if (careType == CareType.Petting && animator != null)
-        {
-            animator.SetBool("IsPetting", true);
-        }
+        
     }
 
     private void reportAppliedCare(CareType careType){
