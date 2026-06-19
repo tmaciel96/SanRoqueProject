@@ -276,9 +276,9 @@ public class Animal : MonoBehaviour
                     break;
                 }
 
-                Pet(IsSick ? 1f : 2f);
+                Pet(IsSick ? 1f : 2.5f);
 
-                if (IsHealthy)
+                if (IsHealthy && !IsSad)
                 {
                     PlayReaction(ReactionType.Love);
                     
