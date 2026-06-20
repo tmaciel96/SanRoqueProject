@@ -32,12 +32,14 @@ public class UIManager : MonoBehaviour
     {
         DayManager.OnDayEnded += CloseAllPanels;
         DayManager.OnDayEnded += OpenEndOfDayPanel;
+        TaskManager.OnDayTasksGenerated += OpenStartOfDayPanel;
     }
 
     private void OnDisable()
     {
         DayManager.OnDayEnded -= CloseAllPanels;
         DayManager.OnDayEnded -= OpenEndOfDayPanel;
+        TaskManager.OnDayTasksGenerated -= OpenStartOfDayPanel;
     }
 
     // ── Auto-registro (llamado por cada BasePanel en su Awake) ───────────
@@ -130,6 +132,11 @@ public class UIManager : MonoBehaviour
     public void OpenEndOfDayPanel()
     {
         GetPanel<EndOfDayUI>()?.Open();
+    }
+
+    public void OpenStartOfDayPanel(IReadOnlyList<TaskData> tasks)
+    {
+        GetPanel<StartOfDayUI>()?.Open(tasks);
     }
 
     public void CloseEndOfDayPanel()
