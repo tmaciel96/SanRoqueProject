@@ -10224,6 +10224,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &2056152317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1887453388910523363, guid: 8f78b3cbb97691d4db9e287b2b3c50f5, type: 3}
+  m_PrefabInstance: {fileID: 6983066520065560373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5004363573062471854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10479,6 +10484,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 378003171045541326, guid: 8f78b3cbb97691d4db9e287b2b3c50f5, type: 3}
+      propertyPath: buttonWobble
+      value: 
+      objectReference: {fileID: 7802341570964250302}
     - target: {fileID: 438728639902450606, guid: 8f78b3cbb97691d4db9e287b2b3c50f5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11163,6 +11172,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1118827646970509720, guid: 8f78b3cbb97691d4db9e287b2b3c50f5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1655456883}
+    - targetCorrespondingSourceObject: {fileID: 1887453388910523363, guid: 8f78b3cbb97691d4db9e287b2b3c50f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7802341570964250302}
   m_SourcePrefab: {fileID: 100100000, guid: 8f78b3cbb97691d4db9e287b2b3c50f5, type: 3}
 --- !u!224 &7050440606559720078 stripped
 RectTransform:
@@ -11204,12 +11216,26 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 378003171045541326, guid: 8f78b3cbb97691d4db9e287b2b3c50f5, type: 3}
   m_PrefabInstance: {fileID: 6983066520065560373}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2056152317}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9ba7163963117c4fbd6819f5701dcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NotificationBadge
+--- !u!114 &7802341570964250302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056152317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3467e640c091f40ab38b3b3d1f3afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RescueButtonWobble
+  wobbleAngle: 6
+  speed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
