@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 66df5ace7d8ab9c48a8a3ae397f98951
+guid: 310d76860e9b8b94784da8b85a2b2d7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3948772563102370609
-    second: BorderHeart_0
+      213: 4271309658533835991
+    second: Comida Sprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BorderHeart_0
+      name: Comida Sprite_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 13
-        width: 93
-        height: 87
+        x: 0
+        y: 0
+        width: 199
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc4797d76442339c0800000000000000
-      internalID: -3948772563102370609
+      spriteID: 7d4ba9a018db64b30800000000000000
+      internalID: 4271309658533835991
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BorderHeart_0: -3948772563102370609
+      Comida Sprite_0: 4271309658533835991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
