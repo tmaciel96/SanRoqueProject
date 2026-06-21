@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Animal : MonoBehaviour
 {
@@ -10,7 +11,6 @@ public class Animal : MonoBehaviour
     [SerializeField] AnimalType animalType;
     private string animalName;
 
-    ReactionType reactionType;
     private Animator animator;
     private bool isReacting;
 
@@ -22,24 +22,20 @@ public class Animal : MonoBehaviour
     [SerializeField] private AudioClip drinkClip;
     [SerializeField] private AudioClip eatClip;
 
-
-    /*private string description;
-    private int age;
-    private double weight;*/
+    [SerializeField] private GameObject heartEffectPrefab;
 
     [SerializeField] private float hunger;
     [SerializeField] private float thirst;
     [SerializeField] private float happiness;
     [SerializeField] private float health;
 
-    private float lowNeedsTimer = 0f;
     private float randomDiseaseTimer = 0f;
     private bool wasSick;
     private bool wasSad;
-    
-    [SerializeField] private bool isSleeping = false;
-    [SerializeField] private bool isAwake = false;
 
+    [SerializeField] private int daysInShelter = 0;
+    public bool IsAdoptable { get; private set; }
+    
     [Header("Visual Variants")]
     [SerializeField] private GameObject[] visualVariants;
 
@@ -156,7 +152,7 @@ public class Animal : MonoBehaviour
         happiness += amount;
     }
 
-    public override string ToString()
+    /*public override string ToString()
     {
         return "ID: " + id +
             "\nNombre: " + animalName +
@@ -164,7 +160,7 @@ public class Animal : MonoBehaviour
             " Sed: " + thirst +
             " Felicidad: " + happiness +
             " Salud: " + health; 
-    }
+    }*/
 
     private void Update()
     {
@@ -176,6 +172,7 @@ public class Animal : MonoBehaviour
         //Debug.Log(Hunger);
 
         CheckingHealth();
+        CheckAdoptable();
 
         animator.SetBool("isSick", IsSick);
         animator.SetBool("isSad", IsSad && !IsSick);
@@ -270,15 +267,14 @@ public class Animal : MonoBehaviour
                 break;
             case CareType.Petting:
                 if (IsCritical)
-                {
-                    
+                {                
                     audioSource.PlayOneShot(angryClip);
                     break;
                 }
 
-                Pet(IsSick ? 1f : 2f);
+                Pet(IsSick ? 1f : 2.5f);
 
-                if (IsHealthy)
+                if (IsHealthy && !IsSad)
                 {
                     PlayReaction(ReactionType.Love);
                     
@@ -296,10 +292,7 @@ public class Animal : MonoBehaviour
                 Pet(30);
                 
                 break;
-
-        }
-
-            
+        }    
     }
     private void CheckingHealth()
     {
@@ -336,11 +329,8 @@ public class Animal : MonoBehaviour
             CheckRandomDisease();
 
             randomDiseaseTimer = 0f;
-        } else { 
-            randomDiseaseTimer = 0; 
         }
 
-        
     }
 
     private void CheckRandomDisease()
@@ -355,4 +345,66 @@ public class Animal : MonoBehaviour
 
     }
 
+    //Adopción
+    /*private void OnEnable()
+    {
+        DayManager.OnDayEnded += AddDayInShelter;
+    }
+
+    private void OnDisable()
+    {
+        DayManager.OnDayEnded -= AddDayInShelter;
+    }*/
+
+    private void AddDayInShelter()
+    {
+        //daysInShelter++;
+
+        CheckAdoptable();
+    }
+
+    private void CheckAdoptable()
+    {
+        if (IsAdoptable) return;
+
+        bool statsReady =
+            Hunger >= 95f &&
+            Thirst >= 95f &&
+            Happiness >= 95f &&
+            Health >= 95;
+
+        //bool timeReady = daysInShelter >= 2;
+
+        /*if (statsReady && timeReady)
+        {
+            IsAdoptable = true;
+            Debug.Log($"{AnimalName} está listo para la adopción.");
+        }*/
+        if (statsReady)
+        {
+            IsAdoptable = true;
+            Debug.Log($"{AnimalName} está listo para la adopción.");
+        }
+
+    }
+
+    public void Adoption()
+    {
+        SpriteRenderer sprite =
+            GetComponentInChildren<SpriteRenderer>();
+
+        Instantiate(
+            heartEffectPrefab,
+            sprite.bounds.center + new Vector3(-0.8f, 0f, 0f),
+            Quaternion.identity);
+
+        Destroy(gameObject);
+    }
+
+    public void RejectAdoption()
+    {
+        IsAdoptable = false;
+        //daysInShelter = 0;
+
+    }
 }
