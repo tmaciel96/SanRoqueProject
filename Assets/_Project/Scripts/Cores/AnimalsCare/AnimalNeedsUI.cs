@@ -1,9 +1,13 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class AnimalNeedsUI : MonoBehaviour
 {
 
     [SerializeField] private Animal animal;
+
+    [SerializeField] private GameObject needsContainer;
+    [SerializeField] private GameObject adoptionPanel;
 
     [SerializeField] private NeedBubble hungerBubble;
     [SerializeField] private NeedBubble thirstBubble;
@@ -18,6 +22,16 @@ public class AnimalNeedsUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(animal.IsAdoptable)
+        {
+            needsContainer.SetActive(false);
+            adoptionPanel.SetActive(true);
+            return;
+        }
+
+        needsContainer.SetActive(true);
+        adoptionPanel.SetActive(false);
+
         /*hungerBubble.SetFill(animal.Hunger / 100f);
         thirstBubble.SetFill(animal.Thirst / 100f);
         happinessBubble.SetFill(animal.Happiness / 100f);
@@ -28,5 +42,15 @@ public class AnimalNeedsUI : MonoBehaviour
         happinessIcon.SetFill(animal.Happiness / 100f);
         thirstIcon.SetFill(animal.Thirst / 100f);
 
+    }
+
+    public void AcceptAdoption()
+    {
+        animal.Adoption();
+    }
+
+    public void RejectAdoption()
+    {
+        animal.RejectAdoption();
     }
 }

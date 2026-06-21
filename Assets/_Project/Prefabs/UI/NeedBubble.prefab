@@ -100,8 +100,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4068052493174531108}
-  - component: {fileID: 1826308533172249946}
-  - component: {fileID: 6095474165310380423}
   m_Layer: 0
   m_Name: NeedBubble
   m_TagString: Untagged
@@ -127,43 +125,6 @@ Transform:
   - {fileID: 2593560143011522287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1826308533172249946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057792833541580934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e92f005c50ca2f4a943e5df1819d459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NeedBubble
-  fillRenderer: {fileID: 8283048693467059739}
-  iconRenderer: {fileID: 7072052474322044149}
-  careIcons: []
-  colorFull: {r: 0.3, g: 0.69, b: 0.31, a: 1}
-  colorMid: {r: 1, g: 0.76, b: 0.03, a: 1}
-  colorEmpty: {r: 0.96, g: 0.26, b: 0.21, a: 1}
-  thresholdMid: 0.5
-  thresholdEmpty: 0.25
-  fillAmount: 1
---- !u!114 &6095474165310380423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057792833541580934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26276073f9f030f4ba40df3785e2c292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BubbleTest
-  bubble: {fileID: 1826308533172249946}
-  autoVaciar: 1
-  velocidad: 0.1
-  fillManual: 1
 --- !u!1 &1380888016252093599
 GameObject:
   m_ObjectHideFlags: 0
