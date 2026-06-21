@@ -22,7 +22,8 @@ public class Animal : MonoBehaviour
     [SerializeField] private AudioClip drinkClip;
     [SerializeField] private AudioClip eatClip;
 
-    [SerializeField] private GameObject heartEffectPrefab;
+    [SerializeField] private GameObject heartEffect;
+    [SerializeField] private GameObject visualRoot;
 
     [SerializeField] private float hunger;
     [SerializeField] private float thirst;
@@ -390,15 +391,9 @@ public class Animal : MonoBehaviour
 
     public void Adoption()
     {
-        SpriteRenderer sprite =
-            GetComponentInChildren<SpriteRenderer>();
-
-        Instantiate(
-            heartEffectPrefab,
-            sprite.bounds.center + new Vector3(-0.8f, 0f, 0f),
-            Quaternion.identity);
-
-        Destroy(gameObject);
+        visualRoot.SetActive(false);
+        heartEffect.SetActive(true);
+        
     }
 
     public void RejectAdoption()

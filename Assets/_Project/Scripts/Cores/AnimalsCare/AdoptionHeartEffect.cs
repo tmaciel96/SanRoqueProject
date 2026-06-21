@@ -11,7 +11,7 @@ public class AdoptionHeartEffect : MonoBehaviour
         AudioSource.PlayClipAtPoint(popClip, transform.position);
     }
 
-    public void DestroyEffect()
+    public void DestroyAnimal()
     {
 
         Destroy(transform.root.gameObject);
