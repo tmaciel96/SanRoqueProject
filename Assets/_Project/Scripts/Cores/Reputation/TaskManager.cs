@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager Instance { get; private set; }
+    public static event System.Action<IReadOnlyList<TaskData>> OnDayTasksGenerated;
 
     [Header("Datos")]
     [SerializeField] private TaskDatabase database;
@@ -50,6 +51,7 @@ public class TaskManager : MonoBehaviour
         _taskProgress.Clear();
         var tasks = GenerateDayTasks();
         taskListUI.SetTasks(tasks);
+        OnDayTasksGenerated?.Invoke(tasks);
     }
 
     private List<TaskData> GenerateDayTasks()
