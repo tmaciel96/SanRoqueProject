@@ -51,21 +51,13 @@ MonoBehaviour:
     accentColor: {r: 0.5960785, g: 0.9843138, b: 0.5960785, a: 1}
     reputationPoints: 30
     baseRequired: 1
-    increasePerDay: 1
-    maxRequired: 3
+    increasePerDay: 0
+    maxRequired: 1
   - id: comprar_comida
     label: Comprar comida
     category: 2
     accentColor: {r: 1, g: 0.8431373, b: 0, a: 1}
     reputationPoints: 30
-    baseRequired: 1
-    increasePerDay: 1
-    maxRequired: 5
-  - id: comprar_juguetes
-    label: Comprar juguetes
-    category: 2
-    accentColor: {r: 0.8666667, g: 0.627451, b: 0.8666667, a: 1}
-    reputationPoints: 20
     baseRequired: 1
     increasePerDay: 1
     maxRequired: 5
