@@ -31,29 +31,39 @@ public class DraggableItem : MonoBehaviour
         BeginDrag();
     }
 
-    private void OnMouseUp() 
-    { 
-        isDragging = false;
+    private void OnMouseUp()
+{
+    isDragging = false;
 
-        if (careType == CareType.Petting && animator != null)
-        {
-            animator.SetBool("IsPetting", false);
-        }
+    if (careType == CareType.Petting && animator != null)
+        animator.SetBool("IsPetting", false);
 
-        if (careType != CareType.Petting && hoveredAnimal != null )
-        {
-            hoveredAnimal.ApplyCare(careType);
-
-            Debug.Log($"Aplicado {careType} a {hoveredAnimal.AnimalName}");
-
-            //reportAppliedCare(careType);
-
-            Destroy( gameObject );
-        }
-
-        Destroy( gameObject );  
-
+    if (careType != CareType.Petting && hoveredAnimal != null)
+    {
+        hoveredAnimal.ApplyCare(careType);
+        ConsumeInventoryAndReport(careType);
+        Destroy(gameObject);
+        return;
     }
+
+    Destroy(gameObject);
+}
+
+private void ConsumeInventoryAndReport(CareType care)
+{
+    switch (care)
+    {
+        case CareType.Food:
+            InventoryManager.Instance.ConsumeItem(InventoryItemType.Food, 1);
+            break;
+        case CareType.Medicine:
+            InventoryManager.Instance.ConsumeItem(InventoryItemType.Medicine, 1);
+            break;
+        // Water y Petting no consumen inventario
+    }
+
+    TaskManager.Instance?.ReportCare(care);
+}
 
     void Update()
     {
@@ -72,10 +82,10 @@ public class DraggableItem : MonoBehaviour
         {
             pettingTimer += Time.deltaTime;
 
-            if(pettingTimer > pettingInterval )
+            if (pettingTimer > pettingInterval)
             {
                 hoveredAnimal.ApplyCare(CareType.Petting);
-
+                TaskManager.Instance?.ReportCare(CareType.Petting);
                 pettingTimer = 0f;
             }
         }
