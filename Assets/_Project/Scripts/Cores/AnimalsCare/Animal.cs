@@ -37,7 +37,8 @@ public class Animal : MonoBehaviour
     [SerializeField] private int daysInShelter = 0;
     public bool IsAdoptable { get; private set; }
     
-    [Header("Visual Variants")]
+    [Header("Visual Variants"), Tooltip("Diferentes variantes visuales para esta especie. Asignar en el inspector las variantes que quiera activar." +
+        "Estan dentro del prefab principal de la especie, en un GameObject llamado 'VisualVariants'.")]
     [SerializeField] private GameObject[] visualVariants;
 
     public int VariantCount => visualVariants != null && visualVariants.Length > 0
@@ -346,7 +347,7 @@ public class Animal : MonoBehaviour
 
     }
 
-    //Adopción
+    //Adopciï¿½n
     /*private void OnEnable()
     {
         DayManager.OnDayEnded += AddDayInShelter;
@@ -379,12 +380,12 @@ public class Animal : MonoBehaviour
         /*if (statsReady && timeReady)
         {
             IsAdoptable = true;
-            Debug.Log($"{AnimalName} está listo para la adopción.");
+            Debug.Log($"{AnimalName} estï¿½ listo para la adopciï¿½n.");
         }*/
         if (statsReady)
         {
             IsAdoptable = true;
-            Debug.Log($"{AnimalName} está listo para la adopción.");
+            Debug.Log($"{AnimalName} estï¿½ listo para la adopciï¿½n.");
         }
 
     }

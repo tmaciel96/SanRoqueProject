@@ -12,6 +12,7 @@ public class CapacityManager : MonoBehaviour
 
     [Header("Configuración")]
     [SerializeField] private ShelterDatabase shelterDatabase;
+    [SerializeField] private int initialUnlockedPensCount = 0;
 
     private readonly List<int> _unlockedTiers = new List<int>();
     private int _currentAnimals = 0;
@@ -26,6 +27,7 @@ public class CapacityManager : MonoBehaviour
     public bool ExpansionAvailable => _expansionAvailable;
     public bool HasShelter => _unlockedTiers.Count > 0; // false hasta que compre el primero
     public bool HasAvailableSpace => HasShelter && _currentAnimals < MaxCapacity;
+    
 
     [Header("Referencias")]
     [SerializeField] private ShelterGridManager shelterGridManager;
@@ -36,6 +38,28 @@ public class CapacityManager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
+    }
+
+    public void InitializeDefaultPens()
+    {
+        if (shelterDatabase == null || shelterGridManager == null)
+        {
+            RefreshUI();
+            return;
+        }
+
+        // Limitamos el número máximo al total disponible en la base de datos para no desbordar
+        int pensToUnlock = Mathf.Min(initialUnlockedPensCount, shelterDatabase.TierCount);
+
+        for (int i = 0; i < pensToUnlock; i++)
+        {
+            _unlockedTiers.Add(i); // Registra el espacio en el tier sin costo
+        }
+
+        shelterGridManager.UnlockInitialPens(pensToUnlock);
+
+        _currentAnimals = 0;
+
         RefreshUI();
     }
 
@@ -53,19 +77,29 @@ public class CapacityManager : MonoBehaviour
 
     // ── Animales ──────────────────────────────────────────────────────────
 
-    public void AssignAnimalToPen(RescueRequest completedRequest)
+    public void AcceptRescueRequest(RescueRequest completedRequest)
     {
         if (_currentAnimals >= MaxCapacity) {
-            Debug.LogError("[CapacityManager] No se pudo asignar al animal a un corral despues de haber aceptado un rescate y esperado su llegada.");
+            Debug.LogError("[CapacityManager] Se acepto un rescate sin espacio disponible. Esto no debería pasar si el botón de aceptar se desactiva correctamente.");
             return;
+        }
+        TotalAnimalsHelped++;
+        this.AssignAnimalToPen(completedRequest.animalData);
+    }
+
+    public bool AssignAnimalToPen(AnimalData animal)
+    {
+        if (_currentAnimals >= MaxCapacity) {
+            Debug.LogError("[CapacityManager] No hay espacio libre para asignar al animal a un corral.");
+            return false;
         }
                   
         Pen pen = shelterGridManager.GetFirstEmptyPen();
-        pen.PlaceAnimal(completedRequest.animalData);
+        pen.PlaceAnimal(animal);
 
         _currentAnimals++;
-        TotalAnimalsHelped++;
         RefreshUI();
+        return true;
     }
 
     public int GetNextShelterCost()
@@ -96,11 +130,13 @@ public class CapacityManager : MonoBehaviour
 
     public bool TryUnlockNextShelter(ShelterGridManager gridManager, int row, int column)
     {
-        if (!_expansionAvailable)
-        {
-            Debug.Log("CapacityManager: no hay tarea de expansión activa hoy.");
-            return false;
-        }
+        // DESACTIVADO TEMPORALMENTE para probar expansión automática sin tarea
+
+        // if (!_expansionAvailable)
+        // {
+        //     Debug.Log("CapacityManager: no hay tarea de expansión activa hoy.");
+        //     return false;
+        // }
 
         int nextTierIndex = _unlockedTiers.Count; // empieza en 0, tier 0 = $100
 

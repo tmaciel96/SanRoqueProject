@@ -45,8 +45,8 @@ public class RescueManager : MonoBehaviour
     [Header("Referencias")]
     [SerializeField] private RescueMapController mapController;
     [SerializeField] private NotificationBadge rescueBadge;
-    [SerializeField] private AnimalPrefabCatalog animalPrefabCatalog;
     [SerializeField] private ShelterGridManager shelterGridManager;
+    [SerializeField] private AnimalPrefabCatalog animalPrefabCatalog;
 
     // ── Estado interno ────────────────────────────────────────────────────────
 
@@ -56,14 +56,6 @@ public class RescueManager : MonoBehaviour
     public bool HasActiveRescue => activeRescue != null;
     public RescueRequest ActiveRescue => activeRescue;
     public List<RescueRequest> PendingRequests => pendingRequests;
-
-    // Mock de nombres de animales
-    private readonly string[] mockNames =
-    {
-        "Bondiola", "Feca", "Pocho", "Yuyo", "Negro",
-        "Michi", "Bala", "Chispa", "Coco", "Pipa",
-        "Bash", "Miga", "Pixel", "Astro", "Pampa"
-    };
 
     // ── Unity ─────────────────────────────────────────────────────────────────
 
@@ -154,15 +146,7 @@ public class RescueManager : MonoBehaviour
         }
     }
 
-    private int GetRandomVariantIndexBy(AnimalType species)
-    {
-        // 0 -> Dog
-        // 1 -> Cat
-        int variantCount = animalPrefabCatalog != null
-            ? animalPrefabCatalog.GetVariantCount(species)
-            : 1;
-        return variantCount > 1 ? UnityEngine.Random.Range(0, variantCount) : 0;
-    }
+
 
     private int RollNewRequestCount()
     {
@@ -175,18 +159,7 @@ public class RescueManager : MonoBehaviour
 
     private RescueRequest CreateRandomRequest(int spawnIndex)
     {
-        var animalType = (AnimalType)UnityEngine.Random.Range(0, Enum.GetValues(typeof(AnimalType)).Length);
-
-        var animal = new AnimalData
-        {
-            animalName = mockNames[UnityEngine.Random.Range(0, mockNames.Length)],
-            species    = animalType,
-            variantIndex = GetRandomVariantIndexBy(animalType),
-            hunger = 100f,
-            thirst = 100f,
-            affection = 50f,
-            health = 100f
-        };
+        AnimalData animal = AnimalGenerator.GenerateRandomAnimal(animalPrefabCatalog);
 
         int rescueHours = UnityEngine.Random.Range(minRescueHours, maxRescueHours + 1);
         int expiryHours = UnityEngine.Random.Range(minExpiryHours, maxExpiryHours + 1);
@@ -224,7 +197,7 @@ public class RescueManager : MonoBehaviour
 
         //  ───────────────────── FIX TEMPORAL ─────────────────────
         // Hasta no resolver bien lo de las horas de translado hasta el refugio, asignamos al animal a un corral inmediatamente
-        cm.AssignAnimalToPen(request);
+        cm.AcceptRescueRequest(request);
         
 
         if (MoneyManager.Instance != null)

@@ -107,4 +107,41 @@ public class ShelterGridManager : MonoBehaviour
 
         return null;
     }
+
+    /// <summary>
+    /// Desbloquea secuencialmente una cantidad de corrales iniciales poniéndolos en estado vacío/disponible.
+    /// No afecta dinero ni misiones.
+    /// </summary>
+    public void UnlockInitialPens(int count)
+    {
+        if (_gridMatrix == null || count <= 0) return;
+
+        int unlockedCount = 0;
+
+        for (int r = 0; r < rows; r++)
+        {
+            for (int c = 0; c < columns; c++)
+            {
+                Pen pen = _gridMatrix[r, c];
+                if (pen == null) continue;
+
+                if (unlockedCount < count)
+                {
+                    // Forzamos al corral a reinicializarse en estado vacío (Empty)
+                    pen.Init(r, c, PenState.Empty, this);
+                    unlockedCount++;
+                }
+                else
+                {
+                    // Al primer corral bloqueado que le sigue a los gratuitos, 
+                    // lo dejamos en 'Available' para que el jugador pueda clickearlo y comprarlo.
+                    if (pen.CurrentState == PenState.Locked)
+                    {
+                        pen.SetAvailable();
+                    }
+                    return; // Ya terminamos de procesar los iniciales y el siguiente disponible.
+                }
+            }
+        }
+    }
 }

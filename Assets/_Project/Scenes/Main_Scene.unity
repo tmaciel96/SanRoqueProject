@@ -3522,6 +3522,7 @@ GameObject:
   - component: {fileID: 632869826}
   - component: {fileID: 632869827}
   - component: {fileID: 632869829}
+  - component: {fileID: 632869830}
   m_Layer: 0
   m_Name: --MANAGERS--
   m_TagString: Untagged
@@ -3549,8 +3550,8 @@ MonoBehaviour:
   baseReward: 100
   mapController: {fileID: 1834785581}
   rescueBadge: {fileID: 7802341570964250300}
-  animalPrefabCatalog: {fileID: 0}
-  shelterGridManager: {fileID: 0}
+  shelterGridManager: {fileID: 1687888823}
+  animalPrefabCatalog: {fileID: 11400000, guid: 859b7b3451fadda43ad0da04a4b35e35, type: 2}
 --- !u!114 &632869820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3637,6 +3638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CapacityManager
   capacityCard: {fileID: 1008807467}
   shelterDatabase: {fileID: 11400000, guid: 83b0e4dfd62a2614e8569aea0125f6a2, type: 2}
+  initialUnlockedPensCount: 1
   shelterGridManager: {fileID: 1687888823}
 --- !u!114 &632869828
 MonoBehaviour:
@@ -3668,6 +3670,20 @@ MonoBehaviour:
   initialFood: 0
   initialMedicine: 0
   initialToys: 0
+--- !u!114 &632869830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632869817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd4e1b35f496646be8d9650271fb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  capacityManager: {fileID: 632869827}
+  animalPrefabCatalog: {fileID: 11400000, guid: 859b7b3451fadda43ad0da04a4b35e35, type: 2}
 --- !u!1 &651447982
 GameObject:
   m_ObjectHideFlags: 0

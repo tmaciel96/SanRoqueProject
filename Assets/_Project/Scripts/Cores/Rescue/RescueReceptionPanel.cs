@@ -74,7 +74,7 @@ public class RescueReceptionPanel : BasePanel
         Populate(completedRequest);
 
         // El animal llega al corral — registralo en el CapacityManager
-        CapacityManager.Instance?.AssignAnimalToPen(completedRequest);
+        CapacityManager.Instance?.AcceptRescueRequest(completedRequest);
 
         Open(); // Usa base.Open() → activa GO + registra en UIManager (pausa el tiempo)
     }

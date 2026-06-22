@@ -11,7 +11,7 @@ public class AnimalPrefabCatalog : ScriptableObject
         switch (species)
         {
             case AnimalType.Cat:
-                return catPrefab != null ? catPrefab : dogPrefab;
+                return catPrefab;
             case AnimalType.Dog:
             default:
                 return dogPrefab;
@@ -24,6 +24,13 @@ public class AnimalPrefabCatalog : ScriptableObject
         if (prefab == null) return 1;
 
         Animal animal = prefab.GetComponent<Animal>();
-        return animal != null ? animal.VariantCount : 1;
+
+        if(animal == null)
+        {
+            Debug.LogError($"[AnimalPrefabCatalog] El prefab para {species} no tiene un componente Animal. Asegurate de que el prefab tenga el script Animal asignado.");
+            return 1;
+        }
+
+        return animal.VariantCount;
     }
 }

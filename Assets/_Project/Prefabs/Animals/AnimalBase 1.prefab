@@ -182,7 +182,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5868468632356229327, guid: 8df7258006772f44fa39bf1f40f51270, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -273,7 +273,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 8d98f4db0e723f74f8e80f09440fda7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -366,7 +366,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: cad4402fb4f2b6448aa1129ffe50fdde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -376,7 +376,7 @@ SpriteRenderer:
   m_Size: {x: 21.75, y: 22.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!95 &5946836149241469081
 Animator:
@@ -683,7 +683,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: dcae2859a32e67449b2d2429061acb19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -973,7 +973,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 41286f809d9e13c49a1beaf30b62f0e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1257,6 +1257,7 @@ MonoBehaviour:
   animal: {fileID: 2191540044511400058}
   needsContainer: {fileID: 6816043694641025401}
   adoptionPanel: {fileID: 4319659012130284773}
+  adoptionPanelDuration: 10
   hungerBubble: {fileID: 0}
   thirstBubble: {fileID: 0}
   happinessBubble: {fileID: 0}
@@ -1499,7 +1500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5702268162082652484, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5702268162082652484, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_SortingLayerID
@@ -1695,7 +1696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5702268162082652484, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5702268162082652484, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_SortingLayerID
@@ -1893,7 +1894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5702268162082652484, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5702268162082652484, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_SortingLayerID
@@ -2091,7 +2092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5702268162082652484, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5702268162082652484, guid: a9195760b95c58745848d7b81c46d706, type: 3}
       propertyPath: m_SortingLayerID
