@@ -130,15 +130,7 @@ public class CapacityManager : MonoBehaviour
 
     public bool TryUnlockNextShelter(ShelterGridManager gridManager, int row, int column)
     {
-        // DESACTIVADO TEMPORALMENTE para probar expansión automática sin tarea
-
-        // if (!_expansionAvailable)
-        // {
-        //     Debug.Log("CapacityManager: no hay tarea de expansión activa hoy.");
-        //     return false;
-        // }
-
-        int nextTierIndex = _unlockedTiers.Count; // empieza en 0, tier 0 = $100
+        int nextTierIndex = _unlockedTiers.Count; 
 
         if (nextTierIndex >= shelterDatabase.TierCount)
         {
@@ -158,9 +150,8 @@ public class CapacityManager : MonoBehaviour
         _unlockedTiers.Add(nextTierIndex);
         RefreshUI();
 
-        // NO llamamos UnlockNeighbors acá — el siguiente pen se habilita
-        // en el próximo día impar via EnableExpansion() → ShowNextAvailable()
-
+        gridManager.UnlockNeighbors(row, column);
+        
         TaskManager.Instance.ReportShelterExpansion();
         DisableExpansion();
 

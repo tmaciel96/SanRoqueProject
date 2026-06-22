@@ -71,7 +71,6 @@ public class TaskManager : MonoBehaviour
         if (quedanExpansiones)
         {
             categories.Add(TaskCategory.Refugio);
-            CapacityManager.Instance.EnableExpansion();
         }
         // No llamamos DisableExpansion acá — se deshabilita solo cuando se compra
 

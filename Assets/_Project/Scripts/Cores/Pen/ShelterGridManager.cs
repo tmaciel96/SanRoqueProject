@@ -127,19 +127,14 @@ public class ShelterGridManager : MonoBehaviour
 
                 if (unlockedCount < count)
                 {
-                    // Forzamos al corral a reinicializarse en estado vacío (Empty)
                     pen.Init(r, c, PenState.Empty, this);
                     unlockedCount++;
                 }
                 else
                 {
-                    // Al primer corral bloqueado que le sigue a los gratuitos, 
-                    // lo dejamos en 'Available' para que el jugador pueda clickearlo y comprarlo.
-                    if (pen.CurrentState == PenState.Locked)
-                    {
-                        pen.SetAvailable();
-                    }
-                    return; // Ya terminamos de procesar los iniciales y el siguiente disponible.
+                    // Solo dejamos el primer corral posterior como disponible
+                    pen.Init(r, c, PenState.Available, this);
+                    return; 
                 }
             }
         }
