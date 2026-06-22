@@ -3626,7 +3626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b59340dcca191469b3b69e6d6fafc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DayTimer
-  dayDurationInSeconds: 180
+  dayDurationInSeconds: 60
   timeCard: {fileID: 1995679140}
 --- !u!4 &632869823
 Transform:
