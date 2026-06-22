@@ -32,8 +32,8 @@ public class ResourceSidebarUI : MonoBehaviour
     {
         if (InventoryManager.Instance == null) return;
 
-        foodText.text = InventoryManager.Instance.Food.ToString();
-        medicineText.text = InventoryManager.Instance.Medicine.ToString();
-        toysText.text = InventoryManager.Instance.Toys.ToString();
+        if (foodText != null) foodText.text = InventoryManager.Instance.Food.ToString();
+        if (medicineText != null) medicineText.text = InventoryManager.Instance.Medicine.ToString();
+        if (toysText != null) toysText.text = InventoryManager.Instance.Toys.ToString();
     }
 }
