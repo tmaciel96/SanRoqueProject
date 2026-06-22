@@ -8,6 +8,10 @@ public class AnimalNeedsUI : MonoBehaviour
 
     [SerializeField] private GameObject needsContainer;
     [SerializeField] private GameObject adoptionPanel;
+    [SerializeField] private float adoptionPanelDuration = 10f;
+    private float adoptionTimer;
+    private bool wasAdoptable;
+
 
     [SerializeField] private NeedBubble hungerBubble;
     [SerializeField] private NeedBubble thirstBubble;
@@ -26,9 +30,21 @@ public class AnimalNeedsUI : MonoBehaviour
         {
             needsContainer.SetActive(false);
             adoptionPanel.SetActive(true);
+
+            if (!wasAdoptable) { 
+                adoptionTimer = adoptionPanelDuration;
+                wasAdoptable = true;
+            }
+
+            adoptionTimer -= Time.deltaTime;
+
+            if (adoptionTimer <= 0f) RejectAdoption();
+            
+
             return;
         }
 
+        wasAdoptable = false;
         needsContainer.SetActive(true);
         adoptionPanel.SetActive(false);
 
@@ -52,5 +68,10 @@ public class AnimalNeedsUI : MonoBehaviour
     public void RejectAdoption()
     {
         animal.RejectAdoption();
+
+        adoptionPanel.SetActive(false);
+        needsContainer.SetActive(true);
+
+        wasAdoptable = false;
     }
 }
