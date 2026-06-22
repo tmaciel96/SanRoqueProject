@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 310d76860e9b8b94784da8b85a2b2d7b
+guid: 45d3a41d1f9b4914e885b44e11195565
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4271309658533835991
-    second: Comida Sprite_0
+      213: -7207532633115197716
+    second: comida sprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Comida Sprite_0
+      name: comida sprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 199
-        height: 160
+        width: 622
+        height: 177
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d4ba9a018db64b30800000000000000
-      internalID: 4271309658533835991
+      spriteID: ceef120e143b9fb90800000000000000
+      internalID: -7207532633115197716
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Comida Sprite_0: 4271309658533835991
+      comida sprite_0: -7207532633115197716
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

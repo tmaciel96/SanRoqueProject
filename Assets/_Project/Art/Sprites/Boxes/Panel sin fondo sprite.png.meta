@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1e6d4c3fb5e76d4418f4d42b2bb79564
+guid: faa54e8ba2969b443a5fd2e252f4617c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3988122828252646400
-    second: BorderHealth_0
+      213: -1875883212309707005
+    second: Panel sin fondo sprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BorderHealth_0
+      name: Panel sin fondo sprite_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 18
-        width: 85
-        height: 84
+        x: 0
+        y: 0
+        width: 1254
+        height: 1254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00c00a21598a85730800000000000000
-      internalID: 3988122828252646400
+      spriteID: 3074922482687f5e0800000000000000
+      internalID: -1875883212309707005
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BorderHealth_0: 3988122828252646400
+      Panel sin fondo sprite_0: -1875883212309707005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

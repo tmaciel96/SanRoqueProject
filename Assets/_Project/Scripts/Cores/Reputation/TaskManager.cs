@@ -14,12 +14,10 @@ public class TaskManager : MonoBehaviour
 
     [Header("Configuración")]
     [SerializeField] private int maxShelterExpansions = 6;
-    [SerializeField] private int shelterTaskEveryNDays = 2; // cada cuántos días aparece la tarea de refugio
 
     private const string ShelterExpansionTaskId = "expandir";
     private const string BuyFoodTaskId = "comprar_comida";
     private const string BuyMedicineTaskId = "comprar_medicina";
-    private const string BuyToysTaskId = "comprar_juguetes";
     private const string RescueTaskId = "rescatar";
     private const string PettingTaskId = "dar_mimos";
     private const string GiveFoodTaskId = "alimentar";
@@ -34,6 +32,7 @@ public class TaskManager : MonoBehaviour
 
     private int _currentDay = 1;
     private int _shelterExpansions = 0;
+    private bool _shelterTaskActiveToday = false;
     private readonly Dictionary<string, int> _taskProgress = new Dictionary<string, int>();
 
     private void Awake()
@@ -65,11 +64,11 @@ public class TaskManager : MonoBehaviour
             TaskCategory.Tienda
         };
 
-        // Tarea de refugio aparece cada N días y solo si quedan expansiones disponibles
-        bool esDiaDeRefugio = _currentDay % 2 != 0; // días impares: 1, 3, 5, 7...
+        // Tarea de refugio: disponible todos los días mientras queden expansiones por comprar
         bool quedanExpansiones = _shelterExpansions < maxShelterExpansions;
+        _shelterTaskActiveToday = quedanExpansiones;
 
-        if (esDiaDeRefugio && quedanExpansiones)
+        if (quedanExpansiones)
         {
             categories.Add(TaskCategory.Refugio);
             CapacityManager.Instance.EnableExpansion();
@@ -136,9 +135,8 @@ public class TaskManager : MonoBehaviour
     {
         _shelterExpansions++;
 
-        // Solo actualiza la UI de tarea si hay una tarea de refugio activa este día
-        bool esDiaDeRefugio = _currentDay % 2 != 0;
-        if (esDiaDeRefugio)
+        // Solo actualiza la UI de tarea si la tarea de refugio estaba activa hoy
+        if (_shelterTaskActiveToday)
             AddProgress(ShelterExpansionTaskId);
 
         if (_shelterExpansions >= maxShelterExpansions)
@@ -151,7 +149,6 @@ public class TaskManager : MonoBehaviour
         {
             InventoryItemType.Food => BuyFoodTaskId,
             InventoryItemType.Medicine => BuyMedicineTaskId,
-            InventoryItemType.Toy => BuyToysTaskId,
             _ => null
         };
 
