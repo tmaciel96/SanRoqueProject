@@ -560,6 +560,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CareSource
   itemPrfb: {fileID: 2896916333917630609, guid: bee83a517916e494faf8b9d2f0a8cbd9, type: 3}
+  careType: 1
+  inventoryType: 0
+  consumesInventory: 0
 --- !u!60 &51781208
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2850,6 +2853,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CareSource
   itemPrfb: {fileID: 8316238051020820312, guid: c459b8cb044142941a092fc9d14bf721, type: 3}
+  careType: 2
+  inventoryType: 2
+  consumesInventory: 0
 --- !u!60 &502490166
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3774,6 +3780,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   itemPrfb: {fileID: 2896916333917630609, guid: df18045c75368944c944c31e216090c2, type: 3}
+  careType: 0
+  inventoryType: 0
+  consumesInventory: 1
 --- !u!60 &651447985
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7383,6 +7392,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodBag
   itemPrfb: {fileID: 2896916333917630609, guid: a24f3c5d3923f9f4a838a6ae9533f604, type: 3}
+  careType: 3
+  inventoryType: 1
+  consumesInventory: 1
 --- !u!60 &1328413135
 PolygonCollider2D:
   m_ObjectHideFlags: 0
