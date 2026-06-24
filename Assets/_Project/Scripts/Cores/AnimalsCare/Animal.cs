@@ -36,7 +36,7 @@ public class Animal : MonoBehaviour
 
     [SerializeField] private int daysInShelter = 0;
     public bool IsAdoptable { get; private set; }
-    private bool isBeingAdopted;
+    
 
     [Header("Visual Variants"), Tooltip("Diferentes variantes visuales para esta especie. Asignar en el inspector las variantes que quiera activar." +
         "Estan dentro del prefab principal de la especie, en un GameObject llamado 'VisualVariants'.")]
@@ -103,13 +103,6 @@ public class Animal : MonoBehaviour
     public bool IsCritical => Health <= 10f;
 
     public bool IsSad => Happiness <= 40f;
-
-    public bool isAdoptable => Hunger >= 95f &&
-            Thirst >= 95f &&
-            Happiness >= 95f &&
-            Health >= 95f;
-
-
     public string AnimalName
     {
         get => animalName;
@@ -176,10 +169,10 @@ public class Animal : MonoBehaviour
 
     private void Update()
     {
-        if (isAdoptable) return;
-
         CheckAdoptable();
-                
+
+        if (IsAdoptable) return;
+
         Hunger -= Time.deltaTime * 0.75f;
         Thirst -= Time.deltaTime * 0.5f;
         Happiness -= Time.deltaTime * 0.30f;

@@ -12,7 +12,7 @@ public class AdoptionHeartEffect : MonoBehaviour
         AudioSource.PlayClipAtPoint(popClip, transform.position);
     }
 
-    public void DestroyAnimal()
+    /*public void DestroyAnimal()
     {
 
         StartCoroutine(DestroyAnimalNextFrame());
@@ -22,5 +22,5 @@ public class AdoptionHeartEffect : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         Destroy(transform.root.gameObject);
-    }
+    }*/
 }
