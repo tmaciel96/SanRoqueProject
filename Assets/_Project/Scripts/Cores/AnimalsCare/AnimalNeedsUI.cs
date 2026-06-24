@@ -65,6 +65,8 @@ public class AnimalNeedsUI : MonoBehaviour
         animal.Adoption();
     }
 
+    // Acá saco el animal
+
     public void RejectAdoption()
     {
         animal.RejectAdoption();

@@ -113,7 +113,7 @@ private void ConsumeInventoryAndReport(CareType care)
                 animator.SetBool("isPetting", true);
             }
 
-            Debug.Log($"Entr� en contacto con el {animal.AnimalName}");
+            Debug.Log($"Entró en contacto con el {animal.AnimalName}");
 
         }
     }

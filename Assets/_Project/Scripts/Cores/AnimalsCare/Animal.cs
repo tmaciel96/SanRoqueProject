@@ -36,7 +36,8 @@ public class Animal : MonoBehaviour
 
     [SerializeField] private int daysInShelter = 0;
     public bool IsAdoptable { get; private set; }
-    
+    private bool isBeingAdopted;
+
     [Header("Visual Variants"), Tooltip("Diferentes variantes visuales para esta especie. Asignar en el inspector las variantes que quiera activar." +
         "Estan dentro del prefab principal de la especie, en un GameObject llamado 'VisualVariants'.")]
     [SerializeField] private GameObject[] visualVariants;
@@ -103,6 +104,11 @@ public class Animal : MonoBehaviour
 
     public bool IsSad => Happiness <= 40f;
 
+    public bool isAdoptable => Hunger >= 95f &&
+            Thirst >= 95f &&
+            Happiness >= 95f &&
+            Health >= 95f;
+
 
     public string AnimalName
     {
@@ -137,21 +143,25 @@ public class Animal : MonoBehaviour
     public void Feed(float amount)
     {
         hunger += amount;
+        //CheckAdoptable();
     }
 
     public void Drink(float amount) 
     { 
         thirst += amount;
+        //CheckAdoptable();
     }
 
     public void Heal(float amount)
     {
         health += amount;
+        //CheckAdoptable();
     }
 
     public void Pet(float amount)
     {
         happiness += amount;
+        //CheckAdoptable();
     }
 
     /*public override string ToString()
@@ -166,16 +176,17 @@ public class Animal : MonoBehaviour
 
     private void Update()
     {
-        
-        Hunger -= Time.deltaTime * 3f;
-        Thirst -= Time.deltaTime * 2f;
-        Happiness -= Time.deltaTime * 0.75f;
+        if (isAdoptable) return;
 
+        CheckAdoptable();
+                
+        Hunger -= Time.deltaTime * 0.75f;
+        Thirst -= Time.deltaTime * 0.5f;
+        Happiness -= Time.deltaTime * 0.30f;
         //Debug.Log(Hunger);
 
         CheckingHealth();
-        CheckAdoptable();
-
+        
         animator.SetBool("isSick", IsSick);
         animator.SetBool("isSad", IsSad && !IsSick);
 
@@ -238,10 +249,12 @@ public class Animal : MonoBehaviour
                 if (IsCritical) {
                     
                     audioSource.PlayOneShot(angryClip);
-                    break; }
+                    break; 
+                }
                 
 
                 Feed(IsSick || IsSad ? 10f : 20f);
+                Heal(IsSick ? 0f : 4f);
 
                 if (IsHealthy)
                 {
@@ -259,6 +272,7 @@ public class Animal : MonoBehaviour
                 }
 
                 Drink(IsSick || IsSad ? 10f : 20f);
+                Heal(IsSick ? 0f : 4f);
 
                 if (IsHealthy)
                 {
@@ -274,7 +288,8 @@ public class Animal : MonoBehaviour
                     break;
                 }
 
-                Pet(IsSick ? 1f : 2.5f);
+                Pet(IsSick ? 1f : 3.5f);
+                Heal(IsSick ? 0f : 4f);
 
                 if (IsHealthy && !IsSad)
                 {
@@ -348,7 +363,7 @@ public class Animal : MonoBehaviour
     }
 
     //Adopci�n
-    /*private void OnEnable()
+    private void OnEnable()
     {
         DayManager.OnDayEnded += AddDayInShelter;
     }
@@ -356,11 +371,11 @@ public class Animal : MonoBehaviour
     private void OnDisable()
     {
         DayManager.OnDayEnded -= AddDayInShelter;
-    }*/
+    }
 
     private void AddDayInShelter()
     {
-        //daysInShelter++;
+        daysInShelter++;
 
         CheckAdoptable();
     }
@@ -373,25 +388,23 @@ public class Animal : MonoBehaviour
             Hunger >= 95f &&
             Thirst >= 95f &&
             Happiness >= 95f &&
-            Health >= 95;
+            Health >= 95f;
 
-        //bool timeReady = daysInShelter >= 2;
+        bool timeReady = daysInShelter >= 2;
 
-        /*if (statsReady && timeReady)
+        if (statsReady && timeReady)
         {
             IsAdoptable = true;
-            Debug.Log($"{AnimalName} est� listo para la adopci�n.");
-        }*/
-        if (statsReady)
-        {
-            IsAdoptable = true;
-            Debug.Log($"{AnimalName} est� listo para la adopci�n.");
+            Debug.Log($"{AnimalName} está listo para la adopción.");
         }
+        
 
     }
 
     public void Adoption()
     {
+
+        
         visualRoot.SetActive(false);
         heartEffect.SetActive(true);
         
@@ -400,7 +413,7 @@ public class Animal : MonoBehaviour
     public void RejectAdoption()
     {
         IsAdoptable = false;
-        //daysInShelter = 0;
+        daysInShelter = 0;
 
     }
 }

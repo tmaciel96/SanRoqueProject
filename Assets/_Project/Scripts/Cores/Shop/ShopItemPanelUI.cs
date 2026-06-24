@@ -47,6 +47,8 @@ public class ShopItemPanelUI : BasePanel
     /// </summary>
     public void Open(ShopItemData itemData)
     {
+        Debug.Log($"Abriendo panel de compra: {itemData.itemName} | Tipo: {itemData.inventoryType} | Precio: {itemData.pricePerUnit}");
+
         _currentItem = itemData;
         _quantity = 1;
         RefreshStaticInfo();
