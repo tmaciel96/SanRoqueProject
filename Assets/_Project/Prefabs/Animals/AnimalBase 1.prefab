@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7453908e88d6b034d91cc622cb4d9b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdoptionBubble
-  animal: {fileID: 0}
+  animal: {fileID: 2191540044511400058}
 --- !u!60 &4178626709775842114
 PolygonCollider2D:
   m_ObjectHideFlags: 0

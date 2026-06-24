@@ -142,8 +142,8 @@ Transform:
   m_GameObject: {fileID: 8195560284136943609}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.610625, y: -0.44124997, z: 0}
-  m_LocalScale: {x: 0.0625, y: 0.0625, z: 0.0625}
+  m_LocalPosition: {x: 0.23, y: 5.22, z: 0}
+  m_LocalScale: {x: 1.3096927, y: 1.3096927, z: 1.3096927}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3632345945922505172}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7453908e88d6b034d91cc622cb4d9b66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AdoptionBubble
-  animal: {fileID: 0}
+  animal: {fileID: 945560752673745194}
 --- !u!60 &4233145415962896438
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -534,6 +534,17 @@ PrefabInstance:
       addedObject: {fileID: 5201098685938387190}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d30e9aadb69d741826e53371d0ddf2, type: 3}
+--- !u!114 &945560752673745194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2191540044511400058, guid: c0d30e9aadb69d741826e53371d0ddf2, type: 3}
+  m_PrefabInstance: {fileID: 1402489141367552336}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9beae932fd072eb4fb6acf323197b454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animal
 --- !u!4 &3632345945922505172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2386357037652291716, guid: c0d30e9aadb69d741826e53371d0ddf2, type: 3}
