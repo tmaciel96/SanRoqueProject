@@ -378,12 +378,12 @@ public class Animal : MonoBehaviour
         if (IsAdoptable) return;
 
         bool statsReady =
-            Hunger >= 95f &&
-            Thirst >= 95f &&
-            Happiness >= 95f &&
-            Health >= 95f;
+            Hunger >= 50f &&
+            Thirst >= 50f &&
+            Happiness >= 50f &&
+            Health >= 50f;
 
-        bool timeReady = daysInShelter >= 2;
+        bool timeReady = daysInShelter >= 0;
 
         if (statsReady && timeReady)
         {
