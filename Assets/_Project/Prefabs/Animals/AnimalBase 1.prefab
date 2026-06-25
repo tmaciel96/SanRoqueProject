@@ -1069,6 +1069,7 @@ MonoBehaviour:
   id: 0
   animalType: 0
   audioSource: {fileID: 2220530870157097379}
+  loopAudioSource: {fileID: 2220530870157097379}
   barkClip: {fileID: 0}
   sadClip: {fileID: 0}
   angryClip: {fileID: 0}

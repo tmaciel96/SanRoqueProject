@@ -52,10 +52,18 @@ public class AnimalNeedsUI : MonoBehaviour
        
     }
 
-    private void HandleAnimalAdopted(Animal animal)
+    /*private void HandleAnimalAdopted(Animal animal)
     {
         Debug.Log($"Animal {animal.name} adopted! Hiding Adoption bubble.");
         adoptationBubble.SetActive(false);
+    }*/
+
+    private void HandleAnimalAdopted(Animal adoptedAnimal)
+    {
+        if (adoptedAnimal != animal) return;
+
+        adoptationBubble.SetActive(false);
+        needsContainer.SetActive(false);
     }
 
     private void HandleAnimalIsAdoptable(Animal animal)
@@ -67,7 +75,5 @@ public class AnimalNeedsUI : MonoBehaviour
             adoptationBubble.SetActive(true);
         }
     }
-
-    
         
 }

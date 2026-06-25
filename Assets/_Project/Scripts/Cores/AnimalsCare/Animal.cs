@@ -17,6 +17,7 @@ public class Animal : MonoBehaviour
     private bool isReacting;
 
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource loopAudioSource;
     [SerializeField] private AudioClip barkClip;
     [SerializeField] private AudioClip sadClip;
     [SerializeField] private AudioClip angryClip;
@@ -111,8 +112,8 @@ public class Animal : MonoBehaviour
     public bool IsHealthy => Health > 40f;
     public bool IsSick => Health <= 40f;
     public bool IsCritical => Health <= 10f;
-
     public bool IsSad => Happiness <= 40f;
+
     public string AnimalName
     {
         get => animalName;
@@ -298,7 +299,7 @@ public class Animal : MonoBehaviour
                 {
                     PlayReaction(ReactionType.Love);
                     
-                    audioSource.PlayOneShot(pantingClip);
+                    //audioSource.PlayOneShot(pantingClip);
                 }
                 
                 break;
@@ -384,7 +385,7 @@ public class Animal : MonoBehaviour
             Happiness >= 90f &&
             Health >= 90f;
 
-        bool timeReady = daysInShelter >= 1;
+        bool timeReady = daysInShelter >= 0;
 
         if (statsReady && timeReady)
         {
@@ -393,21 +394,40 @@ public class Animal : MonoBehaviour
             Debug.Log($"{AnimalName} está listo para la adopción.");
 
         }
-        
-
     }
 
     public void Adoption()
     {
-        visualRoot.SetActive(false);
-        heartEffect.SetActive(true); 
         OnAnimalAdopted?.Invoke(this);
+        visualRoot.SetActive(false);
+        heartEffect.SetActive(true);
+
+        enabled = false;
+        
     }
 
-    public void RejectAdoption()
+    public void StartPettingSound()
     {
-        IsAdoptable = false;
-        daysInShelter = 0;
+        if (loopAudioSource == null) return;
 
+        if (loopAudioSource.isPlaying && loopAudioSource.clip == pantingClip)
+            return;
+
+        loopAudioSource.clip = pantingClip;
+        loopAudioSource.loop = true;
+        loopAudioSource.Play();
     }
+
+    public void StopPettingSound()
+    {
+        if (loopAudioSource == null) return;
+
+        if (loopAudioSource.clip == pantingClip)
+        {
+            loopAudioSource.Stop();
+            loopAudioSource.loop = false;
+            loopAudioSource.clip = null;
+        }
+    }
+
 }

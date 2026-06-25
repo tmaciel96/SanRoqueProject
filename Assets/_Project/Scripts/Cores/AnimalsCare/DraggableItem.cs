@@ -35,10 +35,18 @@ public class DraggableItem : MonoBehaviour
 {
     isDragging = false;
 
-    if (careType == CareType.Petting && animator != null)
-        animator.SetBool("IsPetting", false);
+        /*if (careType == CareType.Petting && animator != null)
+            animator.SetBool("isPetting", false);*/
+        if (careType == CareType.Petting)
+        {
+            if (animator != null)
+                animator.SetBool("isPetting", false);
 
-    if (careType != CareType.Petting && hoveredAnimal != null)
+            if (hoveredAnimal != null)
+                hoveredAnimal.StopPettingSound();
+        }
+
+        if (careType != CareType.Petting && hoveredAnimal != null)
     {
         hoveredAnimal.ApplyCare(careType);
         ConsumeInventoryAndReport(careType);
@@ -107,11 +115,18 @@ private void ConsumeInventoryAndReport(CareType care)
         if (animal != null)
         {
             hoveredAnimal = animal;
-
-            if (careType == CareType.Petting && animator != null)
+            if (careType == CareType.Petting)
             {
-                animator.SetBool("isPetting", true);
+                if (animator != null)
+                    animator.SetBool("isPetting", true);
+
+                hoveredAnimal.StartPettingSound();
             }
+
+            /* if (careType == CareType.Petting && animator != null)
+             {
+                 animator.SetBool("isPetting", true);
+             }*/
 
             Debug.Log($"Entró en contacto con el {animal.AnimalName}");
 
@@ -124,12 +139,22 @@ private void ConsumeInventoryAndReport(CareType care)
 
         if (animal == hoveredAnimal)
         {
+
+            if (careType == CareType.Petting)
+            {
+                if (animator != null)
+                    animator.SetBool("isPetting", false);
+
+                hoveredAnimal.StopPettingSound();
+            }
+
+
             hoveredAnimal = null;
 
-            if (careType == CareType.Petting && animator != null)
+            /*if (careType == CareType.Petting && animator != null)
             {
                 animator.SetBool("isPetting", false);
-            }
+            }*/
         }
     }
 
