@@ -982,7 +982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510.00003, y: -163.40979}
+  m_AnchoredPosition: {x: 510, y: -163.40979}
   m_SizeDelta: {x: 1020, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &74040301
@@ -2011,7 +2011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 200, y: 350}
+  m_AnchoredPosition: {x: 200, y: 400}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &371118143 stripped
@@ -2695,8 +2695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.000015258789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456003079
 MonoBehaviour:
@@ -3716,8 +3716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620f4ebc7278040458c495c6f4ebdbec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  initialFood: 0
-  initialMedicine: 0
+  initialFood: 1
+  initialMedicine: 1
   initialToys: 0
 --- !u!114 &632869830
 MonoBehaviour:
@@ -7797,7 +7797,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510.00003, y: -122}
+  m_AnchoredPosition: {x: 510, y: -122}
   m_SizeDelta: {x: 1020, y: 205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385703727
@@ -8101,7 +8101,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510.00003, y: -224.54639}
+  m_AnchoredPosition: {x: 510, y: -224.54639}
   m_SizeDelta: {x: 1020, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415495244
@@ -9589,7 +9589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShelterGridManager
   rows: 2
-  columns: 3
+  columns: 4
   cellSize: {x: 180, y: 135}
   spacing: {x: 10, y: 40}
   penPrefab: {fileID: 97217789805435302, guid: 1bd00d18ef32d004eb747a2153809fff, type: 3}
@@ -10475,7 +10475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510.00003, y: -263.18298}
+  m_AnchoredPosition: {x: 510, y: -263.18298}
   m_SizeDelta: {x: 1020, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1832876671
@@ -11930,15 +11930,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 77896589540335500, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 510.00003
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 3327986315355143232, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 510.00003
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 3522681762116440804, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 510.00003
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 7133426756488458829, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
       propertyPath: m_Name
@@ -11946,7 +11946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7779096238383826543, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 510.00003
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 8574078777039032105, guid: c6b368f3770eaa2419d69d3d229fdbae, type: 3}
       propertyPath: m_Pivot.x

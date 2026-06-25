@@ -31,3 +31,9 @@ MonoBehaviour:
   - label: Corral premium
     unlockCost: 2000
     animalCapacity: 3
+  - label: Corral premium
+    unlockCost: 2000
+    animalCapacity: 3
+  - label: Corral premium
+    unlockCost: 2000
+    animalCapacity: 3
