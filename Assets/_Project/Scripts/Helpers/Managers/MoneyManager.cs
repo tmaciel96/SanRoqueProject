@@ -25,7 +25,7 @@ public class MoneyManager : MonoBehaviour
     private void Start()
     {
         CurrentMoney = startingMoney;
-        moneyCard.UpdateMoney(CurrentMoney);
+        Refresh();
     }
 
     public bool TrySpend(int amount)

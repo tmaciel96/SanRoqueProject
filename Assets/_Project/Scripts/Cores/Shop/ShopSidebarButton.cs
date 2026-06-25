@@ -12,22 +12,31 @@ public class ShopSidebarButton : MonoBehaviour
     [SerializeField] private ShopItemData itemData;
 
     private Button _button;
+    private bool _isSubscribedToMoneyChanges;
+    private MoneyManager _subscribedMoneyManager;
 
     private void Awake()
     {
-        _button = GetComponent<Button>();
-        _button.onClick.AddListener(OnClick);
+        EnsureButton();
     }
 
     private void OnEnable()
     {
-        MoneyManager.Instance.OnMoneyChanged += HandleMoneyChanged;
+        EnsureButton();
+        SubscribeToMoneyChanges();
+        RefreshInteractable();
+    }
+
+    private void Start()
+    {
+        EnsureButton();
+        SubscribeToMoneyChanges();
         RefreshInteractable();
     }
 
     private void OnDisable()
     {
-        MoneyManager.Instance.OnMoneyChanged -= HandleMoneyChanged;
+        UnsubscribeFromMoneyChanges();
     }
 
     private void OnClick()
@@ -59,9 +68,39 @@ public class ShopSidebarButton : MonoBehaviour
         RefreshInteractable();
     }
 
+    private void SubscribeToMoneyChanges()
+    {
+        MoneyManager moneyManager = MoneyManager.Instance;
+        if (_isSubscribedToMoneyChanges || moneyManager == null) return;
+
+        moneyManager.OnMoneyChanged += HandleMoneyChanged;
+        _subscribedMoneyManager = moneyManager;
+        _isSubscribedToMoneyChanges = true;
+    }
+
+    private void UnsubscribeFromMoneyChanges()
+    {
+        if (!_isSubscribedToMoneyChanges || _subscribedMoneyManager == null) return;
+
+        _subscribedMoneyManager.OnMoneyChanged -= HandleMoneyChanged;
+        _subscribedMoneyManager = null;
+        _isSubscribedToMoneyChanges = false;
+    }
+
     private void RefreshInteractable()
     {
-        if (itemData == null) return;
+        if (_button == null || itemData == null || MoneyManager.Instance == null) return;
         _button.interactable = MoneyManager.Instance.CanAfford(itemData.pricePerUnit);
+    }
+
+    private void EnsureButton()
+    {
+        if (_button == null)
+            _button = GetComponent<Button>();
+
+        if (_button == null) return;
+
+        _button.onClick.RemoveListener(OnClick);
+        _button.onClick.AddListener(OnClick);
     }
 }
