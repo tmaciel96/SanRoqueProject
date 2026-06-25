@@ -54,6 +54,8 @@ public class Animal : MonoBehaviour
 
     public AnimalType Species => animalType;
 
+    public float tiempoDeEspera = 0.9f;
+
     public void Awake()
     {
         ResolveVariant(-1);
@@ -398,12 +400,20 @@ public class Animal : MonoBehaviour
 
     public void Adoption()
     {
-        OnAnimalAdopted?.Invoke(this);
         visualRoot.SetActive(false);
         heartEffect.SetActive(true);
-
         enabled = false;
         
+
+        StartCoroutine(DesactivarDespuesDeTiempo(tiempoDeEspera));
+
+    }
+
+    IEnumerator DesactivarDespuesDeTiempo(float tiempo)
+    {
+        yield return new WaitForSeconds(tiempo);
+        OnAnimalAdopted?.Invoke(this);
+
     }
 
     public void StartPettingSound()
