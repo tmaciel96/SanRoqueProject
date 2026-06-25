@@ -19,15 +19,24 @@ public class AnimalNeedsUI : MonoBehaviour
     [SerializeField] private DrainableIcon happinessIcon;
     [SerializeField] private DrainableIcon thirstIcon;
 
+    private void Awake()
+    {
+        Animal.OnAnimalAdopted += HandleAnimalAdopted;
+        Animal.OnAnimalIsReadyForAdoption += HandleAnimalIsAdoptable;
+    }
+
+    private void OnDestroy()
+    {
+        Animal.OnAnimalAdopted -= HandleAnimalAdopted;
+        Animal.OnAnimalIsReadyForAdoption -= HandleAnimalIsAdoptable;
+    }
+
 
     // Update is called once per frame
     void Update()
     {
         bool adoptable = animal.IsAdoptable;
-
-        needsContainer.SetActive(!adoptable);
-        adoptationBubble.SetActive(adoptable);
-           
+        
         if(!adoptable)
         {
             hungerIcon.SetFill(animal.Hunger / 100f);
@@ -41,6 +50,22 @@ public class AnimalNeedsUI : MonoBehaviour
         happinessBubble.SetFill(animal.Happiness / 100f);
         healthBubble.SetFill(animal.Health / 100f);*/
        
+    }
+
+    private void HandleAnimalAdopted(Animal animal)
+    {
+        Debug.Log($"Animal {animal.name} adopted! Hiding Adoption bubble.");
+        adoptationBubble.SetActive(false);
+    }
+
+    private void HandleAnimalIsAdoptable(Animal animal)
+    {
+        if (animal == this.animal)
+        {
+            Debug.Log($"Animal {animal.name} is ready for adoption! Showing adoption bubble. Hiding needs container.");
+            needsContainer.SetActive(false);
+            adoptationBubble.SetActive(true);
+        }
     }
 
     

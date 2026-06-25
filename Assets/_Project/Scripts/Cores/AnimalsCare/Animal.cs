@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
+
+
 
 public class Animal : MonoBehaviour
 {
@@ -42,6 +44,9 @@ public class Animal : MonoBehaviour
         "Estan dentro del prefab principal de la especie, en un GameObject llamado 'VisualVariants'.")]
     [SerializeField] private GameObject[] visualVariants;
 
+    public static event Action<Animal> OnAnimalAdopted;
+    public static event Action<Animal> OnAnimalIsReadyForAdoption;
+
     public int VariantCount => visualVariants != null && visualVariants.Length > 0
         ? visualVariants.Length
         : 1;
@@ -52,6 +57,11 @@ public class Animal : MonoBehaviour
     {
         ResolveVariant(-1);
         BindComponents();
+        DayManager.OnDayEnded += AddDayInShelter;
+    }
+    private void OnDestroy()
+    {
+        DayManager.OnDayEnded -= AddDayInShelter;
     }
 
     public void Initialize(string id, string name, AnimalType type, float hunger, float thirst, float happiness, float health, int variantIndex = -1)
@@ -84,7 +94,7 @@ public class Animal : MonoBehaviour
 
         int chosen = index >= 0 && index < visualVariants.Length
             ? index
-            : Random.Range(0, visualVariants.Length);
+            : UnityEngine.Random.Range(0, visualVariants.Length);
 
         if (visualVariants[chosen] != null)
             visualVariants[chosen].SetActive(true);
@@ -345,7 +355,7 @@ public class Animal : MonoBehaviour
 
     private void CheckRandomDisease()
     {
-        float chance = Random.Range(0f, 100f);
+        float chance = UnityEngine.Random.Range(0f, 100f);
 
         if (chance <= 5 ) Health = 40;
     }
@@ -355,16 +365,7 @@ public class Animal : MonoBehaviour
 
     }
 
-    //Adopci�n
-    private void OnEnable()
-    {
-        DayManager.OnDayEnded += AddDayInShelter;
-    }
-
-    private void OnDisable()
-    {
-        DayManager.OnDayEnded -= AddDayInShelter;
-    }
+    //Adopcion
 
     private void AddDayInShelter()
     {
@@ -378,17 +379,19 @@ public class Animal : MonoBehaviour
         if (IsAdoptable) return;
 
         bool statsReady =
-            Hunger >= 50f &&
-            Thirst >= 50f &&
-            Happiness >= 50f &&
-            Health >= 50f;
+            Hunger >= 85f &&
+            Thirst >= 85f &&
+            Happiness >= 90f &&
+            Health >= 90f;
 
-        bool timeReady = daysInShelter >= 0;
+        bool timeReady = daysInShelter >= 1;
 
         if (statsReady && timeReady)
         {
             IsAdoptable = true;
+            OnAnimalIsReadyForAdoption?.Invoke(this);
             Debug.Log($"{AnimalName} está listo para la adopción.");
+
         }
         
 
@@ -396,11 +399,9 @@ public class Animal : MonoBehaviour
 
     public void Adoption()
     {
-
-        
         visualRoot.SetActive(false);
-        heartEffect.SetActive(true);
-        
+        heartEffect.SetActive(true); 
+        OnAnimalAdopted?.Invoke(this);
     }
 
     public void RejectAdoption()

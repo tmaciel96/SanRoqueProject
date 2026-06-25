@@ -10,5 +10,7 @@ public class AdoptionBubble : MonoBehaviour
         if (animal == null) return;
 
             animal.Adoption();
+            Debug.Log($"Animal {animal.name} adopted!");
+            gameObject.SetActive(false);
     }
 }

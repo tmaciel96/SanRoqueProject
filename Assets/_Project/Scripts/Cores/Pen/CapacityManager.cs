@@ -38,6 +38,13 @@ public class CapacityManager : MonoBehaviour
     {
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
+
+        Animal.OnAnimalAdopted += RemoveAnimal;
+    }
+
+    private void OnDestroy()
+    {
+        Animal.OnAnimalAdopted -= RemoveAnimal;
     }
 
     public void InitializeDefaultPens()
@@ -119,11 +126,23 @@ public class CapacityManager : MonoBehaviour
         return _expansionAvailable && nextCost >= 0 && availableMoney >= nextCost;
     }
 
-    public void RemoveAnimal()
+    public void RemoveAnimal(Animal animal)
     {
+        if (animal == null) return;
+
         if (_currentAnimals <= 0) return;
-        _currentAnimals--;
-        RefreshUI();
+
+        Pen pen = animal.GetComponentInParent<Pen>();
+        if (pen != null)
+        {
+            pen.RemoveAnimal();
+            _currentAnimals--;
+            RefreshUI();
+        }
+        else
+        {
+            Debug.LogWarning($"CapacityManager: No se encontró un corral para el animal {animal.name}.");
+        }
     }
 
     // ── Desbloqueo de corrales ────────────────────────────────────────────
