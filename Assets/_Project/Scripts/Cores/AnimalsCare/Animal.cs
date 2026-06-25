@@ -385,7 +385,7 @@ public class Animal : MonoBehaviour
             Happiness >= 90f &&
             Health >= 90f;
 
-        bool timeReady = daysInShelter >= 0;
+        bool timeReady = daysInShelter >= 2;
 
         if (statsReady && timeReady)
         {
